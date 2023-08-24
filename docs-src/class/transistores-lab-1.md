@@ -8,18 +8,17 @@ Existem basicamente três níveis de simulação de componentes eletrônicos: a 
 
 Vamos usar o simulador do site falstad para implementar um circuito feito com transistores que implementa uma equação booleana. 
 
-1. Abra o site: http://www.falstad.com/circuit/
-1. :arrow_right: Arquivo :arrow_right: Importar Arquivo Texto :arrow_right: Copiar e colar o texto a seguir
+!!! exercise 
+    1. Abra o site: http://www.falstad.com/circuit/
+    1. :arrow_right: Arquivo :arrow_right: Importar Arquivo Texto :arrow_right: Copiar e colar o texto a seguir: [code.txt](transistores-lab-1-exe1.txt)
 
-- [code.txt](transistores-lab-1-exe1.txt)
+    Vocês devem obter o seguinte diagrama:
 
-Vocês devem obter o seguinte diagrama:
-
-![](figs/A-Transistores/simulacao.gif){width=400}
-
-Com o circuito carreado no site, encontre:
+    ![](figs/A-Transistores/simulacao.gif){width=400}
 
 !!! example "Tarefa"
+    Com o circuito carreado no site:
+    
     1. Encontre a tabela verdade do circuito.
         - Faça todas as combinações possíveis de entradas (H/L) e verifique o valor da saída (H/L)
     1. A partir da tabela verdade encontre a equação lógica.
@@ -28,12 +27,11 @@ Com o circuito carreado no site, encontre:
 
 ## Outro circuito misterioso
 
-Implementar o outro circuito feito com transistores que implementa uma equação booleana no simulador do site falstad. 
+!!! exercise
+    Implementar o outro circuito feito com transistores que implementa uma equação booleana no simulador do site falstad. 
 
-1. Abra o site: http://www.falstad.com/circuit/
-1. :arrow_right: Arquivo :arrow_right: Importar Arquivo Texto :arrow_right: Copiar e colar o texto a seguir
-
-[circuito](transistores-lab-1-exe2.txt)
+    1. Abra o site: http://www.falstad.com/circuit/
+    1. :arrow_right: Arquivo :arrow_right: Importar Arquivo Texto :arrow_right: Copiar e colar o texto a seguir:  [circuito](transistores-lab-1-exe2.txt)
 
 !!! exercise
     1. Encontre a tabela verdade do circuito.
@@ -71,20 +69,23 @@ O grupo deve se organizar e executar da melhor forma possível (com todos partic
 ### a - NOT
 
 !!! info
-   **Cada grupo deve realizar duas** implementações do circuito a seguir que representa uma NOT:
+    **Cada grupo deve realizar duas** implementações do circuito a seguir que representa uma NOT:
 
 Iremos implementar uma porta lógica do tipo NOT usando transistores BJT. 
 
-![RTL Not](figs/A-Transistores/rtl-notNEW.png){width=500}
+![RTL Not](figs/A-Transistores/rtl-not.png){width=500}
 
 Para isso vocês deverão:
 
-1. Entrar no site [TinkerCad](https://www.tinkercad.com/)
-1. Logar (com google) e criar conta **pessoal**
-1. **Circuis** :arrow_right: **Criar novo Circuito**
-1. Fazer a implementação a seguir
+!!! exercise
+    Passos:
+    
+    1. Entrar no site [TinkerCad](https://www.tinkercad.com/)
+    1. Logar (com google) e criar conta **pessoal**
+    1. **Circuis** :arrow_right: **Criar novo Circuito**
+    1. Fazer a implementação a seguir
 
-![Protoboard](figs/A-Transistores/rtl-not-protoboard.png)
+    ![Protoboard](figs/A-Transistores/rtl-not-protoboard.png)
 
 !!! warning
     Se você perceber que algum transistor está aquecendo,
