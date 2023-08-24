@@ -39,8 +39,8 @@ Atualmente, containers é uma forma altamente popular e consolidada no mercado d
 
     Para instalar o programador **openFPGALoader**, entre na página com os binários [https://github.com/trabucayre/openFPGALoader/releases](https://github.com/trabucayre/openFPGALoader/releases).
 
-    1. Baixe a versão **mingw-w64-x86_64-openFPGALoader-ci-1-any.pkg.tar.zst**
-    2. Extraia o arquivo utilizando o 7-zip ou algum outro aplicativo. Copie o arquivo **openFPGALoader.exe** para a pasta da disciplina ou coloque no seu PATH.
+    1. Baixe a versão [mingw-w64-x86_64-openFPGALoader-ci-1-any.pkg.tar.zst](https://github.com/trabucayre/openFPGALoader/releases/download/nightly/mingw-w64-x86_64-openFPGALoader-ci-1-any.pkg.tar.zst)
+    2. Extraia o arquivo utilizando o 7-zip ou algum outro aplicativo. Copie o arquivo `openFPGALoader.exe` para a pasta da disciplina ou coloque no seu PATH.
     3. Abra o Command Prompt novamente como administrador, entre na pasta da disciplina, rode o comando `openfpgaloader -V` no terminal e verifique se é exibido a versão.
 
     **Importante:** sempre que for utilizar da disciplina, ver se o Docker está aberto, caso contrário, a infra não funcionará.
@@ -51,7 +51,7 @@ Atualmente, containers é uma forma altamente popular e consolidada no mercado d
 
     Antes de começar, assegure-se de que seu sistema operacional é macOS na versão Big Sur (11) ou superior (como Monterey, Ventura, etc.). Para usuários do Mac com chipset M1, não se preocupe, todos são compatíveis.
 
-    1. Acesse o [site oficial do Docker](https://docs.docker.com/desktop/install/mac-install/) e baixe o aplicativo Docker. Importante: existem duas versões para macOS, x64 e M1. Certifique-se de escolher a correta para o seu Mac.
+    1. Acesse o [site oficial do Docker](https://docs.docker.com/desktop/install/mac-install/) e baixe o aplicativo Docker. Importante: existem duas versões para macOS, x64 e M1. ==Certifique-se de escolher a correta para o seu Mac==.
     2. Execute o instalador e siga as instruções apresentadas.
     3. Uma vez instalado, abra o aplicativo Docker. Você pode localizá-lo na pasta 'Aplicativos' ou buscar no Spotlight usando o atalho Command+Space.
     4. Com o Docker em execução, abra o terminal do macOS (pode ser encontrado em 'Aplicativos' ou via Spotlight com Command+Space) e execute o comando:
