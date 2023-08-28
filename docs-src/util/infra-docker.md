@@ -11,9 +11,16 @@ Vamos configurar os softwares que usaremos para desenvolver o nosso processador.
 
 Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar uma extensão especifica chamada: **Dev Containers**:
 
+
+
 ```
-ext install ms-vscode-remote.remote-containers
+1 - Abra o VSCode e pressione **Ctrl + Shift + X** para abrir o Extension
+2 - Pesquiste por **ms-vscode-remote.remote-containers** e instale o mesmo
 ```
+
+![](figs/addExtension.png)
+
+
 
 ## Telemetry
 
