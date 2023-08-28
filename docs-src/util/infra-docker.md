@@ -3,11 +3,11 @@
 Vamos configurar os softwares que usaremos para desenvolver o nosso processador. Para isso teremos que:
 
 1. Ter o Vscode instalado
-1. Configurar um pacote python
+1. Configurar um pacote python (telemetry)
 1. Instalar docker
 1. Instalar o openFPGALoader
 
-## Vscode
+## 1. VScode
 
 Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar uma extensão especifica chamada: **Dev Containers**:
 
@@ -18,7 +18,7 @@ Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar
 ![](figs/addExtension.png)
 
 
-## Telemetry
+## 2. Telemetry
 
 Primeiro vamos configurar o plugin de telemetria (python), uma coleta de dados que fazemos em algumas disciplinas, os dados são usados anonimamentes a fim de entender e melhorar as dinâmicas de sala de aula.
 
@@ -37,7 +37,7 @@ telemetry auth
 !!! info
     Isso ira abrir um navegador que você devera logar com sua conta do github e então o sistema irá gerar um token, que deve ser colado no terminal. 
 
-## Docker
+## 3. Docker
 
 A infraestrutura da disciplina utiliza Docker para rodar containers com imagens padronizadas com todas as ferramentas
 instaladas e configuradas, de forma a ser mais prático, rápido e eficiente para o desenvolvedor.
