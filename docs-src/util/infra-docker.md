@@ -35,7 +35,9 @@ telemetry auth
 ```
 
 !!! info
-    Isso ira abrir um navegador que você devera logar com sua conta do github e então o sistema irá gerar um token, que deve ser colado no terminal. 
+    Isso ira abrir um navegador que você devera logar com sua conta do github e então o sistema irá gerar um token, que deve ser **colado no terminal**. 
+	
+![](figs/telemetryAuth.png)
 
 ## 3. Docker
 
