@@ -57,7 +57,7 @@ markdown_extensions:
 
 nav:
   - Home:
-      - index: "Sobre.md"
+      - index: "index.md"
       - "Sobre-Criterios-de-Avaliacao.md"
       - "Sobre-Rubricas.md"
   - Projetos:
