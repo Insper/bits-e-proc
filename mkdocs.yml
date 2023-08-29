@@ -30,6 +30,7 @@ extra:
     lab_11_classroom: https://classroom.github.com/a/rS4zT505
 
 markdown_extensions:
+  - footnotes
   - markdown.extensions.admonition
   - pymdownx.tasklist:
       custom_checkbox: true
@@ -123,11 +124,11 @@ nav:
       - "Resumo VM": "commum-content/z01/z01-Resumo-VM.md"
 
   - Exercícios:
-      - "commum-content/exercicios/Exercicio-Algebra-Booleana-1.md"
-      - "commum-content/exercicios/Exercicio-Algebra-Booleana-2.md"
-      - "Dados Digitais - 1": https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
-      - "commum-content/exercicios/Exercicio-Dados-2.md"
-      - "Aritmética binária - HW": https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Exercicio-Aritmetica-Booleana.pdf
+      - Algebra Booleana - 1: "commum-content/exercicios/Exercicio-Algebra-Booleana-1.md"
+      - Álgebra Booleana - 2: "commum-content/exercicios/Exercicio-Algebra-Booleana-2.md"
+      - Dados Digitais - 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
+      - Dados Digitais - 2: commum-content/exercicios/Exercicio-Dados-2.md
+      - Aritmética Binária: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
       - "Lógica Sequencial": "https://forms.gle/XMsFCDMYsmz1qUP86"
       - "Linguagem de Máquina": "https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf"
       - "commum-content/exercicios/Exercicio-CPU-1.md"
