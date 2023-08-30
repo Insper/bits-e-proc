@@ -1,4 +1,4 @@
-# Lab 11: (nasm) Periféricos
+# Lab 12: (nasm) Periféricos
 
 Ao final desse lab você deve ser capaz de:
 

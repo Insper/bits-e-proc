@@ -1,9 +1,5 @@
 # C - ULA
 
-| Entrega         |
-|-----------------|
-| 18/09 - Domingo |
-
 ![ULA](figs/D-ULA/D-sistema-ula.png)
 
 Neste projeto seu grupo terá que desenvolver os componentes para a implementação de uma unidade lógica e aritmética (ULA) de 16 bit (proposta pelo livro texto) que será capaz de realizar operações binárias muito simples porém que possibilitará realizarmos muitas coisas!

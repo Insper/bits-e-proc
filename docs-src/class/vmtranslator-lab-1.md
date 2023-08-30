@@ -1,4 +1,4 @@
-# Lab 7 - VM translator
+# Lab 17 - VM translator
 
 Este laboratório é uma introdução para o nosso último projeto, o vmtranslator! Neste laboratório iremos aprender como:
 

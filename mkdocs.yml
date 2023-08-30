@@ -4,8 +4,8 @@ theme:
 
 docs_dir: "docs-src"
 site_url: https://insper.github.io/bits-e-proc/
-repo_name: "Insper/bits-e-proc"
-repo_url: "https://github.com/insper/bits-e-proc"
+repo_name: Insper/bits-e-proc
+repo_url: https://github.com/insper/bits-e-proc
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
@@ -18,9 +18,9 @@ plugins:
 
 extra:
   custom_variables:
-    lab_1_groups_spreadsheet: 'https://docs.google.com/spreadsheets/d/1V1h8e0awIF-E_OVm-Vc4zupaBRAQf-PcWidCq1knw74/edit?usp=sharing'
+    lab_1_groups_spreadsheet: https://docs.google.com/spreadsheets/d/1V1h8e0awIF-E_OVm-Vc4zupaBRAQf-PcWidCq1knw74/edit?usp=sharing
     lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1691767251465/18278e02ddfd2c0c5bec054ae54303dcf58dad23?sender=ub569a9273c6e285461187641
-    lab_1_benchmark: 'https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing'
+    lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
     lab_5_classroom: https://classroom.github.com/a/vL9MgUbs
     lab_5_points: '2 HW / 1 SW'
     lab_6_classroom: https://classroom.github.com/a/yQ34x1Xc
@@ -57,90 +57,90 @@ markdown_extensions:
 
 nav:
   - Home:
-      - index: "index.md"
-      - "Sobre-Criterios-de-Avaliacao.md"
-      - "Sobre-Rubricas.md"
+      - index: index.md
+      - Critérios de Avaliação: Sobre-Criterios-de-Avaliacao.md
+      - Rubricas individuais: Sobre-Rubricas.md
   - Projetos:
-      - "class/intro-proj.md"
-      - "class/comb-proj.md"
-      - "class/ula-proj.md"
-      - "class/seq-proj.md"
-      - "class/asm-proj.md"
-      - 'class/assembler-proj.md'
-      - "class/vmtranslator-proj.md"
-      - 'class/x-proj.md'
+      - A - Ambiente de desenvolvimento: class/intro-proj.md
+      - B - Lógica Combinacional: class/comb-proj.md
+      - C - ULA: class/ula-proj.md
+      - D - Lógica Sequencial: class/seq-proj.md
+      - E - Assembly: class/asm-proj.md
+      - G - Assembler: class/assembler-proj.md
+      - H - VM translator: class/vmtranslator-proj.md
+      - X - Mundo Real: class/x-proj.md
   - Labs:
-      - "class/intro-benchmark-lab.md"
-      - "class/intro-lab-1.md"
-      - "class/intro-lab-2.md"
-      - "class/transistores-lab-1.md"
-      - "class/comb-lab-1.md"
-      - "class/ula-lab-1.md"
-      - "class/ula-lab-2.md"
-      - "class/ula-lab-4.md"
-      - "class/ula-lab-3.md"
-      - "class/seq-lab-1.md"
-      - "class/asm-lab-1.md"
-      - "class/asm-lab-2.md"
-      - "class/asm-lab-3.md"
-      - "class/asm-lab-4.md"
-      - "class/assembler-lab-1.md"
-      - "class/vm-lab-1.md"
-      - "class/vmtranslator-lab-1.md"
+      - Lab 1  - Visão geral: class/intro-benchmark-lab.md
+      - Lab 2  - Configurando Github: class/intro-lab-1.md
+      - Lab 3  - Github: class/intro-lab-2.md
+      - Lab 4  -  Transistores / CI: class/transistores-lab-1.md
+      - Lab 5  -  MyHDL: class/comb-lab-1.md
+      - Lab 6  -  Adders : class/ula-lab-1.md
+      - Lab 7  -  Hardware types: class/ula-lab-2.md
+      - Lab 8  -  ULA: class/ula-lab-4.md
+      - Lab 9  -  Depurando: class/ula-lab-3.md
+      - Lab 10 - Lógica Sequencial: class/seq-lab-1.md
+      - Lab 11 - (nasm) Assembly: class/asm-lab-1.md
+      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
+      - Lab 13 - (nasm) Saltos: class/asm-lab-3.md
+      - Lab 14 - (nasm) Praticando: class/asm-lab-4.md
+      - Lab 15 - Assembler: class/assembler-lab-1.md
+      - Lab 16 - VM: class/vm-lab-1.md
+      - Lab 17 - VM translator: class/vmtranslator-lab-1.md
 
   - Teoria:
-      - "commum-content/teoria/Teoria-Dados.md"
-      - "commum-content/teoria/Teoria-Algebra-Booleana.md"
-      #    - "commum-content/teoria/Teoria-CMOS.md"
-      - "commum-content/teoria/Teoria-RTL.md"
-      - "commum-content/teoria/Teoria-Componentes.md"
-      - "commum-content/teoria/Teoria-Aritmetica-Binaria.md"
-      - "commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md"
-      - "commum-content/teoria/Teoria-ULA.md"
-      - "commum-content/teoria/Teoria-Logica-Sequencial.md"
-      - "commum-content/teoria/Teoria-Sequencial-Componentes.md"
-      - "commum-content/teoria/Teoria-Z01.md"
-      - "commum-content/teoria/Teoria-Assembly.md"
-      - "commum-content/teoria/Teoria-Z01-mapadeMemoria.md"
-      - "commum-content/teoria/Teoria-nasm-jump.md"
-      - "commum-content/teoria/Teoria-Linguagem-de-Maquina.md"
-      - "commum-content/teoria/Teoria-Assembler.md"
-      - "commum-content/teoria/Teoria-Assembler-SymbolTable.md"
-      - "commum-content/teoria/Teoria-vm.md"
-      - "commum-content/teoria/Teoria-vm-segmentos.md"
-      - "commum-content/teoria/Teoria-vm-jump.md"
-      - "commum-content/teoria/Teoria-vm-funcoes.md"
-      - "commum-content/teoria/Teoria-vm-memoria.md"
-      - "commum-content/teoria/Vídeo Aulas (Luciano)": "Util-Video-Aulas.md"
+      - Dados Digitais: commum-content/teoria/Teoria-Dados.md
+      - Álgebra Booleana: commum-content/teoria/Teoria-Algebra-Booleana.md
+      #    - commum-content/teoria/Teoria-CMOS.md
+      - Resistor-Transistor Logic (RTL): commum-content/teoria/Teoria-RTL.md
+      - Componentes Digitais: commum-content/teoria/Teoria-Componentes.md
+      - Aritmética Binária: commum-content/teoria/Teoria-Aritmetica-Binaria.md
+      - Aritmética Binária - HW: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
+      - ULA: commum-content/teoria/Teoria-ULA.md
+      - Lógica Sequencial: commum-content/teoria/Teoria-Logica-Sequencial.md
+      - Componentes Síncronos: commum-content/teoria/Teoria-Sequencial-Componentes.md
+      - Z01: commum-content/teoria/Teoria-Z01.md
+      - ASM - Assembly: commum-content/teoria/Teoria-Assembly.md
+      - ASM - Mapa de memória: commum-content/teoria/Teoria-Z01-mapadeMemoria.md
+      - ASM - jump: commum-content/teoria/Teoria-nasm-jump.md
+      - Linguagem de máquina: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+      - Assembler: commum-content/teoria/Teoria-Assembler.md
+      - Tabela de Símbolos: commum-content/teoria/Teoria-Assembler-SymbolTable.md
+      - VM: commum-content/teoria/Teoria-vm.md
+      - VM - Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
+      - VM - jump: commum-content/teoria/Teoria-vm-jump.md
+      - VM - Funções: commum-content/teoria/Teoria-vm-funcoes.md
+      - VM - Memória: commum-content/teoria/Teoria-vm-memoria.md
+      #- commum-content/teoria/Vídeo Aulas (Luciano): Util-Video-Aulas.md
 
   - MyHDL:
-      - "util/infra-docker.md"
-      - "teoria/myhdl-1.md"
+      - Configurando Infra: util/infra-docker.md
+      - MyHDL Básico: teoria/myhdl-1.md
 
-  - "Z01":
-      - "Resumo Assembly": "commum-content/z01/z01-Resumo-Assembly.md"
-      - "Z01.1 Cheat Sheet": "commum-content/z01/z01-Cheat-Sheet.md"
-      - "Instruction Set": "commum-content/z01/z01-InstructionSet.md"
-      - "Resumo VM": "commum-content/z01/z01-Resumo-VM.md"
+  - Z01:
+      - Resumo Assembly: commum-content/z01/z01-Resumo-Assembly.md
+      - Z01.1 Cheat Sheet: commum-content/z01/z01-Cheat-Sheet.md
+      - Instruction Set: commum-content/z01/z01-InstructionSet.md
+      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
 
   - Exercícios:
-      - Algebra Booleana - 1: "commum-content/exercicios/Exercicio-Algebra-Booleana-1.md"
-      - Álgebra Booleana - 2: "commum-content/exercicios/Exercicio-Algebra-Booleana-2.md"
+      - Algebra Booleana - 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1.md
+      - Álgebra Booleana - 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
       - Dados Digitais - 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
       - Dados Digitais - 2: commum-content/exercicios/Exercicio-Dados-2.md
       - Aritmética Binária: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
-      - "Lógica Sequencial": "https://forms.gle/XMsFCDMYsmz1qUP86"
-      - "Linguagem de Máquina": "https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf"
-      - "commum-content/exercicios/Exercicio-CPU-1.md"
-      - "commum-content/exercicios/Exercicio-CPU-2.md"
-      - "linguagem de máquina": commum-content/exercicios/Linguagem_de_maquina.pdf"
+      - Lógica Sequencial: https://forms.gle/XMsFCDMYsmz1qUP86
+      - Linguagem de Máquina: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
+      - commum-content/exercicios/Exercicio-CPU-1.md
+      - commum-content/exercicios/Exercicio-CPU-2.md
+      - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
 
   - Útil:
-      - "commum-content/util/Util-Comecando-novo-projeto.md"
-      - "commum-content/util/Util-vixi-sou-scrum.md"
-      - "commum-content/util/Util-vixi-sou-dev.md"
-      - "util/infra-docker.md"
+      - commum-content/util/Util-Comecando-novo-projeto.md
+      - commum-content/util/Util-vixi-sou-scrum.md
+      - commum-content/util/Util-vixi-sou-dev.md
+      - util/infra-docker.md
 
-  - Avaliações: "Avaliacoes.md"
+  - Avaliações: Avaliacoes.md
 #- História:
 #  - 'Historia-linux.md'
