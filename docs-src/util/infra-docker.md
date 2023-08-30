@@ -5,7 +5,8 @@ Vamos configurar os softwares que usaremos para desenvolver o nosso processador.
 1. Ter o Vscode instalado
 1. Configurar um pacote python (telemetry)
 1. Instalar docker
-1. Instalar o openFPGALoader
+1. Instalar o FPGALoader
+1. Teste
 
 ## 1. VScode
 
@@ -16,7 +17,6 @@ Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar
 2. Pesquiste por **ms-vscode-remote.remote-containers** e instale o mesmo, conforme a imagem abaixo:
 
 ![](figs/addExtension.png)
-
 
 ## 2. Telemetry
 
@@ -89,10 +89,19 @@ Atualmente, containers é uma forma altamente popular e consolidada no mercado d
     sudo snap enable docker
     ```
 
-## Testando
 
-!!! info
-    Plugue a FPGA no computador!
+## 4. FpgaLoader
+
+Faća o download do programa que facilita a programacão da FPGA (desenvolvido internamento pelo Eduardo Marossi):
+
+- https://github.com/Insper/fpgaloader/releases
+
+E com a FPGA plugada no computador execute o programa.
+
+!!! warning "Usuários Linux"
+    Executem o comando com `sudo` por conta do acesso ao USB.
+
+## 5. Testando
 
 Para testar faca o download do repositório:
 
@@ -107,6 +116,8 @@ E abra a pasta recém clonada no Vscode e carregue o projeto no contêiner execu
 No terminal:
 
 1. Execute `pytest` para testarmos a instalacão python
-1. Execute `make toplevel.prog` para testarmos a parte de compilação e programacão da FPGA.
+1. Execute `make toplevel.rbf` para testarmos a parte de compilação e programacão da FPGA.
 
-Você deve ver os LEDs da FPGA piscarem.
+Os scripts devem ter gerado um arquivo chamado `toplevel.rbf`, arraste o arquivo para o programa `fpgaloader`.
+
+Agora você deve observar que os LEDs da FPGA piscam.
