@@ -101,6 +101,17 @@ Faća o download do programa que facilita a programacão da FPGA (desenvolvido i
 
 E com a FPGA plugada no computador execute o programa.
 
+!!! warning "Usuários Windows"
+
+    Vocês vão precisar baixar também o programa Zadig (está também no github, em releases). Executem o Zadig, e pluguem a placa, deverá aparecer "USB Blaster II", escolha o driver "libusb-K" conforme a imagem e clique em "Install Driver". Em seguida pode prosseguir abrindo o programa "fpgaloader"
+
+![](figs/windowsZadig.png)
+
+    
+!!! warning "Usuários macOS (M1/M2 ou Intel)"
+
+    Baixem a versão apropriada para o seu macOS, se você tem M1 ou M2 baixe a versão aarch64. Caso seja Intel baixe a versão x86_64. Descompacte e arraste o aplicativo fpgaloader para pasta Applications no seu macOS. Para abrir a primeira vez, será necessário clicar com o botão direito do mouse em cima do executável, e clicar em "Abrir".
+
 !!! warning "Usuários Linux"
     Executem o comando com `sudo` por conta do acesso ao USB.
 
