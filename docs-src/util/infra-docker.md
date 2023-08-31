@@ -24,6 +24,9 @@ Primeiro vamos configurar o plugin de telemetria (python), uma coleta de dados q
 
 
 !!! exercise
+
+    - ==Execute fora do docker no seu terminal do vscode==
+    
     Fazer dentro de um venv
     
     ```
@@ -86,7 +89,6 @@ Atualmente, containers é uma forma altamente popular e consolidada no mercado d
     sudo snap disable docker
     sudo snap enable docker
     ```
-
 
 ## 4. FpgaLoader
 
