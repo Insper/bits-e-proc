@@ -90,6 +90,9 @@ Atualmente, containers é uma forma altamente popular e consolidada no mercado d
     sudo snap enable docker
     ```
 
+!!! warning
+    Reinicie o computador antes de seguir.
+
 ## 4. FpgaLoader
 
 Faća o download do programa que facilita a programacão da FPGA (desenvolvido internamento pelo Eduardo Marossi):
