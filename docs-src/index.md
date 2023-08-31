@@ -1,6 +1,5 @@
 # Bits e Processadores
 
-
 - **Curso:** Ciência da Computacão do [Insper](https://www.insper.edu.br/)
 - **Disciplina:** [Bits e Processadores]()[^1]- 
 - **Prof:** Rafael Corsi - rafael.corsi@insper.edu.br
@@ -17,15 +16,15 @@ Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de
 ## Aulas
 
 
-|       | Teoria                                                                               | Lab                                              | Exercício                                                                        | Proj |
-|-------|--------------------------------------------------------------------------------------|--------------------------------------------------|----------------------------------------------------------------------------------|------|
-| 1     |                                                                                      | Lab 1: Visão geral                               |                                                                                  |      |
-| 2     | Dados Digitais                                                                       | Lab 1: Visão geral<br>Lab 2: Configurando Github | Dados Digitais - 1<br>Dados Digitais - 2                                         |      |
-| 3     | Álgebra Booleana                                                                     | Lab 3: Github                                    | Álgebra Booleana - 1<br>Álgebra Booleana - 2                                     |      |
-| 4     | Resistor-Transistor Logic (RTL)                                                      | Lab 4: Transistores / CI                         |                                                                                  |      |
-| ==5== | [Aritimética Binária](/bits-e-proc/commum-content/teoria/Teoria-Aritmetica-Binaria/) |                                                  | [Aritimética Binária](commum-content/exercicios/Exercicios-Aritmetica-Booleana/) |      |
-| 6     |                                                                                      |                                                  |                                                                                  |      |
-| 7     | PROVA 1                                                                              |                                                  |                                                                                  |      |
+|       | Teoria                                                                               | Lab                                                                                              | Exercício                                                                        | Proj |
+|-------|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|------|
+| 1     |                                                                                      | Lab 1: Visão geral                                                                               |                                                                                  |      |
+| 2     | Dados Digitais                                                                       | Lab 1: Visão geral<br>Lab 2: Configurando Github                                                 | Dados Digitais - 1<br>Dados Digitais - 2                                         |      |
+| 3     | Álgebra Booleana                                                                     | Lab 3: Github                                                                                    | Álgebra Booleana - 1<br>Álgebra Booleana - 2                                     |      |
+| 4     | Resistor-Transistor Logic (RTL)                                                      | Lab 4: Transistores / CI                                                                         |                                                                                  |      |
+| 5     | [Aritimética Binária](/bits-e-proc/commum-content/teoria/Teoria-Aritmetica-Binaria/) |                                                                                                  | [Aritimética Binária](commum-content/exercicios/Exercicios-Aritmetica-Booleana/) |      |
+| ==6== |                                                                                      | [Configurando Infra](https://insper.github.io/bits-e-proc/util/infra-docker/)  <br> Lab 5: MyHDL |                                                                                  |      |
+| 7     | PROVA 1                                                                              |                                                                                                  |                                                                                  |      |
 
 -------------------------
 
