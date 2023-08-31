@@ -22,22 +22,20 @@ Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar
 
 Primeiro vamos configurar o plugin de telemetria (python), uma coleta de dados que fazemos em algumas disciplinas, os dados são usados anonimamentes a fim de entender e melhorar as dinâmicas de sala de aula.
 
-No terminal do Vscode execute:
 
-```bash
-pip3 install git+https://github.com/insper-education/telemetry-pytest
-```
-
-E depois de instalado o pacote, execute:
-
-```
-telemetry auth
-```
-
-!!! info
+!!! exercise
+    Fazer dentro de um venv
+    
+    ```
+    python3 -m venv venv
+    . venv/bin/activate    
+    pip3 install git+https://github.com/insper-education/telemetry-pytest
+    telemetry auth
+    ```
+ 
     Isso ira abrir um navegador que você devera logar com sua conta do github e então o sistema irá gerar um token, que deve ser **colado no terminal**. 
 	
-![](figs/telemetryAuth.png)
+    ![](figs/telemetryAuth.png)
 
 ## 3. Docker
 
