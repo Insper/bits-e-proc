@@ -103,12 +103,11 @@ E com a FPGA plugada no computador execute o programa.
 
 ## 5. Testando
 
-Para testar faca o download do repositório:
 
-```
-https://github.com/Insper/bits-e-proc-docker-test
-```
-
+!!! exercise
+    1. Criei um repositório usando o [classroom]({{infra_test_classroom}})
+    2. Clone o repositório para a sua máquina
+    
 E abra a pasta recém clonada no Vscode e carregue o projeto no contêiner executando o comando **Open Folder in Container**:
 
 ![](figs/vscode.png)

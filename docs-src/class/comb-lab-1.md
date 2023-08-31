@@ -1,54 +1,36 @@
 # Lab 5: MyHDL
 
+| Lab 5                                                                      |
+|----------------------------------------------------------------------------|
+| **Data limite para entrega**: =={{lab_5_deadline}}==                      |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_5_classroom}})== |
+
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
     
     Neste laboratório você pode receber até: **({{lab_5_points}})**.
 
-Leitura prévia necessária:
+!!! exercise
+    Antes de seguiir você deve instalar a infra descrita em:
+    
+    - https://insper.github.io/bits-e-proc/util/infra-docker/ 
 
-- `MyHDL/MyHDL Básico`
+!!! exercise
+    Leitura prévia necessária:
+
+    - https://insper.github.io/bits-e-proc/teoria/myhdl-1/
 
 Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-Combinacional`](/bits-e-proc/class/logiComb-Projeto)), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
 
 ==Os laboratórios são individuais e possuem nota (atualizado para a nova versão do curso)==, cada laboratório contribui com um pouco dos pontos da avaliação individual. Todos os laboratórios devem ser realizados localmente e finalizados até o término da aula.
 
 !!! exercise
-    Para executar qualquer laboratório você deve seguir os passos a seguir:
-
-    1. Acesse o lab pelo link {{lab_5_classroom}} 
-    1. Clone o repositório criado 
-    1. Crie o ambiente virtual python (`python3 -m venv env`)
-    1. Ative o ambiente virtual (`. env/bin/activate`)
-    1. Instale as dependências (`pip3 install -r requirements.txt`)
+    Para executar qualquer laboratório você deve:Agora
     
-!!! warning 
-    Sempre que for abrir um terminal novo e acessar a pasta, será necessário ativar o ambiente virtual:
-   
-    ```
-    . env/bin/activate
-    ```
-    
-### Configurando telemetria
-
-Para entender melhor o comportamento de vocês ao longo dos laboratórios e atividades da disciplina, nós coletamos alguns dados de telemetria. A ideia aqui não é utilizar os dados para avaliação, mas sim para melhorias futuras. Esta técnica é muito utilizado em disciplinas da ciência da computação (inclusive devlife).
-
-
-!!! exercise
-    Antes de trabalharmos no laboratório será que vocês se autentiquem no servidor:
-    
-    === "Linux"
-        ```bash
-        $ telemetry auth
-        ```
-        
-    === "Mac"
-        ```bash
-        $ python -m telemetry auth
-        ```
-    
-    1. Ele deve abrir uma página no navegador e pedir para vocês logarem no github
-    1. Após logar você deve receber um token e colar o valor no terminal
+    1. Abrir a pasta no vscode
+    1. Abrir o workspace no container 
+    1. Usar o terminal do container
+    1. Abrir o fpgaLoader para programar a FPGA
     
 ### pytest
 
@@ -101,10 +83,10 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 Agora vamos entender como conseguimos usar o nosso hardware descrito em `MyHDL` em um hardware real (FPGA), para isso temos que primeiro converter o `MyHDL` para `VHDL` e então usar a ferramenta da Intel (Quartus) para **sinterizar** o nosso hardware. Depois disso temos que programar a FPGA, a seguir temos uma visão simplificada do fluxo:
 
 ```
-   toplevel.py   ---> toplevel.vhd ---> Makefile ---> .sof ---> FPGA
-       ^                                   ^
-       |                                   |
-    componente.py                        Quartus
+   toplevel.py   ---> toplevel.v ---> yosys ---> .rbf ---> FPGA
+       ^                                  
+       |                                   
+    componente.py                        
 ```
 
 Notem que agora o nosso módulo precisa ler e acionar pinos (interface com o mundo externo), normalmente a última camada de um projeto de hardware (aquela que realmente acessa os pinos) é chamada de toplevel. Os pinos dessa camada possuem nomes fixos, por isso temos que mapear os pinos do HW para os sinais do nosso módulo. Nessa primeira etapa iremos utilizar os seguintes componentes da nossa placa:
@@ -144,11 +126,9 @@ HEX5 = Signal(intbv(1)[7:])
 
 # instance e generate vhd
 top = toplevel(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5)
-top.convert(hdl="VHDL") # (2)
+top.convert(hdl="verilog") #
 ```
- 
- 1. Vetor de tamanho 10
- 2. Aqui indicamos para o MyHDL gerar o vhdl a partir do componente `top`
+
  
 Notem que os sinais criados são do tipo `Signal(intbv(0)[X:])`, isso indica que estamos manipulando um vetor de bits de tamanho **X**, no caso do LED, indicamos que o vetor é do tamanho 10, e no caso das KEY de tamanho 4. Com isso, podemos dentro do componente acessar individualmente cada um dos elementos do vetor:
  
@@ -174,26 +154,25 @@ Notem que os sinais criados são do tipo `Signal(intbv(0)[X:])`, isso indica que
     ./toplevel.py 
     ```
 
-### Gerando `.sof`
+### Gerando `.rbf`
 
-O processo de gerar um hardware que posso ser executado na FPGA é complexo e até pouco tempo não existiam ferramentas opensource que fazem isso. Iremos utilizar um software da Intel chamado de Quartus que é capaz de sintetizar um hardware paras as FPGAs que a Intel possui, no nosso caso a Cyclone V. Para facilitar o desenvolvimento criamos um makefile que recebe como input a pasta do exercício e gera o `sof`. O projeto do quartus será o mesmo para todos os exercícios.
+O processo de gerar um hardware que posso ser executado na FPGA é complexo e até pouco tempo não existiam ferramentas opensource que fazem isso. Iremos utilizar uma série de softwares opensource que realizam a sintese do nosso projeto para algo que possa ser programado na FPGA.
 
 !!! tip
-    O processo é demorado para quem está acostumado a apenas programar em python, a geracão do arquivo pode demorar alguns minutos.
+    O processo é demorado para quem está acostumado a apenas programar em python, a geracão do arquivo pode demorar um pouco mais.
 
 !!! exercise
     Na raiz do repositório execute:
-    1. `make -C quartus clean`
-    1. `make -C quartus all`
+    1. `make toplevel.rbf`
     1. Aguardem compilar
-    1. Verifiquem que um novo arquivo `quartus/DE0_CV_Default.sof` foi gerado
+    1. Verifiquem que um novo arquivo `toplevel.rbf` foi gerado
     
 ### Programando FPGA
 
-Agora com a FPGA plugada no computador podemos programar, para isso usaremos o comando `make -C quartus program` que deve enviar para a ROM da FPGA o bitstream.
+Agora com a FPGA plugada no computador podemos programar, para isso basta abrir o programa `fpgaloader` e arrastar o arquivo `toplevel.rbf` para o programa. 
 
 !!! exercise
-    1. execute `make -C quartus program`
+    1. Programe a FPGA
     1. Mexa nas chaves 0 e 1 e notem o LED 0 obedece a equacao `sw0 and (not sw1)`
     
 ## Praticando - parte 2
@@ -208,11 +187,10 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     1. Implementar o módulo
     1. Edite o `toplevel` para incluir o `exe5`
     1. Gerar o `toplevel.vhd` rodando `toplevel.py`
-    1. Compile o vhdl
-        - `make -C quartus clean`
-        - `make -C quartus all`.
-        - `make -C quartus program`
-    1. Validar na FPGA 
+    1. Compile o verilog
+        - `make toplevel.rbf`
+    1. Programe a FPGA 
+    1. Valide 
     
     Dica: 
     
@@ -234,7 +212,7 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     +ic2 = sw2hex(HEX0, SW)
     ```
     
-    Lembre de validar na FPGA.
+    Lembre de validar na FPGA, seguindo todos os passos.
     
 !!! exercise
     - Modulo: `bin2hex`
@@ -247,4 +225,4 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     +ic3 = bin2hex(HEX1, SW)
     ```
     
-    Lembre de validar na FPGA.
+    Lembre de validar na FPGA, seguindo todos os passos.
