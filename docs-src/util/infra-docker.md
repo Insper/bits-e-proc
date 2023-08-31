@@ -112,6 +112,8 @@ E com a FPGA plugada no computador execute o programa.
 
     Baixem a versão apropriada para o seu macOS, se você tem M1 ou M2 baixe a versão aarch64. Caso seja Intel baixe a versão x86_64. Descompacte e arraste o aplicativo fpgaloader para pasta Applications no seu macOS. Para abrir a primeira vez, será necessário clicar com o botão direito do mouse em cima do executável, e clicar em "Abrir".
 
+![](figs/macosOpen.png)
+
 !!! warning "Usuários Linux"
     Executem o comando com `sudo` por conta do acesso ao USB.
 
