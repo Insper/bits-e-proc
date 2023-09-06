@@ -2,7 +2,7 @@
 
 | Data da entrega |
 |-----------------|
-| 11/09 - Domingo |
+| 11/09 - Segunda |
 
 - Arquivo: `hw/components.py`
 

@@ -24,15 +24,28 @@ Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-
 
 ==Os laboratórios são individuais e possuem nota (atualizado para a nova versão do curso)==, cada laboratório contribui com um pouco dos pontos da avaliação individual. Todos os laboratórios devem ser realizados localmente e finalizados até o término da aula.
 
-!!! exercise
-    Para executar qualquer laboratório você deve:Agora
-    
-    1. Abrir a pasta no vscode
-    1. Abrir o workspace no container 
-    1. Usar o terminal do container
-    1. Abrir o fpgaLoader para programar a FPGA
-    
-### pytest
+!!! video
+    ![](https://youtu.be/u03nflB7V6o)
+
+## Autenticando
+
+Para podermos executar os testes será necessário autenticar, execute no terminal do codespace:
+
+```bash
+telemetry auth
+```
+
+1. Autentique com seu user do github
+1. Cole o token no terminal
+
+Verifique executando novamente o mesmo comando, você deve obter:
+
+```
+$ telemetry check
+All set! Configuration ok
+```
+
+## pytest
 
 Bits e Processadores utiliza uma metodologia de desenvolvimento de projeto chamada de **test driven development (TDD)**, ou seja, para cada etapa do projeto teremos um teste associado a ele. Os testes podem ser do tipo unitário e de integraćão. Para realizarmos os testes em python utilizaremos o módulo `pytest` e o plugin de dev-life (para fazer o report do progresso de vocês para o servidor).
 
@@ -43,8 +56,7 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
 <script id="asciicast-DL3cuBQSgSgIyXdZK2LVBolgr" src="https://asciinema.org/a/DL3cuBQSgSgIyXdZK2LVBolgr.js" async></script>
 
 !!! exercise
-    1. Navegue no terminal até a pasta `comb`
-    1. Execute no terminal `pytest -k exe1`
+    Execute no terminal `pytest -s -k exe1`
     
     O teste deve falhar pois não foi implementado ainda.
     
@@ -58,10 +70,6 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
     
     Execute o `pytest` novamente e note que o código passa no teste.
     
-    
-!!! info
-    Todo o teste executado no repositório será submetido ao servidor de dev-life para processamento futuro e acompanhamento individual da participacão de vocês nos projetos. Portanto, facam individualmente os laboratórios.
-    
 !!! progress
     Começando o laboratório.
     
@@ -72,13 +80,20 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 !!! exercise "💰 ({{lab_5_points}})"
     Para cada exercício implemente a solução no arquivo `comb_modules.py` e teste com `pytest`. A descrição do exercício está no próprio módulo.
 
-    - `def exe2()`: `pytest -k exe2`
-    - `def exe3()`: `pytest -k exe3`
+    - `def exe2()`: `pytest -s -k exe2`
+    - `def exe3()`: `pytest -s -k exe3`
 
 !!! progress
     Continuar...
 
-## Executando na FPGA
+## Executando na FPGA 
+
+
+!!! exercise
+    Instalar o fpgaLoader conforme [instrucões para cada OS](https://insper.github.io/bits-e-proc/util/infra-codespace)
+
+!!! video
+    ![](https://www.youtube.com/watch?v=KVWXYP08llg)
 
 Agora vamos entender como conseguimos usar o nosso hardware descrito em `MyHDL` em um hardware real (FPGA), para isso temos que primeiro converter o `MyHDL` para `VHDL` e então usar a ferramenta da Intel (Quartus) para **sinterizar** o nosso hardware. Depois disso temos que programar a FPGA, a seguir temos uma visão simplificada do fluxo:
 
@@ -145,24 +160,16 @@ Notem que os sinais criados são do tipo `Signal(intbv(0)[X:])`, isso indica que
 !!! info
     Notem que o `componente` recebe como argumentos os `ledr_s` e as chaves `SW` da FPGA e implementa a lógica `sw[0] and (not sw[1])`.
 
-!!! exercise
-    1. Analise o arquivo `toplevel.py`
-    1. Execute o `toplevel.py` e note a geração do arquivo `toplevel.vhd`
-    1. Analise o arquivo `toplevel.vhd`
-    
-    ```bash
-    ./toplevel.py 
-    ```
-
 ### Gerando `.rbf`
 
-O processo de gerar um hardware que posso ser executado na FPGA é complexo e até pouco tempo não existiam ferramentas opensource que fazem isso. Iremos utilizar uma série de softwares opensource que realizam a sintese do nosso projeto para algo que possa ser programado na FPGA.
+O processo de gerar um hardware que posso ser executado na FPGA é complexo e até pouco tempo não existiam ferramentas opensource que fazem isso. Iremos utilizar uma série de softwares opensource que realizam a síntese do nosso projeto para algo que possa ser programado na FPGA.
 
 !!! tip
     O processo é demorado para quem está acostumado a apenas programar em python, a geracão do arquivo pode demorar um pouco mais.
 
 !!! exercise
     Na raiz do repositório execute:
+ 
     1. `make toplevel.rbf`
     1. Aguardem compilar
     1. Verifiquem que um novo arquivo `toplevel.rbf` foi gerado
@@ -172,7 +179,9 @@ O processo de gerar um hardware que posso ser executado na FPGA é complexo e at
 Agora com a FPGA plugada no computador podemos programar, para isso basta abrir o programa `fpgaloader` e arrastar o arquivo `toplevel.rbf` para o programa. 
 
 !!! exercise
-    1. Programe a FPGA
+    1. Gere o `toplevel.rbf`
+    1. Faća o download do arquivo
+    1. Usando o `fpgaLoader` programe a FPGA
     1. Mexa nas chaves 0 e 1 e notem o LED 0 obedece a equacao `sw0 and (not sw1)`
     
 ## Praticando - parte 2
@@ -186,7 +195,6 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     
     1. Implementar o módulo
     1. Edite o `toplevel` para incluir o `exe5`
-    1. Gerar o `toplevel.vhd` rodando `toplevel.py`
     1. Compile o verilog
         - `make toplevel.rbf`
     1. Programe a FPGA 

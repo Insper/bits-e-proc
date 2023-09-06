@@ -141,10 +141,10 @@ nav:
       - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
 
   - Útil:
-      - commum-content/util/Util-Comecando-novo-projeto.md
-      - commum-content/util/Util-vixi-sou-scrum.md
-      - commum-content/util/Util-vixi-sou-dev.md
-      - util/infra-docker.md
+      - "Novo projeto": commum-content/util/Util-Comecando-novo-projeto.md
+      - "Ixi, sou scrum": commum-content/util/Util-vixi-sou-scrum.md
+      - "Ixi, sou dev": commum-content/util/Util-vixi-sou-dev.md
+      - "Codespace": util/infra-codespace.md
 
   - Avaliações: Avaliacoes.md
 #- História:
