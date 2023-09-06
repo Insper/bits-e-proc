@@ -11,11 +11,6 @@
     Neste laboratório você pode receber até: **({{lab_5_points}})**.
 
 !!! exercise
-    Antes de seguiir você deve instalar a infra descrita em:
-    
-    - https://insper.github.io/bits-e-proc/util/infra-docker/ 
-
-!!! exercise
     Leitura prévia necessária:
 
     - https://insper.github.io/bits-e-proc/teoria/myhdl-1/
@@ -24,12 +19,23 @@ Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-
 
 ==Os laboratórios são individuais e possuem nota (atualizado para a nova versão do curso)==, cada laboratório contribui com um pouco dos pontos da avaliação individual. Todos os laboratórios devem ser realizados localmente e finalizados até o término da aula.
 
+## Infra
+
+Agora iremos fazer todo o desenvolvimento da disciplina usando o codespaces:
+
+1. Crie o repositório pelo link do [Classroom]({{lab_5_classroom}})
+1. Com o repositório criado, clique em `Code -> Codespacess -> +` ()[^1]
+1. Aguarde carregar e abrir o `vscode` online
+1. Trabalhe online
+
+[^1]:![](figs/codespace.png)
+
 !!! video
     ![](https://youtu.be/u03nflB7V6o)
 
-## Autenticando
+### Autenticando
 
-Para podermos executar os testes será necessário autenticar, execute no terminal do codespace:
+Para podermos executar os testes será necessário autenticar, execute no terminal do codespaces:
 
 ```bash
 telemetry auth
@@ -45,7 +51,7 @@ $ telemetry check
 All set! Configuration ok
 ```
 
-## pytest
+### pytest
 
 Bits e Processadores utiliza uma metodologia de desenvolvimento de projeto chamada de **test driven development (TDD)**, ou seja, para cada etapa do projeto teremos um teste associado a ele. Os testes podem ser do tipo unitário e de integraćão. Para realizarmos os testes em python utilizaremos o módulo `pytest` e o plugin de dev-life (para fazer o report do progresso de vocês para o servidor).
 
@@ -88,9 +94,8 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 
 ## Executando na FPGA 
 
-
 !!! exercise
-    Instalar o fpgaLoader conforme [instrucões para cada OS](https://insper.github.io/bits-e-proc/util/infra-codespace)
+    Instalar o fpgaLoader conforme [instrucões para cada OS](https://insper.github.io/bits-e-proc/util/infra-codespaces)
 
 !!! video
     ![](https://www.youtube.com/watch?v=KVWXYP08llg)
