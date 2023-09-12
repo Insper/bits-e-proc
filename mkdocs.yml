@@ -151,6 +151,7 @@ nav:
     #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
       - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md
       - "Ixi, sou dev": util/Util-vixi-sou-dev.md
+      - "Codespace Projeto": util/Util-projeto-codespace.md
       - "Codespace": util/infra-codespace.md
 
   - Avaliações: Avaliacoes.md

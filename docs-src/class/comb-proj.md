@@ -23,31 +23,17 @@
     - Você é o mediador do projeto? Leia: [Vixi sou mediador](/bits-e-proc/util/Util-vixi-sou-scrum)
     - Seu papel é o de desenvolvedor? Leia: [Vixi sou dev](/bits-e-proc/util/Util-vixi-sou-dev/)
 
+    Para o desenvolvimento do projeto iremos o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno:
+
+    - [github codespace](/bits-e-proc/util/Util-projeto-codespace)
+
 Esse projeto tem como objetivo trabalhar com portas lógicas e sistemas digitais combinacionais (sem um clock) em FPGA e MyHDL. Os elementos lógicos desenvolvidos nessa etapa serão utilizados como elementos básicos para a construção do computador. 
 
 ## Instruções
 
 O desenvolvimento será na linguagem MyHDL, o grupo deve se organizar para implementar todos os elementos propostos. O facilitador escolhido será responsável pela completude e consistência do branch master do grupo.
 
-### Codespace
-
-Todo o desenvolvimento do projeto deve ser realizado usando o github codespace, cada aluno deve criar o seu próprio ambiente de trabalho (==NÃO COMPARTILHAR CONTÊINERES==).
-
-![](figs/codespace-group.png)
-
-Sugerimos, que após criado o codespace, vocês editem e coloquem o nome de cada um para não confundir.
-
-![](figs/codespace-group-rename.png)
-
-### No container
-
-Com o contêiner criado, autentique:
-
-> Dentro do codespace
-
-```bash
-telemetry auth
-```
+Vocês irão trabalhar usando o [github codespace](/bits-e-proc/util/Util-projeto-codespace), mas a entrega só é validada quando realizarem um commit e push para o repositório, os arquivos alterados dentro do contêiner não temporários.
 
 ### Integrantes
     
