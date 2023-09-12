@@ -1,11 +1,13 @@
 # B - Lógica Combinacional
 
-| Sobre a entrega                                                    |
-|--------------------------------------------------------------------|
-| {{proj_comb_deadline}}                                             |
-| Criar repositório [Classroom]( {{proj_comb_classroom}})             |
-| Preencher para entregar [==Mediador==]( {{forms_proj_mediador}}) |
-| Preencher para entregar [==Dev==]( {{forms_proj_dev}})          |
+| Sobre a entrega                                                                 |
+|---------------------------------------------------------------------------------|
+| ==Deadline: {{proj_comb_deadline}}==                                            |
+| ^^APENAS UM DO GRUPO:^^ Criar repositório [Classroom]( {{proj_comb_classroom}}) |
+| ^^AO FINAL:^^ Preencher para entregar [==Mediador==]( {{proj_forms_mediador}})  |
+| ^^AO FINAL:^^ Preencher para entregar [==Dev==]( {{proj_forms_dev}})            |
+
+Visão geral do projeto ao final do curso:
 
 ![](figs/LogiComb/sistema-comb.svg)
 
@@ -23,7 +25,7 @@
     - Você é o mediador do projeto? Leia: [Vixi sou mediador](/bits-e-proc/util/Util-vixi-sou-scrum)
     - Seu papel é o de desenvolvedor? Leia: [Vixi sou dev](/bits-e-proc/util/Util-vixi-sou-dev/)
 
-    Para o desenvolvimento do projeto iremos o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno:
+    Para o desenvolvimento do projeto iremos usar o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno, siga os passos em:
 
     - [github codespace](/bits-e-proc/util/Util-projeto-codespace)
 
@@ -87,12 +89,27 @@ Cada desenvolvedor além de editar o arquivo `hw/components.py` deve editar o ar
 A entrega **final** deve ser feita no ramo `master` do git.
 
 - [ ] Implementar todos os módulos listados
+- [ ] Logo do grupo
 - [ ] Todos os módulos referentes a rubrica devem passar nos testes
 - [ ] Actions deve estar configurado e funcionando
 
-### Rubricas para avaliação do projeto
+## Rubricas para avaliação do projeto
 
 Cada integrante do grupo irá receber duas notas: Uma referente ao desenvolvimento total do projeto (Projeto) e outra referente a sua participação individual no grupo.
+
+### Logo
+
+Junto com os módulos o grupo deve entregar um logo da equipe, o logo deve ser salvo no repositório do grupo com o nome: 'logo.png'. Vocês podem usar IAs generativas para gerarem o logo, o mesmo deve possuir alguma relação com a matéria e o nome do grupo (é agora eu quero ver os arrependidos!).
+
+Lembrando dos nomes:
+
+- ASCIIrianos
+- Bosque     
+- Camarão    
+- djkhaled   
+- Elefante   
+- FURBY10111            
+- GolDoVasco 
 
 ### Conceito C
 
@@ -106,6 +123,7 @@ Cada integrante do grupo irá receber duas notas: Uma referente ao desenvolvimen
 - `deMux2way(a, q0, q1, sel)`
 - `deMux4way(a, q0, q1, q2, q3, sel)`
 - `deMux8way(a, q0, q1, q2, q3, q4, q5, q6, q7, sel)`
+- `logo.png`
 
 ### Conceito B
 

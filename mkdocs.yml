@@ -36,10 +36,11 @@ extra:
 
 
     proj_comb_classroom: https://classroom.github.com/a/wPrQAfo2
-    proj_comb_deadline: 11/09 - Quarta
+    proj_comb_deadline: 11/09 - Quarta - Meia Noite
 
     proj_forms_mediador: https://docs.google.com/forms/d/e/1FAIpQLSf3zNsrLDsf4Y_nQDBNIvMCgc7Bo8TeZhxcpInMACX4pCnOxQ/viewform?usp=sf_link
     proj_forms_dev:  https://docs.google.com/forms/d/e/1FAIpQLSdHZselm85uDTPkpzhUef5t8xVNvONvJsETDzoJDp85oIU4jQ/viewform?usp=sf_link
+
 
 markdown_extensions:
   - footnotes
@@ -151,7 +152,7 @@ nav:
     #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
       - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md
       - "Ixi, sou dev": util/Util-vixi-sou-dev.md
-      - "Codespace Projeto": util/Util-projeto-codespace.md
+      - "Codespace Projeto": util/Util-projet-codespace.md
       - "Codespace": util/infra-codespace.md
 
   - Avaliações: Avaliacoes.md
