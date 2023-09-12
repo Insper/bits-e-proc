@@ -1,33 +1,53 @@
 # B - Lógica Combinacional
 
-| Data da entrega |
-|-----------------|
-| 11/09 - Segunda |
-
-- Arquivo: `hw/components.py`
+| Sobre a entrega                                                    |
+|--------------------------------------------------------------------|
+| {{proj_comb_deadline}}                                             |
+| Criar repositório [Classroom]( {{proj_comb_classroom}})             |
+| Preencher para entregar [==Mediador==]( {{forms_proj_mediador}}) |
+| Preencher para entregar [==Dev==]( {{forms_proj_dev}})          |
 
 ![](figs/LogiComb/sistema-comb.svg)
 
+<!--
 !!! tip "Antes de começar"
     Siga os passos em:
     
     - https://insper.github.io/bits-e-proc/commum-content/util/Util-Comecando-novo-projeto/
+-->
 
-!!! tip "Vixi Sou scrum master"
-    Você é o scrum do projeto? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-scrum/
+!!! exercise "Começando novo projeto"
 
-!!! tip "Vixi! Sou desenvolvedor"
-    Seu papel é o de desenvolvedor? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-dev/
+    O grupo deve escolher um mediador para o projeto (não pode repetir) e os demais integrantes serão desenvolvedores.
+
+    - Você é o mediador do projeto? Leia: [Vixi sou mediador](/bits-e-proc/util/Util-vixi-sou-scrum)
+    - Seu papel é o de desenvolvedor? Leia: [Vixi sou dev](/bits-e-proc/util/Util-vixi-sou-dev/)
 
 Esse projeto tem como objetivo trabalhar com portas lógicas e sistemas digitais combinacionais (sem um clock) em FPGA e MyHDL. Os elementos lógicos desenvolvidos nessa etapa serão utilizados como elementos básicos para a construção do computador. 
 
 ## Instruções
 
 O desenvolvimento será na linguagem MyHDL, o grupo deve se organizar para implementar todos os elementos propostos. O facilitador escolhido será responsável pela completude e consistência do branch master do grupo.
+
+### Codespace
+
+Todo o desenvolvimento do projeto deve ser realizado usando o github codespace, cada aluno deve criar o seu próprio ambiente de trabalho (==NÃO COMPARTILHAR CONTÊINERES==).
+
+![](figs/codespace-group.png)
+
+Sugerimos, que após criado o codespace, vocês editem e coloquem o nome de cada um para não confundir.
+
+![](figs/codespace-group-rename.png)
+
+### No container
+
+Com o contêiner criado, autentique:
+
+> Dentro do codespace
+
+```bash
+telemetry auth
+```
 
 ### Integrantes
     
@@ -39,40 +59,26 @@ As tarefas devem ser resolvidas individualmente! Utilize a ajuda de seus colegas
     
 ### Controle de Tarefas e Repositório
 
-Nas discussões com os outros colegas o scrum master deve definir os módulos que cada um do grupo irá desenvolver. Crie uma rotina para commits e pull-request. Sempre teste os módulos e verifique se está fazendo o esperado.
-
-=== "Facilitador (Scrum Master)"
-    - Fazer a **atualização** do fork com o upstream
-    - Organizar o **github + issues + project**
-    - Gerenciar o grupo (atribuir tarefas)
-    - **Gerenciar os pull-requests**
-    - Criar relatório da performance de cada um do grupo
-    - Entregar/Apresentar o projeto no final 
-
-=== "Desenvolvedores"
-    - Realizar as tarefas atribuidas pelo scrum-master
-    - Ajudar na entrega final 
-    - Testar os códigos
-    - Realizar os pull-requests
+Nas discussões com os outros colegas o Mediador deve definir os módulos que cada um do grupo irá desenvolver. Crie uma rotina para commits e pull-request. Sempre teste os módulos e verifique se está fazendo o esperado.
 
 ### Testes
 
 Cada módulo da entrega possui um teste de unidade (similar ao dos labs), para executar o teste rode:
 
 ```py
-pytest -k hw/componentes.py -k MODULO
+pytest -s -k hw/componentes.py -k MODULO
 ```
 
 - MODULO: Módulo a ser testado
 
 ### Configurando Testes CI
 
-Cada desenvolvedor além de editar o arquivo `hw/components.py` deve editar o arquivo `.github/workflows/ components.yml` adicionando o teste referente ao modulo que implementou.
+Cada desenvolvedor além de editar o arquivo `hw/components.py` deve editar o arquivo `.github/workflows/ comb.yml` adicionando o teste referente ao modulo que implementou.
 
 !!! example
     Exemplo de como testar o componente `and16`.
 
-    ``` yml title=".github/workflows/componentes.yml"
+    ``` yml title=".github/workflows/comb.yml"
     - name: Test and16
       run: |
         pytest hw/test_components.py -k and16
@@ -80,7 +86,7 @@ Cada desenvolvedor além de editar o arquivo `hw/components.py` deve editar o ar
     
     Para testar mais módulos basta replicar o bloco anterior:
     
-    ``` yml title=".github/workflows/componentes.yml"
+    ``` yml title=".github/workflows/comb.yml"
     - name: Test and16
       run: |
         pytest hw/test_components.py -k and16
@@ -95,7 +101,7 @@ Cada desenvolvedor além de editar o arquivo `hw/components.py` deve editar o ar
 A entrega **final** deve ser feita no ramo `master` do git.
 
 - [ ] Implementar todos os módulos listados
-- [ ] Todos os módulos devem passar nos testes
+- [ ] Todos os módulos referentes a rubrica devem passar nos testes
 - [ ] Actions deve estar configurado e funcionando
 
 ### Rubricas para avaliação do projeto
@@ -168,8 +174,3 @@ O `toplevel.py` já está configurado para testar na FPGA, usando as chaves SW c
     ihex0 = bin2hex(hex0, bc0)
 ```
 
-### Formulários
-
-- O scrum deve preencher este: https://docs.google.com/forms/d/e/1FAIpQLScf_G8nLvN45edhR7o043xig2aAWB8jb9ZSM6yCvbHP7DziZA/viewform?usp=sf_link
-
-- Os desenvolvedores devem preencher este: https://docs.google.com/forms/d/e/1FAIpQLScYtzwG9xI6Aef3hWBJSD6GocEyhZC05NsEXzCVK3C7aKGZ-Q/viewform?usp=sf_link

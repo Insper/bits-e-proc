@@ -34,6 +34,13 @@ extra:
     lab_11_points: '0 HW / 2 SW'
     lab_11_classroom: https://classroom.github.com/a/rS4zT505
 
+
+    proj_comb_classroom: https://classroom.github.com/a/wPrQAfo2
+    proj_comb_deadline: 11/09 - Quarta
+
+    proj_forms_mediador: https://docs.google.com/forms/d/e/1FAIpQLSf3zNsrLDsf4Y_nQDBNIvMCgc7Bo8TeZhxcpInMACX4pCnOxQ/viewform?usp=sf_link
+    proj_forms_dev:  https://docs.google.com/forms/d/e/1FAIpQLSdHZselm85uDTPkpzhUef5t8xVNvONvJsETDzoJDp85oIU4jQ/viewform?usp=sf_link
+
 markdown_extensions:
   - footnotes
   - markdown.extensions.admonition
@@ -66,7 +73,7 @@ nav:
       - Critérios de Avaliação: Sobre-Criterios-de-Avaliacao.md
       - Rubricas individuais: Sobre-Rubricas.md
   - Projetos:
-      - A - Ambiente de desenvolvimento: class/intro-proj.md
+      # - A - Ambiente de desenvolvimento: class/intro-proj.md
       - B - Lógica Combinacional: class/comb-proj.md
       - C - ULA: class/ula-proj.md
       - D - Lógica Sequencial: class/seq-proj.md
@@ -141,9 +148,9 @@ nav:
       - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
 
   - Útil:
-      - "Novo projeto": commum-content/util/Util-Comecando-novo-projeto.md
-      - "Ixi, sou scrum": commum-content/util/Util-vixi-sou-scrum.md
-      - "Ixi, sou dev": commum-content/util/Util-vixi-sou-dev.md
+    #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
+      - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md
+      - "Ixi, sou dev": util/Util-vixi-sou-dev.md
       - "Codespace": util/infra-codespace.md
 
   - Avaliações: Avaliacoes.md
