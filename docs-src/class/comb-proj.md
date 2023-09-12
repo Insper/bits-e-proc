@@ -1,4 +1,4 @@
-# B - Lógica Combinacional
+# 1 - Lógica Combinacional
 
 | Sobre a entrega                                                                 |
 |---------------------------------------------------------------------------------|
@@ -37,6 +37,10 @@ O desenvolvimento será na linguagem MyHDL, o grupo deve se organizar para imple
 
 Vocês irão trabalhar usando o [github codespace](/bits-e-proc/util/Util-projeto-codespace), mas a entrega só é validada quando realizarem um commit e push para o repositório, os arquivos alterados dentro do contêiner não temporários.
 
+O arquivo que deve ser alterado é:
+
+- `hw/componentes.py`
+
 ### Integrantes
     
 Tarefas devem ser criadas no **Issues** e atribuídas aos demais colegas.
@@ -58,6 +62,13 @@ pytest -s -k hw/componentes.py -k MODULO
 ```
 
 - MODULO: Módulo a ser testado
+
+Para simplificar, você pode ir para o diretório `hw` e apenas executar o pytest:
+
+```
+cd hw/
+pytest -s -k MODULO
+```
 
 ### Configurando Testes CI
 

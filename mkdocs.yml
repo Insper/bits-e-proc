@@ -75,12 +75,12 @@ nav:
       - Rubricas individuais: Sobre-Rubricas.md
   - Projetos:
       # - A - Ambiente de desenvolvimento: class/intro-proj.md
-      - B - Lógica Combinacional: class/comb-proj.md
-      - C - ULA: class/ula-proj.md
-      - D - Lógica Sequencial: class/seq-proj.md
-      - E - Assembly: class/asm-proj.md
-      - G - Assembler: class/assembler-proj.md
-      - H - VM translator: class/vmtranslator-proj.md
+      - 1 - Lógica Combinacional: class/comb-proj.md
+      - 2 - ULA: class/ula-proj.md
+      - 3 - Lógica Sequencial: class/seq-proj.md
+      - 4 - Assembly: class/asm-proj.md
+      - 5 - Assembler: class/assembler-proj.md
+      - 6 - VM translator: class/vmtranslator-proj.md
       - X - Mundo Real: class/x-proj.md
   - Labs:
       - Lab 1  - Visão geral: class/intro-benchmark-lab.md
