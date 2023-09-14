@@ -83,7 +83,7 @@ Para cada exercício, anote a operação no papel e entenda o que está acontece
 
 ## Executando na FPGA
 
-Podemos executar a ULA na FPGA, para isso iremos disponibilizar o binário da FPGA com a ULA já implementada, o arquivo está dentro da pasta do lab da ula e é chamado de `Z011-ULA.rbf`. 
+Podemos executar a ULA na FPGA, para isso iremos disponibilizar o binário da FPGA com a ULA já implementada, o arquivo está dentro da pasta do lab da ula e é chamado de [Z011-ULA.rbf`](https://github.com/Insper/bits-e-proc-lab-6-adders/blob/main/Z011-ULA.rbf). 
 
 !!! exercise
     Use o programa fpgaLoader para carregar esse projeto na FPGA
