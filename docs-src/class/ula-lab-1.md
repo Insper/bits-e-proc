@@ -56,12 +56,12 @@ def fullAdder(a, b, c, soma, carry):
     s1 = Signal(bool(0)) 
     s2 = Signal(bool(0))
 
-    half_1 = halfAdder(a, b, s0, s1) # (2)
-    half_2 = halfAdder(c, s0, soma, s2) # (3)
+    half_1 = halfAdder(a, b, s1, s2) # (2)
+    half_2 = halfAdder(c, s1, soma, s3) # (3)
 
     @always_comb
     def comb():
-        carry.next = s1 | s2 # (4)
+        carry.next = s2 | s3 # (4)
 
     return instances()
 ```
@@ -104,12 +104,12 @@ Com isso temos um vetor de bits `s` que pode ser endereçado como `s[0]`, `s[1]`
         def fullAdder(a, b, c, soma, carry):
             s = [Signal(bool(0)) for i in range(3)]
 
-            half_1 = halfAdder(a, b, s[0], s[1]) 
-            half_2 = halfAdder(c, s[0], soma, s[2])
+            half_1 = halfAdder(a, b, s[1], s[2]) 
+            half_2 = halfAdder(c, s[1], soma, s[3])
 
             @always_comb
             def comb():
-                carry.next = s[1] | s[2]
+                carry.next = s[2] | s[3]
 
             return instances()
         ```
