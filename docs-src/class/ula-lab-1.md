@@ -1,5 +1,10 @@
 # Lab 6: Adders
 
+| Lab 6                                                                      |
+|----------------------------------------------------------------------------|
+| **Data limite para entrega**: =={{lab_6_deadline}}==                      |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_6_classroom}})== |
+
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
 !!! info "💰 Laboratório com pontos"
@@ -9,11 +14,8 @@ Neste laboratório iremos desenvolver somadores que serão utilizados no desenvo
 
 !!! exercise
     1. Acesse o lab 6 pelo link {{lab_6_classroom}}
-    1. Clone o repositório criado 
-    1. Crie o ambiente virtual python (`python3 -m venv env`)
-    1. Ative o ambiente virtual (`. env/bin/activate`)
-    1. Instale as dependências (`pip3 install -r requirements.txt`)
-
+    1. Trabalhe no codespace
+    1. Lembre de executar `telemetry auth` uma única vez antes de começar o lab.
 
 ## Half e Full adder 
 
@@ -22,13 +24,12 @@ Vamos começar implementando as duas unidades básicas de um somador: o *half-ad
 !!! exercise
     - File: `ula_modules.py `
     - Modulo: `def halfAdder(a, b, soma, carry):`
-    - Test: `pytest -k halfAdder`
+    - Test: `pytest -s -k halfAdder`
  
 !!! exercise
     - Modulo: `def fullAdder(a, b, c, soma, carry):`
-    - Test: `pytest -k fullAdder`
+    - Test: `pytest -s -k fullAdder`
     
-
 ### Reutilizando componente ( `Structural Modeling` )
 
 !!! info
@@ -74,7 +75,7 @@ Notem que na implementação anterior utilizamos três sinais binários interno 
 
 !!! exercise
     - Modulo: `def fullAdder(a, b, c, soma, carry):`
-    - Test: `pytest -k fullAdder`
+    - Test: `pytest -s -k fullAdder`
 
     Tarefa: 
     
@@ -148,7 +149,7 @@ Onde `x`, `y` e `s` são vetores do tipo `bool` de duas posições.
 !!! exercise "💰 Somador ({{lab_6_points}}), exercício "
     
     - Modulo: `def adder2bits(x, y, soma, vaiUm):`
-    - Test: `pytest -k adder2bits`
+    - Test: `pytest -s -k adder2bits`
     - Run: `./run_adder2bits.py`
 
     Tarefa: 
@@ -156,7 +157,13 @@ Onde `x`, `y` e `s` são vetores do tipo `bool` de duas posições.
     - Modifique o `adder2bits` para implementar um somador de dois bits como demonstrado no diagrama anterior.
     - Teste com `pytest`
     - Você pode testar o módulo executando ele: `./run_adder2bits`. Você deve dar como entrada os valores de `x` e `y` em decimal. ==Lembre que para dois bits o valor máximo é 3==.
-
+    
+    Nota:
+    
+    - Você deve lembrar de dar um commit e push para o seu código ir para o repositório e ser avaliado.
+    
+    Tip:
+    
     <script id="asciicast-282J3aAGabeQLyhbSdTgGuRIB" src="https://asciinema.org/a/282J3aAGabeQLyhbSdTgGuRIB.js" async></script>
 
 ### Generalizando
@@ -191,7 +198,7 @@ def fullAdder(a, b, c, soma, carry):
 
 !!! exercise
     - Modulo: `def fullAdder(a, b, soma, vaiUm):`
-    - Test: `pytest -k fullAdder`
+    - Test: `pytest -s -k fullAdder`
     
     Tarefa:
     
@@ -237,9 +244,4 @@ No `toplevel.py` eu estou usando o `bin2hex` do laboratório anterior para mostr
     ic2 = bin2hex(HEX0, ledr_bin)
     ```
 
-    1. Gerar o `toplevel.vhd` rodando `toplevel.py`
-    1. Compile o vhdl
-        - `make -C quartus clean`
-        - `make -C quartus all`.
-        - `make -C quartus program`
-    1. Validar na FPGA 
+    - Gere o `rbf` com: `make toplevel.rbf`

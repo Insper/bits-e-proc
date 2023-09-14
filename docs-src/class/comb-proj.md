@@ -58,7 +58,7 @@ Nas discussões com os outros colegas o Mediador deve definir os módulos que ca
 Cada módulo da entrega possui um teste de unidade (similar ao dos labs), para executar o teste rode:
 
 ```py
-pytest -s -k hw/componentes.py -k MODULO
+pytest hw/componentes.py -s -k MODULO
 ```
 
 - MODULO: Módulo a ser testado

@@ -6,16 +6,6 @@ O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da 
 1. Controlando ULA para realizar operações específicas (exercícios)
 1. Programar a FPGA na ULA e realizar operações.
 
-## Antes de começar
-
-Vamos atualizar o repositório de vocês com o oficial da disciplina, execute os comandos a seguir no terminal (dentro da pasta do lab):
-
-```bash
-git remote add upstream https://github.com/insper/bits-e-proc-labs 
-git fetch upstream
-git merge upstream/main
-```
-
 ## Simulador
 
 Iremos utilizar um simulador da ULA feito em python + Qt. Siga os passos a seguir:
@@ -81,35 +71,22 @@ Para cada exercício, anote a operação no papel e entenda o que está acontece
 
 !!! exercise "(difícil)"
     ```
-    `out = X or Y
+    out = X or Y
     ```
     Faça com que a saída da ULA seja X ou Y
 
 !!! exercise "(difícil)"
     ```
-    `out = X - Y`"
+    out = X - Y
     ```
     Faça com que a saída da ULA seja a entrada X menos a entrada Y
 
 ## Executando na FPGA
 
-!!! warning
-    - Só funciona na VM
-    - Precisa da FPGA
+Podemos executar a ULA na FPGA, para isso iremos disponibilizar o binário da FPGA com a ULA já implementada, o arquivo está dentro da pasta do lab da ula e é chamado de `Z011-ULA.rbf`. 
 
-Podemos executar a ULA na FPGA, para isso iremos disponibilizar o binário da FPGA com a ULA já implementada, o arquivo está dentro da pasta do lab da ula e é chamado de `ula/Z011-ULA.sof`. 
-
-Mas antes de programarmos a FPGA será necessário instalar um pacote python que possui a infra da disciplina, no terminal execute:
-
-```
-pip3 install git+https://github.com/Insper/bits-e-proc-tools
-```
-
-O pacote da disciplina chama `bits` e ao longo do curso ele será atualizado com novas funcionalidades. Agora iremos usar a de programar FPGA, passando como argumento o HW com a ULA:
-
-```
-$ bits program fpga Z011-ULA.sof
-```
+!!! exercise
+    Use o programa fpgaLoader para carregar esse projeto na FPGA
 
 Agora basta controlar as chaves da FPGA e ver o resultado da ULA nos LEDS. Note que as entradas X e Y da ula são fixas em:
 
