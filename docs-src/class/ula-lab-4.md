@@ -8,7 +8,7 @@ O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da 
 
 ## Simulador
 
-Iremos utilizar um simulador da ULA feito em python + Qt. Siga os passos a seguir:
+Iremos utilizar um simulador da ULA feito em python + Qt. Siga os passos a seguir (execute no seu computador):
 
 ```sh
 git clone https://github.com/eduardomarossi/z01.1-ula
