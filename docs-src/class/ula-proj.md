@@ -3,7 +3,7 @@
 | Sobre a entrega                                                                 |
 |---------------------------------------------------------------------------------|
 | ==Deadline: {{proj_ula_deadline}}==                                            |
-| ^^APENAS UM DO GRUPO:^^ Criar repositório [Classroom]( {{proj_ula__classroom}}) |
+| ^^APENAS UM DO GRUPO:^^ Criar repositório [Classroom]( {{proj_ula_classroom}}) |
 | ^^AO FINAL:^^ Preencher para entregar [==Mediador==]( {{proj_forms_mediador}})  |
 | ^^AO FINAL:^^ Preencher para entregar [==Dev==]( {{proj_forms_dev}})            |
 
