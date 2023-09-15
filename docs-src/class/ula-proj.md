@@ -1,26 +1,27 @@
 # C - ULA
 
+| Sobre a entrega                                                                 |
+|---------------------------------------------------------------------------------|
+| ==Deadline: {{proj_ula_deadline}}==                                            |
+| ^^APENAS UM DO GRUPO:^^ Criar repositório [Classroom]( {{proj_ula__classroom}}) |
+| ^^AO FINAL:^^ Preencher para entregar [==Mediador==]( {{proj_forms_mediador}})  |
+| ^^AO FINAL:^^ Preencher para entregar [==Dev==]( {{proj_forms_dev}})            |
+
+
 ![ULA](figs/D-ULA/D-sistema-ula.png)
 
 Neste projeto seu grupo terá que desenvolver os componentes para a implementação de uma unidade lógica e aritmética (ULA) de 16 bit (proposta pelo livro texto) que será capaz de realizar operações binárias muito simples porém que possibilitará realizarmos muitas coisas!
 
-!!! warning
-    O grupo deve eleger um novo scrum master para essa entrega (diferente do projeto B).
+!!! exercise "Começando novo projeto"
 
-!!! tip "Antes de começar"
-    Siga os passos em:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-Comecando-novo-projeto/
+    O grupo deve escolher um mediador para o projeto (não pode repetir) e os demais integrantes serão desenvolvedores.
 
-!!! tip "Vixi Sou scrum master"
-    Você é o scrum do projeto? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-scrum/
+    - Você é o mediador do projeto? Leia: [Vixi sou mediador](/bits-e-proc/util/Util-vixi-sou-scrum)
+    - Seu papel é o de desenvolvedor? Leia: [Vixi sou dev](/bits-e-proc/util/Util-vixi-sou-dev/)
 
-!!! tip "Vixi! Sou desenvolvedor"
-    Seu papel é o de desenvolvedor? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-dev/
+    Para o desenvolvimento do projeto iremos usar o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno, siga os passos em:
+
+    - [github codespace](/bits-e-proc/util/Util-projeto-codespace)
 
 ## Instruções 
 
@@ -29,18 +30,24 @@ Os arquivos referentes ao projeto são:
 - `hw/ula.py`: Script python com os módulos a serem implementados
 - `hw/test_ula.py`: Script de teste 
 
+Lembre que na primeira vez que criar o codespace você deve executar: `telemetry auth` no terminal.
+
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `hw` execute o pytest
+Abra o terminal na pasta `hw` execute o pytest:
 
 ```bash
-$pytest test_ula.py
+cd hw/
+pytest test_ula.py -s
 ```
 
 !!! tip
     Você pode usar o `-k MODULO` para executar apenas o teste o do módulo que deseja.
-
-## Módulos 
+    
+    ```
+    pytest test_ula -s -k zerador
+    ```
+## Conceito C - Módulos  
 
 Deve-se implementar os seguintes circuitos combinacionais:
 
@@ -106,7 +113,9 @@ A entrega **final** deve ser feita no ramo `master` do git.
 !!! warning
     Não fazer rubrica A e B na master, criar um novo branch para isso!
 
-### C
+### Conceito - C
+
+Para o conceito C, implementar: 
 
 - `add`
 - `inc`
@@ -115,11 +124,35 @@ A entrega **final** deve ser feita no ramo `master` do git.
 - `comparador`
 - `ula`
 
-- Testar na FPGA a ULA e gravar um vídeo dela funcionando.
+Você deve testar a ULA na FPGA e gravar um vídeo explicando o que está acontecendo, para isso modifique o toplevel para:
 
-### B - Nova topologia de somador (adder)
+```py
+def toplevel(LEDR, SW, KEY, hex0, hex1, HEX2, HEX3, HEX4, HEX5, CLOCK_50, RESET_N):
+    sw_s = [SW(i) for i in range(10)]
+    key_s = [KEY(i) for i in range(10)]
+    ledr_s = [Signal(bool(0)) for i in range(10)]
+    leds = Signal(modbv(0)[8:])
 
-!!! video
+    x = Signal(intbv(2)[8:])
+    y = Signal(intbv(1)[8:])
+    saida = ledr_s[0:8]
+    control = sw_s[6:0]
+    zr = ledr_s[8]
+    ng = ledr_s[9]
+    ula1 = ula(x, y, SW, zr, ng, leds)
+
+    # ---------------------------------------- #
+    @always_comb
+    def comb():
+        for i in range(8):
+            LEDR[i].next = leds[i]
+        LEDR[8].next = zr
+        LEDR[9].next = ng
+        
+    return instances()
+```
+
+### Conceito B - Nova topologia de somador (adder)
 
 Entrega:
 
@@ -204,7 +237,7 @@ Vocês encontram mais detalhes na wiki: https://en.wikipedia.org/wiki/Lookahead_
     - E           myhdl.AlwaysCombError: signal ({'cin'}) used as inout in always_comb function argument
     ```
     
-### A - Mais funcionalidades
+### Conceito A - Mais funcionalidades
 
 Entrega:
 
@@ -229,6 +262,11 @@ Os módulos devem ser integrados na `ula_new` e um diagrama fornecido indicando 
 !!! info "BCD adder"
     Iremos considerar que a nossa ULA pode tratar as entradas X e Y como números em BCD e pode realizar uma operação de soma entre eles. Para essa operação vocês devem criar um novo módulo `bcdAdder(x, y, z)` que recebe dois vetores de entrada `x` e `y` e resulta em um novo vetor `z` que é a soma em BCD dos valores.
     
-    Exemplo: `x=0000000000001000, y=0000000000001000 ==> z=0000000000010110`
+    Exemplo: 
+    
+    ```
+    x=0000000000001000, y=0000000000001000
+    z=0000000000010110`
+    ```
     
 

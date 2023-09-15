@@ -14,6 +14,8 @@ Você é o mediador (Scrum Master) do projeto e não sabe por onde começar? A s
       - FURBY10111 
       - GolDoVasco 
 
+1. Atualizar README e o logo.png 
+1. Atualizar repositório com módulos anteriores
 2. Ler documentação do projeto
 3. Criar Project e issues no github (detalhes ao final dessa página)
     - Discuta com os seus colegas
