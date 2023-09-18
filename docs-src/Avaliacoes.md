@@ -59,9 +59,12 @@ Liberado consulta ao material da disciplina.
 [Prova - Av3 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3.pdf) - [Resolução](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova_Av3_resolucao.pdf) - [Repositório](https://github.com/insper-classroom/21b-ele-av3-teste)
 
 
-## AV2 - AI
+    - RTL
+    - Formas de onda
+    - VHDL: Sequencial   
+-->
 
-Avaliação prática individual a ser realizada no SSD Linux. 
+## AV2 - AI
 
 A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
 
@@ -70,26 +73,21 @@ Liberado consulta ao material da disciplina.
 - Projetos:
     - B: Lógica Combinacional  
     - C: ULA
-    - D: Lógica sequencial 
 
-- Conteúdos:
+- Teoria:
     - Componentes Digitais
+    - Aritmética Binária HW
     - Aritmética Binária - HW: Half-Adder/ Full-Adder/ Somadores
     - ULA
-    - Lógica Sequencial
-    - VHDL: Combinacional
-    - VHDL: Sequencial   
-    - RTL
-    - Formas de onda
-    - Arquivos de teste
 
-[Prova - Av2 - 22b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/22b-ele-av2_resolucao.pdf)
+- Labs:
+  - Lab 5 - Myhdl / Lab 6 - Adders / Lab 7 - Hardware types / Lab 8 - ULA / Lab 9 - Depurando
 
-[Prova - Av2 - 22a](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Av2_resolucao.pdf ) - [Repositório](https://github.com/insper-classroom/22a-ele-av2-teste)
+- Simulado:
+    - https://classroom.github.com/a/_BZEsoXf
+    
+> Lembrem que o simulado é apenas um recorte da matéria.    
 
-[Prova - Av2 - 21b](https://github.com/Insper/Z01.1/blob/main/Exercicios/Extras/Prova-Av2_resposta.pdf ) 
-
--->
 ## AV1 - Terça 05/09
 
 Conteúdos: 
