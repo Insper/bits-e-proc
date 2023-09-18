@@ -66,6 +66,8 @@ Liberado consulta ao material da disciplina.
 
 ## AV2 - AI
 
+> Lembrem que o simulado é apenas um recorte da matéria.    
+
 A avaliação será distribuída via github classroom (link estará no blakcboard) e o envio deve ser feito via ele.
 
 Liberado consulta ao material da disciplina.
@@ -81,12 +83,11 @@ Liberado consulta ao material da disciplina.
     - ULA
 
 - Labs:
-  - Lab 5 - Myhdl / Lab 6 - Adders / Lab 7 - Hardware types / Lab 8 - ULA / Lab 9 - Depurando
+    - Lab 5 - Myhdl / Lab 6 - Adders / Lab 7 - Hardware types / Lab 8 - ULA / Lab 9 - Depurando
 
 - Simulado:
     - https://classroom.github.com/a/_BZEsoXf
     
-> Lembrem que o simulado é apenas um recorte da matéria.    
 
 ## AV1 - Terça 05/09
 
