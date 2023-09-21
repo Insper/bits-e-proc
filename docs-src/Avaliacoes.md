@@ -86,8 +86,10 @@ Liberado consulta ao material da disciplina.
     - Lab 5 - Myhdl / Lab 6 - Adders / Lab 7 - Hardware types / Lab 8 - ULA / Lab 9 - Depurando
 
 - Simulado:
-    - https://classroom.github.com/a/_BZEsoXf
-    
+    - {{av2_simulado_classroom}} 
+
+- 22b AV2:
+    - {{av2_simulado_2_classroom}}
 
 ## AV1 - Terça 05/09
 
