@@ -16,6 +16,11 @@ cd z01.1-ula
 pip3 install -r requirements.txt
 python3 main.py
 ```
+!!! Dica - Caso o programa não abrir, tente instalar esses pacotes a seguir: 
+    ```sh
+        sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+    ```
+
 
 Você deve obter a seguinte interface:
 
