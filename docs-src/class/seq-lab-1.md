@@ -1,25 +1,11 @@
 # Lab 10: Lógica Sequencial
 
+| Lab 10                                                                      |
+|----------------------------------------------------------------------------|
+| Entregue o código pelo repositório do ==[Classroom]({{lab_10_classroom}})== |
+
 !!! warning
     :zap: O laboratório só pode ser realizado com FPGA. 
-    
-    ==MAC M1? Use uma das NUCs do laboratório.==
-
-!!! exercise
-    Para executar qualquer laboratório você deve seguir os passos a seguir:
-
-    1. Acesse o lab pelo link {{lab_10_classroom}} 
-    1. Clone o repositório criado 
-    1. Crie o ambiente virtual python (`python3.8 -m venv env`)
-    1. Ative o ambiente virtual (`. env/bin/activate`)
-    1. Instale as dependências (`pip3 install -r requirements.txt`)
-    
-!!! warning 
-    Sempre que for abrir um terminal novo e acessar a pasta, será necessário ativar o ambiente virtual:
-   
-    ```
-    . env/bin/activate
-    ```
 
 ## Começando
 
@@ -53,6 +39,12 @@ Podemos interpretar o `def seq()` da seguinte maneira: Sempre que o sinal clock 
         time.sleep(1/CLOCK)
 ```
 
+Para todas as tarefas sigam o fluxo a seguir:
+
+1. `make toplevel.rbf`
+1. Programe a FPGA
+1. Teste e obeserve se o resultado é o esperado.
+
 ##  dff - FlipFlop tipo D
 
 !!! exercise
@@ -66,12 +58,7 @@ Podemos interpretar o `def seq()` da seguinte maneira: Sempre que o sinal clock 
     
     Mapeamos o clock para o `KEY[0]` e a entrada do dff para o `SW[0]`, notem que ao mexer a chave `SW[0]` nada acontece, o valor do LED muda apenas após apertar o `KEY[0]` (que é o `clock`).
     
-    Tarefa: Execute na FPGA e teste com as chaves e botões.
-    
-    1. `python3.8 toplevel.py`
-    1. `make -C quartus clean`
-    1. `make -C quartus all`
-    1. `make -C quartus program`
+    ==Tarefa: Execute na FPGA e teste com as chaves e botões.==
     
 ### Aplicando
  
@@ -119,6 +106,8 @@ Com a possibilidade de executarmos uma acão por clock, conseguimos realizar tar
         ```
         
         Mas precisamos lembrar que um sinal do módulo (argumento) não pode ser *entrada* e *saída* ao mesmo tempo. Por isso temos que criar o sinal auxiliar `tmp`. Sinais auxiliares podem ser entradas e saídas... na verdade não podemos dizer que ele é entrada ou saída pois só existe dentro do módulo.
+ 
+    ==Tarefa: Execute na FPGA e teste com as chaves e botões.==
  
 ### Clock
 
@@ -222,14 +211,8 @@ def seq():
             LEDR[i].next = ledr_s[i]
     ```
     
-    E façam o fluxo de rodar o módulo na FPGA. Verifiquem que o LED 0 pisca a aproximadamente 1s!!
-
-    Fluxo:
     
-    1. `python3.8 toplevel.py`
-    1. `make -C quartus clean`
-    1. `make -C quartus all`
-    1. `make -C quartus program`
+    ==Tarefa: Execute na FPGA e teste com as chaves e botões.==
 
 !!! exercise short 
     O `cnt` de 32 bits está bem dimensionado? Esse valor faz alguma diferença? Qual o maior tempo que podemos contar com o contador de 32bits?
@@ -265,7 +248,7 @@ def seq():
     ic4 = blinkLed(ledr_s[2], 1000, CLOCK_50, RESET_N)
     ```
     
-    Lembre de validar na FPGA!
+    ==Tarefa: Execute na FPGA e teste com as chaves e botões.==
 
 !!! exercise 
     - File: `seq_modules.py`
@@ -311,7 +294,9 @@ def seq():
         ```
         
         Aqui é a mesma coisa, os sinais `l` e `cnt` são internos e podem ser lidos e escritos. A cada contagem de tempo eu inverto o valor do sinal booleano `l` e atualizo a saída `led` com o valor.
-    
+ 
+    ==Valide na FPGA!== 
+ 
 !!! exercise
     - File: `seq_modules.py`
     - Função: `barLed`
@@ -326,6 +311,8 @@ def seq():
     ```
     
     E no toplevel iremos mapear a chave `SW[0]` para a velocidade e `SW[1]` para a direção.
+
+    ==Valide na FPGA!== 
 
 !!! exercise
     - File: `seq_modules.py`
@@ -344,3 +331,5 @@ def seq():
     def comb():
         leds.next = intbv(1)[10:] << cntLed
     ```
+
+    ==Valide na FPGA!== 

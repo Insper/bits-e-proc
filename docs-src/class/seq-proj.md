@@ -1,11 +1,6 @@
 D - Lógica Sequencial
 ==================
 
-
-| Entrega      |
-|--------------|
-| 27/9 - Terça |
-
 ![](figs/E-LogSeq/sistema-seq.png)
 
 Neste projeto você terá que desenvolver os componentes síncronos que serão utilizados na construção do nosso computador Z01.
