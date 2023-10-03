@@ -1,5 +1,11 @@
-D - Lógica Sequencial
-==================
+# 3 - Lógica Sequencial
+
+| Deadline: {{proj_seq_deadline}}                                                |
+|--------------------------------------------------------------------------------|
+| [Classroom]( {{proj_seq_classroom}})                                           |
+| ^^AO FINAL:^^ Preencher para entregar [==Mediador==]( {{proj_forms_mediador}}) |
+| ^^AO FINAL:^^ Preencher para entregar [==Dev==]( {{proj_forms_dev}})           |
+
 
 ![](figs/E-LogSeq/sistema-seq.png)
 
@@ -7,23 +13,15 @@ Neste projeto você terá que desenvolver os componentes síncronos que serão u
 
 ## Instruções 
 
-!!! warning
-    O grupo deve eleger um novo scrum master para essa entrega (diferente do projeto B, C).
+!!! exercise "Começando novo projeto"
+    O grupo deve escolher um novo mediador para o projeto (não pode repetir) e os demais integrantes serão desenvolvedores.
 
-!!! tip "Antes de começar"
-    Siga os passos em:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-Comecando-novo-projeto/
+    - Você é o mediador do projeto? Leia: [Vixi sou mediador](/bits-e-proc/util/Util-vixi-sou-scrum)
+    - Seu papel é o de desenvolvedor? Leia: [Vixi sou dev](/bits-e-proc/util/Util-vixi-sou-dev/)
 
-!!! tip "Vixi Sou scrum master"
-    Você é o scrum do projeto? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-scrum/
+    Para o desenvolvimento do projeto iremos usar o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno, siga os passos em:
 
-!!! tip "Vixi! Sou desenvolvedor"
-    Seu papel é o de desenvolvedor? Leia:
-    
-    - https://insper.github.io/bits-e-proc/commum-content/util/Util-vixi-sou-dev/
+    - [github codespace](/bits-e-proc/util/Util-projeto-codespace)
 
 ## Instruções 
 
@@ -34,17 +32,17 @@ Os arquivos referentes ao projeto são:
 
 ### Executando o Script de Teste 
 
-Abra o terminal na pasta `hw` execute o pytest
+Abra o terminal na pasta `hw` execute o pytest:
 
 ```bash
-$pytest test_seq.py
+$pytest -s test_seq.py 
 ```
 
 !!! tip
     Você pode usar o `-k MODULO` para executar apenas o teste o do módulo que deseja, exemplo (para testar o PC):
     
     ```bash
-    pytest test_seq.py -k pc
+    pytest test_seq.py -s -k pc
     ```
 
 ## Projeto
@@ -52,7 +50,8 @@ $pytest test_seq.py
 O projeto consistem em:
 
 - Implementar os módulos descritos a seguir.
-- Para cada módulo vocês devem gerar uma forma de onda `gtkview` e salvar na pasta `hw/waveform`
+- Para cada módulo vocês devem gerar uma forma de onda `vcd` e salvar na pasta `hw/waveform`
+- Analisar a forma de onda gerada 
     
 ### Módulos 
 
@@ -64,6 +63,7 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
 - `registerN(i, load, output, width, clk, rst) `
 - `pc(increment, load, i, output, width, clk, rst)`
 - `ram(dout, din, addr, we, clk, rst, width, depth)`
+
 ---------------------------
 
 - Flip-flop
@@ -126,28 +126,120 @@ Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do c
  
 ### Forma de onda
 
-Para cada teste realizado, deve-se carregar o `gtkview` e tirar um **print** da forma de onda do módulo com os testes aplicados a ele. Essa imagem deve ser salva na mesma pasta `hw/waveform/` e com o mesmo nome dos módulos. 
+Para cada teste realizado, deve-se carregar o `vcd` e tirar um **print** da forma de onda do módulo com os testes aplicados a ele. Essa imagem deve ser salva na mesma pasta `hw/waveform/` e com o mesmo nome dos módulos. 
 
 !!! warning
     Não basta só gerar a imagem, você precisa analisar e entender. Isso será cobrado nas avaliações.
 
 ### Projeto
 
-| Conceito |                                                                           |
-|----------|---------------------------------------------------------------------------|
-| A        | (a1) Vídeo explicando os módulos                                             |
-| B        | (b2) Usou sempre que possível outros módulos para criar um novo (hierarquia) |
-|          | (b1) Exemplo: usou o `inc16`, `mux` e `reg` para criar PC                    |
-| C        | (c3) Todos os módulos básicos testados no github actions               |
-|          | (c2) Todos os módulos básicos passam nos testes                              |
-|          | (c1) Possui a forma de onda (.png)                                           |
-| D        | (d1) Ao menos um módulo não foi implementando ou não passa no testes.        |
-| I        | (i1) Menos da metade dos módulos funcionando                                 |
+| Conceito |                                                                  |
+|----------|------------------------------------------------------------------|
+| B        |                                                                  |
+| C        | Todos os módulos testados no github actions                      |
+|          | Todos os módulos básicos passam nos testes                       |
+|          | Vídeo explicando os módulos                                      |
+| D        | Ao menos um módulo não foi implementando ou não passa no testes. |
+| I        | Menos da metade dos módulos funcionando                          |
+
+## C
+
+!!! info
+    Atualizar o README.md do repositório com o link para os vídeos!
+
+Para o conceito C o grupo (um módulo por integrante) deve escrever um pequeno descritivo no `README.md` do repositório contendo uma breve explicacão de que como cada um dos módulos foram desenvolvidos e para que eles funcionam. Para cada módulo vocês devem escrever:
+
+1. Para que serve o componente
+1. O diagrama (`hardware`) do módulo (pode fazer no drawio) 
+1. A forma de onda da simulacão (`vcd`) explicada
+
+## B
+
+Aqui vocês devem gravar um pequeno vídeo explicando cada módulo, o vídeo de no máximo 4min por módulo deve possuir:
+
+1. Para que serve o componente
+1. O `MyHDL` que descreve o módulo
+1. O diagrama (`hardware`) do módulo (pode fazer no drawio) 
+1. A forma de onda da simulacão (`vcd`) explicada
+
+Atualizar o `README` adicionando o vídeo.
 
 ## A
 
-Para o conceito A o grupo (todos os integrantes) devem gravar um vídeo que contém (na sequência) e para cada módulo realizado uma explicaćão de:
+Vamos estudar mais alguns componentes muito utilizados em sistemas digitais para armazenamento de dados, para cada componente vocês devem escrever uma pequena secćão no `README` e gravar um vídeo explicando:
 
-1. O diagrama (`hardware`) do módulo 
-1. O `MyHDL` que descreve o módulo
-1. A forma de onda da simulacão (`gtkwave`) explicada
+1. Para que serve
+1. Um diagrama `hardware` do módulo (entrada e saída, pode ser tipo "caixa preta")
+
+Os componentes a serem estudados são:
+
+- FIFO: First-in First-out (`FIFO`)
+- LIFO: Last-in First-out (`LIFO`) 
+- Shift Register
+
+## A
+
+
+
+
+<!--
+
+Para testar utilize a FPGA e o `toplevel.py` fornecido de exemplo, cada módulo deve ser testado na FPGA e um vídeo explicativo gravado (com um diagrama de blocos, o myhdl e o hardware funcionando).
+
+### FIFO
+
+First-in First-out (`FIFO`) é um componente que implementa uma FILA, onde o primeiro dado salvo é o primeiro dado a ser lido. Este componente é muito utilizado para armazenamento de dados e pós processamento. Uma FIFO pode ser implementada tanto em `hw` quando em `sw` (no python você pode usar `queue`).$pytest
+
+!!! video
+    ![](https://www.youtube.com/watch?v=Nr8q5VW-mXI)
+
+A nossa FIFO vai possuir os seguintes sinais de entrada e saída:
+
+```py
+def fifo(dout, din, we, re, empty, full, clk, rst, width, depth):
+```
+
+Onde:
+
+- `din`: Entrada, dado a ser armazenado
+- `dout`: Saída, dado lido 
+- `we`: Entrada, se `1` a operacão é de armazenamento 
+- `re`: Entrada,  se `1` a operacão é de leitura 
+- `empty`: Saída, se `1` a FIFO está fazia
+- `full`: Saída, se `1` a FIFO está cheia
+
+O módulo possui os seguintes valores de configuraćão:
+
+- `width`: Largura do dado a ser armazenado
+- `height`: Quantidade de dados possíveis na fila
+
+![](figs/E-LogSeq/fifo.png)
+
+### LIFO
+
+Last-in First-out (`LIFO`) é um componente que implementa uma PILHA, onde o primeiro dado salvo é o ==ultimo== dado a ser lido. Este componente é muito utilizado para armazenamento de dados e pós processamento. Uma FIFO pode ser implementada tanto em `hw` quando em `sw`.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lifo_stack.svg/350px-Lifo_stack.svg.png)
+
+A nossa LIFO vai possuir os mesmo sinais da FIFO:
+
+```py
+def fifo(dout, din, we, re, empty, full, clk, rst, width, depth):
+```
+
+![](figs/E-LogSeq/lifo.png)
+
+Onde:
+
+- `din`: Entrada, dado a ser armazenado
+- `dout`: Saída, dado lido 
+- `we`: Entrada, se `1` a operacão é de armazenamento 
+- `re`: Entrada,  se `1` a operacão é de leitura 
+- `empty`: Saída, se `1` a LIFO está fazia
+- `full`: Saída, se `1` a LIFO está cheia
+
+O módulo possui os seguintes valores de configuraćão:
+
+- `width`: Largura do dado a ser armazenado
+- `height`: Quantidade de dados possíveis na fila
+-->
