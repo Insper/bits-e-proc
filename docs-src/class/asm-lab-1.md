@@ -70,7 +70,7 @@ Onde:
     ```nasm
     leaw $5, %A
     movw %A, %D
-    leaw %10, %A
+    leaw $10, %A
     movw %D, %A
     ```
     
