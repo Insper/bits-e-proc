@@ -132,8 +132,8 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         leaw $END, %A ; prepara salto
         jne           ; RAM[1] == 0?
         nop
-        leaw $1, %A
-        movw $1, (%A) ; RAM[=] = 1
+        leaw $0, %A
+        movw $1, (%A) ; RAM[0] = 1
         END:          
         ```
         
