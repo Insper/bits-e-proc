@@ -16,14 +16,11 @@ Ao final desse lab você deve ser capaz de:
 
 !!! tip
     Para fazer esse lab, você deve ter lido a teoria sobre:
-    
-    - [mapa de memória](https://insper.github.io/Z01.1/Teoria-Z01-mapadeMemoria/)
-    - [jump](https://insper.github.io/Z01.1/Teoria-nasm-jump/)
+    - [mapa de memória](https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Z01-mapadeMemoria/)
+    - [jump](https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-Assembly/)
 
 !!! note
-    Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Util-Resumo-Assembly/)
-
-Esse lab deve ser feito no Z01Simulador, para abrir o programa basta digitar no terminal, `bits gui nasm` com o **env ativado!**
+    Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/bits-e-proc/commum-content/z01/z01-Resumo-Assembly/)
 
 ## Incondicional
 
