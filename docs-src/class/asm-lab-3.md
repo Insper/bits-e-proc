@@ -193,7 +193,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         subw %D, %A, %D ; %D = RAM[1] - 3
         ```
 
-!!! exercise "💰 ({{lab_11_points}})"
+!!! exercise "💰 ({{lab_12_points}})"
     - File: `jmp3.nasm`
     - File: `test_nasm.py`
     - Test: `pytest -k jmp3`

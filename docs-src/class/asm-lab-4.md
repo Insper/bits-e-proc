@@ -1,5 +1,10 @@
 # Lab 13: (nasm) Praticando
 
+| Lab 13                                                                      |
+|-----------------------------------------------------------------------------|
+| **Data limite para entrega**: =={{lab_13_deadline}}==                       |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_11_classroom}})== |
+
 Ao final desse lab você deve ser capaz de:
 
 - Fazer programas complexos em assembly 
@@ -27,7 +32,7 @@ Os problemas desse lab possuem teste unitário, sugerimos utilizarem o simulador
    
     Copia o valor de RAM[1] para RAM[0] deixando o valor sempre positivo.
 
-!!! exercise "mult.nasm" 
+!!! exercise "💰 ({{lab_13_points}})"
     - File: `mult.nasm`
     - Test: `pytest -k mult`
  
