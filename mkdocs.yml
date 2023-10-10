@@ -36,6 +36,9 @@ extra:
     lab_11_points: '0 HW / 2 SW'
     lab_11_classroom: https://classroom.github.com/a/Jznrc_KG
 
+    lab_11_deadline: 10/10/22023
+    lab_11_points: '0 HW / 1 SW'
+
     proj_comb_classroom: https://classroom.github.com/a/wPrQAfo2
     proj_comb_deadline: 11/09 - Quarta - Meia Noite
 
@@ -103,9 +106,9 @@ nav:
       - Lab 9  -  Depurando: class/ula-lab-3.md
       - Lab 10 - Lógica Sequencial: class/seq-lab-1.md
       - Lab 11 - (nasm) Assembly: class/asm-lab-1.md
-      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
-      - Lab 13 - (nasm) Saltos: class/asm-lab-3.md
-      - Lab 14 - (nasm) Praticando: class/asm-lab-4.md
+      - Lab 12 - (nasm) Saltos: class/asm-lab-3.md
+      - Lab 13 - (nasm) Praticando: class/asm-lab-4.md
+      - Lab 14 - (nasm) Periféricos: class/asm-lab-2.md
       - Lab 15 - Assembler: class/assembler-lab-1.md
       - Lab 16 - VM: class/vm-lab-1.md
       - Lab 17 - VM translator: class/vmtranslator-lab-1.md

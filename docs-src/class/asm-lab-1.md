@@ -1,10 +1,9 @@
 # Lab 11: (nasm) Assembly 
 
-| Lab 5                                                                       |
+| Lab 11                                                                       |
 |-----------------------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_11_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_11_classroom}})== |
-
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
