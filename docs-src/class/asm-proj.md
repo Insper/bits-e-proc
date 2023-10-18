@@ -17,7 +17,10 @@ Deve-se implementar diversos programas na linguagem de máquina do Z01 que irão
 A descrição de cada módulo está localizada no cabeçalho do arquivo.
  
 !!! info ""
-    🧩 indica código com certo grau de dificuldade. 
+    - 🧩 indica código com certo grau de dificuldade. 
+    - Lembre de executar com `pytest -s -k NOME_ARQUIVO`
+    - Se não funcionar, depure usando `bits debug nasm NOME_ARQUIVO`
+    
  
 - mod 
     - **Arquivo**   : `mod.nasm`
