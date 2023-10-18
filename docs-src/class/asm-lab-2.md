@@ -8,16 +8,7 @@ Ao final desse lab você deve ser capaz de:
 
 !!! info
     Vamos continuar com o mesmo repositório criado no lab passado.
-
-!!! tip
-    Para fazer esse lab, você deve ter lido a teoria sobre [mapa de memória](https://insper.github.io/Z01.1/Teoria-Z01-mapadeMemoria/)
-
-!!! note
-    Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/Z01.1/Util-Resumo-Assembly/)
-
-Esse lab deve ser feito no Z01Simulador, para abrir o programa digitar `bits nasm gui` com o **env ativado!**
-
-Todos os arquivos possuem teste, após programar no `Simulador` execute o teste
+<!--
 
 ## LEDs
 
@@ -153,16 +144,17 @@ Problemas relacionado a chave do nosso Z01
     Dica:  Utilize a instrução `notw %D` para inverter o valor  salvo no registrador `%D`
 
 ## LCD
+-->
 
 Trabalhando com o LCD.
 
 !!! exercise "LCD1"
     - File: `lcd1.nasm`
-    - Test: Visual no simulador
+    - Test: execute `pytest lcd1` e visualize o arquivo gerado
  
     Task: Execute o arquivo no simulador o observe os 16 primeiros pxs acenderem  
 
-    Dica: `movw $-1, (%A)`: Gera o vetor `1111111111111` e grava no endereço que %A aponta (primeiros pxs do LCD)
+    Dica: `movw $-1, (%A)`: Gera o vetor `1111111111111` e grava no endereço que `%A` aponta (primeiros pxs do LCD)
 
 !!! exercise "LCD2"
     - File: `lcd2.nasm`
