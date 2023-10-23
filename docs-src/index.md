@@ -13,20 +13,10 @@ Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de
 
 -------------------------
 
-## Aulas
+## Aula - aula
 
-
-|   | Teoria                                                                               | Lab                                                                                              | Exercício                                                                        | Proj          |
-|---|--------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------|---------------|
-| 1 |                                                                                      | Lab 1: Visão geral                                                                               |                                                                                  |               |
-| 2 | Dados Digitais                                                                       | Lab 1: Visão geral<br>Lab 2: Configurando Github                                                 | Dados Digitais - 1<br>Dados Digitais - 2                                         |               |
-| 3 | Álgebra Booleana                                                                     | Lab 3: Github                                                                                    | Álgebra Booleana - 1<br>Álgebra Booleana - 2                                     |               |
-| 4 | Resistor-Transistor Logic (RTL)                                                      | Lab 4: Transistores / CI                                                                         |                                                                                  |               |
-| 5 | [Aritimética Binária](/bits-e-proc/commum-content/teoria/Teoria-Aritmetica-Binaria/) |                                                                                                  | [Aritimética Binária](commum-content/exercicios/Exercicios-Aritmetica-Booleana/) | 1             |
-| 6 |                                                                                      | [Configurando Infra](https://insper.github.io/bits-e-proc/util/infra-docker/)  <br> Lab 5: MyHDL |                                                                                  |               |
-| 7 | PROVA 1                                                                              |                                                                                                  |                                                                                  |               |
-| 8 |                                                                                      | Lab 8 - ULA <br> Lab 6 - Adders <br> Lab 7 - HW Types                                            |                                                                                  |               |
-| 9 |                                                                                      | Lab 9                                                                                            |                                                                                  | Início Proj 2 |
+<iframe
+width="1200" height="800" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfV_tTNi25dGykINqXN4_J8aAaD-q9SAAQxWdxsP9K7I_JCMB3OZyGrTVUbk38Rmz_LFvpKSp0voFs/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"></iframe>
 
 -------------------------
 
