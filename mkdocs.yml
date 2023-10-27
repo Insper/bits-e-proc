@@ -102,8 +102,8 @@ nav:
       - 2 - ULA: class/ula-proj.md
       - 3 - Lógica Sequencial: class/seq-proj.md
       - 4 - Assembly: class/asm-proj.md
-      - 5 - Assembler: class/assembler-proj.md
-      - 6 - VM translator: class/vmtranslator-proj.md
+#      - 5 - Assembler: class/assembler-proj.md
+#      - 6 - VM translator: class/vmtranslator-proj.md
       - X - Mundo Real: class/x-proj.md
   - Labs:
       - Lab 1  - Visão geral: class/intro-benchmark-lab.md
