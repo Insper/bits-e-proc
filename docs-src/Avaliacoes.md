@@ -64,6 +64,11 @@ Liberado consulta ao material da disciplina.
     - VHDL: Sequencial   
 -->
 
+## AV3 - 31/10
+
+- Simulado:
+    - {{av3_simulado_classroom}}
+
 ## AV2 - AI
 
 > Lembrem que o simulado é apenas um recorte da matéria.    
