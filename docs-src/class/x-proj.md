@@ -1,14 +1,13 @@
 # Mundo Real
 
 !!! warning ""
-    Entregar até dia 23/11
+    Entregar até dia 10/11
 
 | HW | SW |
 |----|----|
 | 15 | 10 |
 
-Esse projeto extra optativo (individual) fornece **15 pontos** 
-extras de **Hardware** e **10 pontos extras** de **Software**. 
+Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
 
 ## Processadores
 
@@ -17,7 +16,7 @@ Você deverá escolher um dos processadores listados a seguir:
 !!! warning 
     Não pode repetir. Ao escolher um processador, coloque o seu nome na planilha:
     
-    - https://docs.google.com/spreadsheets/d/14MBWYusOTiBsR9gXlFhh964Hi1ULSdAOSlLffCnFaP0/edit?usp=sharing 
+    - https://docs.google.com/spreadsheets/d/1OxFfHGUkG75fUT7L98yiP4Zbd6KUCgrEO_ih38b4g5s/edit?usp=sharing
     
 
 - [ARM Cortex M0](https://en.wikipedia.org/wiki/ARM_Cortex-M)
@@ -60,7 +59,7 @@ Você deverá escolher um dos processadores listados a seguir:
 
 ## Entrega
 
-Você deve entregar um vídeo que explica a CPU em questão, este vídeo ==de 10 minutos== deve conter:
+Você deve entregar um vídeo que explica a CPU em questão, este vídeo ==de aproximadamente 10 minutos== deve conter:
 
 - Explicativo do hardware
 - Código Assembly Comentado
