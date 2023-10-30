@@ -66,8 +66,24 @@ Liberado consulta ao material da disciplina.
 
 ## AV3 - 31/10
 
+- Teoria:
+    - Z01 
+    - ASM - Assembly
+    - ASM - Mapa de Memória
+    - ASM - jump
+    - Linguagem de máquina
+
+- Labs:
+    - 11: Assembly
+    - 12: Saltos
+    - 13: Praticando
+    - 14: Periféricos
+    - 15: Linguagem de Máquina
+    
 - Simulado:
     - {{av3_simulado_classroom}}
+
+
 
 ## AV2 - AI
 
