@@ -47,6 +47,10 @@ extra:
     lab_16_classroom: https://classroom.github.com/a/raqIcmQy
     lab_16_points: 'HW: 0 / SW: 14'
 
+    lab_17_deadline: 08/11/2023
+    lab_17_classroom: https://classroom.github.com/a/aqKU251j
+    lab_17_points: 'HW: 10 / SW: 10'
+
     proj_comb_classroom: https://classroom.github.com/a/wPrQAfo2
     proj_comb_deadline: 11/09 - Quarta - Meia Noite
 
@@ -171,6 +175,7 @@ nav:
       - commum-content/exercicios/Exercicio-CPU-1.md
       - commum-content/exercicios/Exercicio-CPU-2.md
       - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
+      - VM translator: https://docs.google.com/spreadsheets/d/1dywPIHgpUztDtpqzuEuGzAuTlcK9ryVUTp9-b84stJ4/edit?usp=sharing
 
   - Útil:
     #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
