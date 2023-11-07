@@ -4,7 +4,7 @@
 |-----------------------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_17_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_17_classroom}})== |
-| =={lab_17_points}==                                                            |
+| Pontos: =={{lab_17_points}}==                                             |
 
 Neste laboratório iremos implementar parte do código que executa a tradução do VM para NASM.
 
@@ -61,7 +61,7 @@ Com o teste passando, abra a pasta `test_assets` e repare que vários arquivos f
 
 Agora vamos praticar um pouco.
 
-!!! exercise
+!!! exercise "💰 (1 HW/ 1 SW)"
     - File: `sw/vmtranlator/Code.py`
     - Command: `neg`
     - Test: `pytest -k neg`
@@ -70,15 +70,14 @@ Agora vamos praticar um pouco.
     
     Dica: Faça no papel antes e só depois implemente.
 
-!!! exercise
+!!! exercise "💰 (1 HW/ 1 SW)"
     - File: `sw/vmtranlator/Code.py`
-    - Command: `neg`
+    - Command: `sub`
     - Test: `pytest -k sub`
     
     Implemente o comando `sub` e teste com `pytest -s -k sub`.
     
-
-!!! exercise
+!!! exercise "💰 (2 HW/ 2 SW)"
     - File: `sw/vmtranlator/Code.py`
     - Method: `writePush`
     - Command: `push constant`
@@ -88,7 +87,7 @@ Agora vamos praticar um pouco.
 
 Os próximos exercícios são de classe diferente da aritméticas.
 
-!!! exercise
+!!! exercise "💰 (1 HW/ 1 SW)"
     - File: `sw/vmtranlator/Code.py`
     - Method: `writePop`
     - Command: `pop local`
@@ -96,7 +95,7 @@ Os próximos exercícios são de classe diferente da aritméticas.
  
     Implemente o comando `pop local`.
 
-!!! exercise
+!!! exercise "💰 (2 HW/ 2 SW)"
     - File: `sw/vmtranlator/Code.py`
     - Method: `writePop`
     - Command: `pop temp`
@@ -106,13 +105,13 @@ Os próximos exercícios são de classe diferente da aritméticas.
     
     > Dica: Você vai precisar do argumento `index` que fornece o valor de N.
 
-!!! exercise
+!!! exercise "💰 (3 HW/ 3 SW)"
     - File: `sw/vmtranlator/Code.py`
     - Method: `writeArithmetic`
     - Command: `gt`
     - Test: `pytest -s -k gt`
  
-     Implemente o comando `gt`. 
+    Implemente o comando `gt`. 
     
     Dica: Você vai ter que fazer um label para poder saltar, mas o label tem que ser único em todo o código `nasm` criado, para isso, utilize a função `self.getUniqLabel()` que retorna uma string única em todo o programa. 
 
