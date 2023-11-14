@@ -1,13 +1,17 @@
 # Mundo Real
 
 !!! warning ""
-    Entregar até dia 10/11
+    Entregar até dia 10/11, via google forms:
+
+    - https://docs.google.com/forms/d/e/1FAIpQLSdrK0lW169gaH0LXzBQNKAjnU_NtO7quFaJkMxuSH3FQAd4hQ/viewform?usp=sf_link
 
 | HW | SW |
 |----|----|
 | 15 | 10 |
 
 Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
+
+- 
 
 ## Processadores
 
