@@ -5,11 +5,6 @@ Neste laboratório iremos explorar o que é arquitetura de computadores e qual o
 Primeiro será necessário criar o grupo que vocês pretendem trabalhar ao longo do semestre, o grupo deve ser de 4 ou 5 alunos, após criado preencha a tabela a seguir.
 
 !!! exercise
-    Preencher a tabela a seguir após criados os grupos:
-
-    {{lab_1_groups_spreadsheet}}
-
-!!! exercise
 
     Acessar o Mural e siga as intruções do professor:
 

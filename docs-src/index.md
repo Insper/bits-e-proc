@@ -13,12 +13,6 @@ Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de
 
 -------------------------
 
-## Aula - aula
-
-<iframe
-width="1200" height="800" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfV_tTNi25dGykINqXN4_J8aAaD-q9SAAQxWdxsP9K7I_JCMB3OZyGrTVUbk38Rmz_LFvpKSp0voFs/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"></iframe>
-
--------------------------
 
 ## Objetivos de aprendizagem
 
@@ -36,13 +30,7 @@ Desenvolver um computador do ZERO!
 
 ## Avaliação
 
-A disciplina é avaliada em duas frentes: avaliação individual e APS:
-
-- Individual: ao longo do semestre o aluno deve acumular `60 pontos` de `Software` e `60 pontos` de `Hardware` 
-esses pontos estarão distribuídos nas quatro avaliações (A1,A2,A3,A4) e dos laboratórios ao longo do semestre. 
-
-- APS: Compostas por duas notas: `Grupo` e `Individual` sendo que cada uma segue uma 
-rubrica diferente e avalia objetivos diferentes do curso.
+A disciplina é avaliada em duas frentes: Quizes e Laboratórios que forneceram pontos em duas frentes: HW e SW. Para passar na disciplina é necessário possuir ao menos 50 pontos / 100 em ambas as frentes.
 
 ## Bibliografia
 

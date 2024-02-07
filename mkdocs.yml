@@ -20,7 +20,7 @@ plugins:
 extra:
   custom_variables:
     lab_1_groups_spreadsheet: https://docs.google.com/spreadsheets/d/1V1h8e0awIF-E_OVm-Vc4zupaBRAQf-PcWidCq1knw74/edit?usp=sharing
-    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1691767251465/18278e02ddfd2c0c5bec054ae54303dcf58dad23?sender=ub569a9273c6e285461187641
+    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1707341403650/21ec9f6d8deb01b63040c273903f818ca821a099?sender=ub569a9273c6e285461187641
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
 
     infra_test_classroom: https://classroom.github.com/a/2Hp8zB83
@@ -101,38 +101,37 @@ nav:
       - index: index.md
       - Critérios de Avaliação: Sobre-Criterios-de-Avaliacao.md
       - Rubricas individuais: Sobre-Rubricas.md
-  - Projetos:
-      # - A - Ambiente de desenvolvimento: class/intro-proj.md
-      - 1 - Lógica Combinacional: class/comb-proj.md
-      - 2 - ULA: class/ula-proj.md
-      - 3 - Lógica Sequencial: class/seq-proj.md
-      - 4 - Assembly: class/asm-proj.md
+#  - Projetos:
+#      # - A - Ambiente de desenvolvimento: class/intro-proj.md
+#      - 1 - Lógica Combinacional: class/comb-proj.md
+#      - 2 - ULA: class/ula-proj.md
+#      - 3 - Lógica Sequencial: class/seq-proj.md
+#      - 4 - Assembly: class/asm-proj.md
 #      - 5 - Assembler: class/assembler-proj.md
 #      - 6 - VM translator: class/vmtranslator-proj.md
       - X - Mundo Real: class/x-proj.md
   - Labs:
       - Lab 1  - Visão geral: class/intro-benchmark-lab.md
-      - Lab 2  - Configurando Github: class/intro-lab-1.md
-      - Lab 3  - Github: class/intro-lab-2.md
-      - Lab 4  -  Transistores / CI: class/transistores-lab-1.md
-      - Lab 5  -  MyHDL: class/comb-lab-1.md
-      - Lab 6  -  Adders : class/ula-lab-1.md
-      - Lab 7  -  Hardware types: class/ula-lab-2.md
-      - Lab 8  -  ULA: class/ula-lab-4.md
-      - Lab 9  -  Depurando: class/ula-lab-3.md
-      - Lab 10 - Lógica Sequencial: class/seq-lab-1.md
-      - Lab 11 - (nasm) Assembly: class/asm-lab-1.md
-      - Lab 12 - (nasm) Saltos: class/asm-lab-3.md
-      - Lab 13 - (nasm) Praticando: class/asm-lab-4.md
-      - Lab 14 - (nasm) Periféricos: class/asm-lab-2.md
-      - Lab 15 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
-      - Lab 16 - VM: class/vm-lab-1.md
-      - Lab 17 - VM translator: class/vmtranslator-lab-1.md
+      #- Lab 2  - Configurando Github: class/intro-lab-1.md
+      #- Lab 3  - Github: class/intro-lab-2.md
+      - Lab 1  -  Transistores / CI: class/transistores-lab-1.md
+      # - Lab 2  -  MyHDL: class/comb-lab-1.md
+      # - Lab 3  -  Adders : class/ula-lab-1.md
+      # - Lab 4  -  Hardware types: class/ula-lab-2.md
+      # - Lab 5  -  ULA: class/ula-lab-4.md
+      # - Lab 6  -  Depurando: class/ula-lab-3.md
+      # - Lab 7 - Lógica Sequencial: class/seq-lab-1.md
+      # - Lab 8 - (nasm) Assembly: class/asm-lab-1.md
+      # - Lab 12 - (nasm) Saltos: class/asm-lab-3.md
+      # - Lab 13 - (nasm) Praticando: class/asm-lab-4.md
+      # - Lab 14 - (nasm) Periféricos: class/asm-lab-2.md
+      # - Lab 15 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
+      # - Lab 16 - VM: class/vm-lab-1.md
+      # - Lab 17 - VM translator: class/vmtranslator-lab-1.md
 
   - Teoria:
       - Dados Digitais: commum-content/teoria/Teoria-Dados.md
       - Álgebra Booleana: commum-content/teoria/Teoria-Algebra-Booleana.md
-      #    - commum-content/teoria/Teoria-CMOS.md
       - Resistor-Transistor Logic (RTL): commum-content/teoria/Teoria-RTL.md
       - Componentes Digitais: commum-content/teoria/Teoria-Componentes.md
       - Aritmética Binária: commum-content/teoria/Teoria-Aritmetica-Binaria.md
@@ -152,7 +151,6 @@ nav:
       - VM - jump: commum-content/teoria/Teoria-vm-jump.md
       - VM - Funções: commum-content/teoria/Teoria-vm-funcoes.md
       - VM - Memória: commum-content/teoria/Teoria-vm-memoria.md
-      #- commum-content/teoria/Vídeo Aulas (Luciano): Util-Video-Aulas.md
 
   - MyHDL:
       - Configurando Infra: util/infra-docker.md
