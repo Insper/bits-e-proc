@@ -116,17 +116,17 @@ nav:
       #- Lab 3  - Github: class/intro-lab-2.md
       - Lab 2  - Transistores / CI: class/transistores-lab-1.md
       - Lab 3  - MyHDL: class/comb-lab-1.md
-      - Lab 4  - Adders : class/ula-lab-1.md
-      - Lab 5  - Hardware types: class/ula-lab-2.md
-      - Lab 6  - ULA: class/ula-lab-4.md
-      - Lab 8  - Lógica Sequencial: class/seq-lab-1.md
-      - Lab 9  - (nasm) Assembly: class/asm-lab-1.md
-      - Lab 10 - (nasm) Saltos: class/asm-lab-3.md
-      - Lab 11 - (nasm) Praticando: class/asm-lab-4.md
-      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
-      - Lab 13 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
-      - Lab 14 - VM: class/vm-lab-1.md
-      - Lab 15 - VM translator: class/vmtranslator-lab-1.md
+#      - Lab 4  - Adders : class/ula-lab-1.md
+#      - Lab 5  - Hardware types: class/ula-lab-2.md
+#      - Lab 6  - ULA: class/ula-lab-4.md
+#      - Lab 8  - Lógica Sequencial: class/seq-lab-1.md
+#      - Lab 9  - (nasm) Assembly: class/asm-lab-1.md
+#      - Lab 10 - (nasm) Saltos: class/asm-lab-3.md
+#      - Lab 11 - (nasm) Praticando: class/asm-lab-4.md
+#      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
+#      - Lab 13 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
+#      - Lab 14 - VM: class/vm-lab-1.md
+#      - Lab 15 - VM translator: class/vmtranslator-lab-1.md
 
   - Teoria:
       - Álgebra Booleana: commum-content/teoria/Teoria-Algebra-Booleana.md
