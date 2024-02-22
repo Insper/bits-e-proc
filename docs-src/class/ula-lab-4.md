@@ -1,4 +1,4 @@
-# Lab 8: ULA 
+# Lab 6: ULA 
 
 O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da ULA para entendermos as operações da unidade de processamento do nosso computador. Para isso iremos:
 

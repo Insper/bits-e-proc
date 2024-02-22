@@ -1,4 +1,4 @@
-# Lab 7: Hardware types
+# Lab 5: Hardware types
 
 Até agora estamos usando **mal** os recursos do MyHDL, o componente `adder` anterior poderia ser muito mais simples se:
 
