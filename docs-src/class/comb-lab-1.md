@@ -1,14 +1,19 @@
-# Lab 5: MyHDL
+# Lab MyHDL
 
-| Lab 5                                                                      |
-|----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_5_deadline}}==                      |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_5_classroom}})== |
+| Descritivo                                                                     |
+|--------------------------------------------------------------------------------|
+| **Data limite para entrega**: =={{lab_myhdl_deadline}}==                       |
+| Pointos: {{lab_myhdl_points}}
+| Fazer em dupla!                                                                |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_myhdl_classroom}})== |
+| **Todos do grupo devem acessar o classroom para ganharem os pontos!**          |
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
     
-    Neste laboratório você pode receber até: **({{lab_5_points}})**.
+    Neste laboratório você pode receber até: **({{lab_myhdl_points}})**.
+
+    ==Realizar em dupla!==, para ganhar os pontos os dois alunos devem acessar o classroom com a conta do github! Mesmo sendo em dupla, sugerimos para todos fazerem, pois esse tipo de exercício vai ser cobrado em quiz.
 
 !!! exercise
     Leitura prévia necessária:
@@ -24,11 +29,11 @@ Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-
 Agora iremos fazer todo o desenvolvimento da disciplina usando o codespaces:
 
 1. Crie o repositório pelo link do [Classroom]({{lab_5_classroom}})
-1. Com o repositório criado, clique em `Code -> Codespacess -> +` ()[^1]
+1. Com o repositório criado, clique em  [Code -> Codespace]()[^1]
 1. Aguarde carregar e abrir o `vscode` online
 1. Trabalhe online
 
-[^1]:![](figs/codespace.png)
+[^1]: ![](figs/codespace.png)
 
 !!! video
     ![](https://youtu.be/u03nflB7V6o)
@@ -74,7 +79,7 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
     +    q.next = a or (not b)
     ```
     
-    Execute o `pytest` novamente e note que o código passa no teste.
+    Execute o `pytest -k exe1` novamente e note que o código passa no teste.
     
 !!! progress
     Começando o laboratório.
@@ -83,7 +88,7 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
 
 Agora é por sua conta, você deve descrever alguns circuitos lógicos combinacionais bem simples em MyHDL. 
 
-!!! exercise "💰 ({{lab_5_points}})"
+!!! exercise "💰 1 ponto"
     Para cada exercício implemente a solução no arquivo `comb_modules.py` e teste com `pytest`. A descrição do exercício está no próprio módulo.
 
     - `def exe2()`: `pytest -s -k exe2`
@@ -96,7 +101,10 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 
 !!! exercise
     Instalar o fpgaLoader conforme [instrucões para cada OS](https://insper.github.io/bits-e-proc/util/infra-codespaces)
-
+    
+!!! progress
+    Continuar...
+    
 !!! video
     ![](https://www.youtube.com/watch?v=KVWXYP08llg)
 
@@ -149,7 +157,6 @@ top = toplevel(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5)
 top.convert(hdl="verilog") #
 ```
 
- 
 Notem que os sinais criados são do tipo `Signal(intbv(0)[X:])`, isso indica que estamos manipulando um vetor de bits de tamanho **X**, no caso do LED, indicamos que o vetor é do tamanho 10, e no caso das KEY de tamanho 4. Com isso, podemos dentro do componente acessar individualmente cada um dos elementos do vetor:
  
  ```py title="comb_modules.py"
@@ -193,9 +200,9 @@ Agora com a FPGA plugada no computador podemos programar, para isso basta abrir 
 
 Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a seguir, implemente o MyHDL e então execute na FPGA.
 
-!!! exercise
+!!! exercise 
     - Modulo: `exe5`
-     
+    
     Tarefa: 
     
     1. Implementar o módulo
@@ -215,8 +222,9 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     leds[1].next = not led0
     ```
 
-!!! exercise
+!!! exercise "💰 1 ponto"
     - Modulo: `sw2hex`
+    - ==Mostrar para o professor!==
     
     Modifique o `toplevel.py` adicionando o módulo novo para acionar o `HEX0` controlado pelo `sw2hex`:
     
@@ -225,17 +233,7 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     +ic2 = sw2hex(HEX0, SW)
     ```
     
-    Lembre de validar na FPGA, seguindo todos os passos.
+    Isso fará com que o módulo `sw2hex` controle os pinos do display de 7 segmentos que temos na FPGA, você deve mudar o valor das chaves e observar se o display exibe o valor correto (as chaves da FPGA vão ser tratadas como um valor binário).
     
-!!! exercise
-    - Modulo: `bin2hex`
-    
-    Modifique o `toplevel.py` adicionando o módulo novo para acionar o `HEX1` controlado pelo `bin2hex`:
-    
-    ``` diff
-    ic1 = exe5(ledr_s, SW)
-    ic2 = sw2hex(HEX0, SW)
-    +ic3 = bin2hex(HEX1, SW)
-    ```
-    
-    Lembre de validar na FPGA, seguindo todos os passos.
+    1. Valide na FPGA, seguindo todos os passo anteriores.
+    1. Agora termine de implementar o módulo

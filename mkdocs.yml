@@ -16,6 +16,7 @@ plugins:
       telemetry: true
       backend_url: https://devlife-api.insper-comp.com.br/
       course_slug: 22b bits
+      plugin_exercise_counter: false
 
 extra:
   custom_variables:
@@ -25,9 +26,10 @@ extra:
 
     infra_test_classroom: https://classroom.github.com/a/2Hp8zB83
 
-    lab_5_classroom: https://classroom.github.com/a/2Kr91-tS
-    lab_5_points: '2 HW / 1 SW'
-    lab_5_deadline: 11/09/2023
+    lab_myhdl_classroom: https://classroom.github.com/a/Qt6dedFa
+    lab_myhdl_points: '2 HW / 0 SW'
+    lab_myhdl_deadline: Final da aula
+
     lab_6_classroom: https://classroom.github.com/a/OZoKykjG
     lab_6_points: '1 HW / 0 SW'
     lab_6_deadline: 15/09/2023
