@@ -18,7 +18,7 @@
 !!! exercise
     Leitura prévia necessária:
 
-    - https://insper.github.io/bits-e-proc/teoria/myhdl-1/
+    - https://insper.github.io/bits-e-proc/myhdl/basico/
 
 Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-Combinacional`](/bits-e-proc/class/logiComb-Projeto)), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
 
