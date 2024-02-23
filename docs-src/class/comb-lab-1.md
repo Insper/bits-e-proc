@@ -100,7 +100,8 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 ## Executando na FPGA 
 
 !!! exercise
-    Instalar o fpgaLoader conforme [instrucões para cada OS](https://insper.github.io/bits-e-proc/util/infra-codespaces)
+    Instalar o fpgaLoader conforme [instrucões para cada OS](
+    https://insper.github.io/bits-e-proc/util/infra-codespace/)
     
 !!! progress
     Continuar...
