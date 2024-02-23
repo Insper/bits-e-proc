@@ -28,7 +28,7 @@ Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-
 
 Agora iremos fazer todo o desenvolvimento da disciplina usando o codespaces:
 
-1. Crie o repositório pelo link do [Classroom]({{lab_5_classroom}})
+1. Crie o repositório pelo link do [Classroom]({{lab_comb_classroom}})
 1. Com o repositório criado, clique em  [Code -> Codespace]()[^1]
 1. Aguarde carregar e abrir o `vscode` online
 1. Trabalhe online
