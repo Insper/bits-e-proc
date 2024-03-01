@@ -2,15 +2,15 @@
 
 | Lab 6                                                                      |
 |----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_6_deadline}}==                      |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_6_classroom}})== |
+| **Data limite para entrega**: ==3 HW, 0 SW==                               |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_4_classroom}})== |
 
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
     
-    Neste laboratório você pode receber até: **({{lab_6_points}})**.
+    Neste laboratório você pode receber até: **({{lab_4_points}})**.
 
 !!! exercise
     1. Acesse o lab 6 pelo link {{lab_6_classroom}}
@@ -146,7 +146,7 @@ Onde `x`, `y` e `s` são vetores do tipo `bool` de duas posições.
 !!! exercise
     Explique o que está acontecendo para o seu colega, você entendeu o porque dessa ligação e como ela funciona? 
 
-!!! exercise "💰 Somador ({{lab_6_points}}), exercício "
+!!! exercise "💰 Somador (1 HW, 0 SW), exercício "
     
     - Modulo: `def adder2bits(x, y, soma, vaiUm):`
     - Test: `pytest -s -k adder2bits`
@@ -206,7 +206,7 @@ def fullAdder(a, b, c, soma, carry):
     
 Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a implementação do adder que se adapta a quantidade de bits que ele recebe. Isso é interessante pois podemos usar o mesmo adder instanciado de diferentes maneiras como um hardware dedicado para somar vetores de `2` bits, `8` ou quanto quisermos. Vamos ver mais para frente que a largura do somador é determinada pela arquitetura da CPU, já reparou que alguns programas quando você vai baixar possuem a opção `x64` ou `x86`? Isso determina entre outras coisas, qual a largura de dados da CPU em questão, `64` ou `32` bits.
 
-!!! exercise
+!!! exercise "💰 adder (2 HW, 0 SW), exercício "
     - Modulo: `def adder(x, y, soma, carry):`
     - Test: `pytest -k adder`
     - Run: `./run_adder.py`

@@ -91,8 +91,8 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 !!! exercise "💰 1 ponto"
     Para cada exercício implemente a solução no arquivo `comb_modules.py` e teste com `pytest`. A descrição do exercício está no próprio módulo.
 
-    - `def exe2()`: `pytest -s -k exe2`
-    - `def exe3()`: `pytest -s -k exe3`
+    - `pytest -s -k exe2`
+    - `pytest -s -k exe3`
 
 !!! progress
     Continuar...
