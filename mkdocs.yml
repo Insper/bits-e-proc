@@ -33,6 +33,9 @@ extra:
     lab_4_classroom: https://classroom.github.com/a/VlAqXxEC
     lab_4_points: '3 HW / 0 SW'
 
+    lab_ula_deadline: Final da aula (07/03)
+    lab_ula_points: '2 HW/ 2 SW'
+    lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSe04qyCZJUSCZvL4FlESN2QbSQyarw753vA0yitZ7o29zARRQ/viewform?usp=sf_link
 
     lab_10_classroom: https://classroom.github.com/a/M27WEklH
     lab_11_deadline: 05/10/2023
@@ -120,7 +123,7 @@ nav:
       - Lab 3  - MyHDL: class/comb-lab-1.md
       - Lab 4  - Adders : class/ula-lab-1.md
       - Lab 5  - Hardware types: class/ula-lab-2.md
-#      - Lab 6  - ULA: class/ula-lab-4.md
+      - Lab 6  - ULA: class/ula-lab-4.md
 #      - Lab 8  - Lógica Sequencial: class/seq-lab-1.md
 #      - Lab 9  - (nasm) Assembly: class/asm-lab-1.md
 #      - Lab 10 - (nasm) Saltos: class/asm-lab-3.md
