@@ -1,14 +1,13 @@
-# Lab 11: (nasm) Assembly 
+# Lab 8: (nasm) Assembly 
 
-| Lab 11                                                                       |
+| Lab 8                                                                       |
 |-----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_11_deadline}}==                       |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_11_classroom}})== |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_nasm_1_classroom}})== |
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
     
-    Neste laboratório você pode receber até: **({{lab_11_points}})**.
+    Neste laboratório você pode receber até: **({{lab_nasm_1_points}})**.
 
 Ao final desse lab você deve ser capaz de:
 
@@ -137,19 +136,19 @@ Vamos praticar um pouco agora programar em assembly, no começo parece bem difí
 
 Vamos implementar alguns códigos assembly, a descrição do que eles devem fazer estão no próprio arquivo `.nasm`.
 
-!!! exercise
+!!! exercise "💰 (0 HW / 1 SW)"
     - File: `add.nasm`
     - Test: `pytest -k add`
     
     Tarefa: Leia o cabeçalho do arquivo e implemente o programa nasm que executa o que está descrito, teste com o `pytest`
 
-!!! exercise
+!!! exercise "💰 (0 HW / 1 SW)"
     - File: `sub.nasm`
     - Test: `pytest -k sub`
     
     Tarefa: Leia o cabeçalho do arquivo e implemente o programa nasm que executa o que está descrito, teste com o `pytest`
 
-!!! exercise "💰 ({{lab_11_points}})"
+!!! exercise "💰 (0 HW / 1 SW)"
     - File: `mov.nasm`
     - Test: `pytest -k mov`
     
