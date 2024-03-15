@@ -41,41 +41,11 @@ extra:
     lab_seq_classroom: https://classroom.github.com/a/ZR9oi2yP
 
     lab_nasm_1_points: '0 HW/ 3 SW'
-    lab_nasm_1_classroom: https://classroom.github.com/a/E-_Z77Tn
+    lab_nasm_2_points: '0 HW/ 3 SW'
+    lab_nasm_2_classroom: https://classroom.github.com/a/ARyD-cq9
 
-    lab_10_classroom: https://classroom.github.com/a/M27WEklH
-    lab_11_deadline: 05/10/2023
-    lab_11_points: '0 HW / 2 SW'
-    lab_11_classroom: https://classroom.github.com/a/Jznrc_KG
-
-    lab_12_deadline: 10/10/2023
-    lab_12_points: '0 HW / 1 SW'
-
-    lab_13_deadline: 16/10/2023
-    lab_13_points: '0 HW / 2 SW'
-
-    lab_16_deadline: 29/10/2023
-    lab_16_classroom: https://classroom.github.com/a/raqIcmQy
-    lab_16_points: 'HW: 0 / SW: 14'
-
-    lab_17_deadline: 08/11/2023
-    lab_17_classroom: https://classroom.github.com/a/aqKU251j
-    lab_17_points: 'HW: 10 / SW: 10'
-
-    proj_comb_classroom: https://classroom.github.com/a/wPrQAfo2
-    proj_comb_deadline: 11/09 - Quarta - Meia Noite
-
-    proj_ula_classroom: https://classroom.github.com/a/r_7lTXDn
-    proj_ula_deadline: 02/10 - Terca - Meio Dia
-
-    proj_seq_classroom: https://classroom.github.com/a/ajXuOGbs
-    proj_seq_deadline: 07/10 - Domingo
-
-    proj_asm_classroom: https://classroom.github.com/a/Ks7en_0Q
-    proj_asm_deadline: 30/10 - Segunda
-
-    proj_forms_mediador: https://docs.google.com/forms/d/e/1FAIpQLSf3zNsrLDsf4Y_nQDBNIvMCgc7Bo8TeZhxcpInMACX4pCnOxQ/viewform?usp=sf_link
-    proj_forms_dev:  https://docs.google.com/forms/d/e/1FAIpQLSdHZselm85uDTPkpzhUef5t8xVNvONvJsETDzoJDp85oIU4jQ/viewform?usp=sf_link
+    lab_nasm_3_points: '0 HW/ 4 SW'
+    lab_nasm_3_classroom: https://classroom.github.com/a/AkOQR7ru
 
     av2_simulado_classroom:   https://classroom.github.com/a/_BZEsoXf
     av2_simulado_2_classroom: https://classroom.github.com/a/LD2ztn4N
@@ -132,8 +102,8 @@ nav:
       - Lab 6  - ULA: class/ula-lab-4.md
       - Lab 7  - Lógica Sequencial: class/seq-lab-1.md
       - Lab 8  - (nasm) Assembly: class/asm-lab-1.md
-#      - Lab 10 - (nasm) Saltos: class/asm-lab-3.md
-#      - Lab 11 - (nasm) Praticando: class/asm-lab-4.md
+      - Lab 9 - (nasm) Saltos: class/asm-lab-3.md
+#      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
 #      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
 #      - Lab 13 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
 #      - Lab 14 - VM: class/vm-lab-1.md

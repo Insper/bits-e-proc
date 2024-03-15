@@ -1,9 +1,8 @@
-# Lab 12 (nasm) Saltos
+# Lab 9 - (nasm) Saltos
 
-| Lab 12                                                                      |
+| Lab 9                                                                     |
 |-----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_12_deadline}}==                       |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_11_classroom}})== |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_nasm_2_classroom}})== |
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
@@ -22,48 +21,12 @@ Ao final desse lab você deve ser capaz de:
 !!! note
     Dúvidas sobre assembly? [Z01->Resumo Assembly](https://insper.github.io/bits-e-proc/commum-content/z01/z01-Resumo-Assembly/)
 
-## Incondicional
-
-<!--
-!!! exercise "lcd1.nasm" 
-    - File: `lcd1.nasm`
-    - Test: Visual no simulador
-    
-    Task: Preencha todos os px do LCD de preto!
-    
-    === "resultado esperado"
-        ![](figs/F-Assembly/lab2-jmp1.png){width=350}
-        
-    === "solucão"
-        
-        Irei usar o RAM[0] para salvar o contador, que será incrementado a partir do endeço base do LCD `16384` até a onde o programa executar.
-        
-        > Neste exemplo, o valor final do loop não está sendo controlado!!
-        
-        ```nasm
-        leaw $16384, %A
-        movw %A, %D
-        leaw $0, %A
-        movw %D, (%A)
-        
-        LOOP:
-          leaw $0, %A
-          movw (%A), %D
-          addw $1, %D, (%A)
-          movw %D, %A
-          movw $-1, (%A)
-          leaw $LOOP, %A
-          jmp
-          nop
-        ```
--->
-
 ## Condicional
 
 Saltos condicionais são utilizados para verificarmos condições no programa, vamos trabalhar um pouco com isso.
 
 
-!!! exercise "jmp1.nasm" 
+!!! exercise "jmp1 💰 (0 HW/ 1 SW)"
     - File: `jmp1.nasm`
     - File: `test_nasm.py`
     - Test: `pytest -k jmp1`
@@ -90,22 +53,6 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
     
     - in: `RAM[0] = 0` / `RAM[1] = 3`
     - out: `RAM[0] = 2`
-    
-    ```py
-    # modifique o test_nasm.py incluindo:
-    
-    @pytest.mark.telemetry_files(source('jmp1.nasm'))
-    def test_jmp1_if():
-        ram = {0: 0, 1: 0}
-        tst = {0: 1}
-        assert nasm_test("jmp1.nasm", ram, tst)
-
-    @pytest.mark.telemetry_files(source('jmp1.nasm'))
-    def test_jmp1_else():
-        ram = {0: 0, 1: 3}
-        tst = {0: 2}
-        assert nasm_test("jmp1.nasm", ram, tst)
-    ```
     
     === "resultado esperado"
         - `test_jmp1_if`: RAM[0] = 1
@@ -136,8 +83,9 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         movw $1, (%A) ; RAM[0] = 1
         END:          
         ```
-        
-!!! exercise "jmp2.nasm" 
+
+
+!!! exercise "jmp2 💰 (0 HW/ 1 SW)"
     - File: `jmp2.nasm`
     - File: `test_nasm.py`
     - Test: `pytest -k jmp2`
@@ -156,24 +104,6 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
     - Teste 1: RAM[1] = 3
     - Teste 2: RAM[1] = 0
         
-    Modifique o `test_nasm.py`:
-    
-    ```py
-    # modifique o test_nasm.py incluindo:
-    
-    @pytest.mark.telemetry_files(source('jmp2.nasm'))
-    def test_jmp2_if():
-        ram = {0: 0, 1: 3}
-        tst = {0: 1}
-        assert nasm_test("jmp2.nasm", ram, tst)
-
-    @pytest.mark.telemetry_files(source('jmp2.nasm'))
-    def test_jmp2_else():
-        ram = {0: 0, 1: 5}
-        tst = {0: 2}
-        assert nasm_test("jmp2.nasm", ram, tst)
-    ```
-        
     === "dica"
         Não temos uma instrução de jmp que verifica se o valor de `%D` é igual a 3, porém podemos subtrair **3** do calor salvo em RAM[1] e verificar se o resultado é igual a 0:
         
@@ -190,7 +120,7 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
         subw %D, %A, %D ; %D = RAM[1] - 3
         ```
 
-!!! exercise "💰 ({{lab_12_points}})"
+!!! exercise "💰 (0 HW/ 1 SW)"
     - File: `jmp3.nasm`
     - File: `test_nasm.py`
     - Test: `pytest -k jmp3`
@@ -203,39 +133,3 @@ Saltos condicionais são utilizados para verificarmos condições no programa, v
     else
         RAM[0] = 2
     ```
-    
-    Modifique o `test_nasm.py` incluindo:
-    
-    ```py
-    # modifique o test_nasm.py incluindo:
-    
-    @pytest.mark.telemetry_files(source('jmp3.nasm'))
-    def test_jmp3_if_equal():
-        ram = {0: 0, 1: 1, 2: 2}
-        tst = {0: 1}
-        assert nasm_test("jmp3.nasm", ram, tst)
-
-    @pytest.mark.telemetry_files(source('jmp3.nasm'))
-    def test_jmp3_if_gt():
-        ram = {0: 0, 1: 2, 2: 2}
-        tst = {0: 1}
-        assert nasm_test("jmp3.nasm", ram, tst)
-
-    @pytest.mark.telemetry_files(source('jmp3.nasm'))
-    def test_jmp3_else():
-        ram = {0: 0, 1: 2, 2: 0}
-        tst = {0: 2}
-        assert nasm_test("jmp3.nasm", ram, tst)
-    ```
-
-        
-<!--
-
-!!! example "jmp4.nasm" 
-    - File: `jmp4.nasm`
-    - Test: Visual
-    
-    Task: Acione a metade superior dos pxs do LCD de preto.
-    
-    ![](figs/F-Assembly/lab2-jmp5.png){width=350}
--->
