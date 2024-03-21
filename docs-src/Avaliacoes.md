@@ -9,7 +9,7 @@ A avaliação ter duas partes: Teórica e Prática, a parte teórica será reali
 
 Teoria: Estudar pelo PrairieLearn e pelos `Exercícios` que fizemos em sala de aula (Álgebra Booleana 1/2; Dados Digitais 1/2; Aritmética Binária), o conteúdo será:
 
--**Lógica sequencial**: Flip Flop tipo D
+- **Lógica sequencial**: Flip Flop tipo D
 - **Aritmética Binária - HW**: Half-Adder; Full-Adder; Somadores
 - **Aritmética Binária**: Soma binária; overflow
 - **ULA**: Controle da ULA; Flags 
@@ -26,8 +26,10 @@ A parte prática será pedida para vocês implementarem soluções em MyHDL, voc
 - Lab 6 - ULA
 - Lab 7 - Lógica Sequencial
 
-### AI - Praticando
+### Praticando 
 
 A seguir exercícios para vocês praticarem, além do que já existe (vocês podem refazer os exercícios no PL ou do site ou os labs).
 
-
+| AI                                                                      |
+|-------------------------------------------------------------------------|
+| Prática extra: ==[Classroom](https://classroom.github.com/a/dk1ErssU)== |
