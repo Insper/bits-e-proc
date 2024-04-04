@@ -40,12 +40,16 @@ extra:
     lab_seq_points: '2 HW/ 0 SW'
     lab_seq_classroom: https://classroom.github.com/a/ZR9oi2yP
 
-    lab_nasm_1_points: '0 HW/ 3 SW'
+    lab_nasm_2_points: '0 HW/ 3 SW'
     lab_nasm_2_points: '0 HW/ 3 SW'
     lab_nasm_2_classroom: https://classroom.github.com/a/ARyD-cq9
 
     lab_nasm_3_points: '0 HW/ 4 SW'
     lab_nasm_3_classroom: https://classroom.github.com/a/AkOQR7ru
+
+    lab_nasm_4_deadline: '11/04'
+    lab_nasm_4_points: '0 HW/ 6 SW'
+    lab_nasm_4_classroom: https://classroom.github.com/a/-ODT6P_Z
 
     av2_simulado_classroom:   https://classroom.github.com/a/_BZEsoXf
     av2_simulado_2_classroom: https://classroom.github.com/a/LD2ztn4N
@@ -103,7 +107,7 @@ nav:
       - Lab 7  - Lógica Sequencial: class/seq-lab-1.md
       - Lab 8  - (nasm) Assembly: class/asm-lab-1.md
       - Lab 9 - (nasm) Saltos: class/asm-lab-3.md
-#      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
+      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
 #      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
 #      - Lab 13 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
 #      - Lab 14 - VM: class/vm-lab-1.md
