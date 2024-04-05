@@ -1,6 +1,6 @@
-# Lab 13: (nasm) Praticando
+# Lab 10: (nasm) Praticando
 
-| Lab 13                                                                          |
+| Lab 10                                                                          |
 |---------------------------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_nasm_4_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_nasm_4_classroom}})== |
