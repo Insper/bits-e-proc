@@ -2,8 +2,8 @@
 
 | Lab 12                                                                      |
 |-----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_12_deadline}}==                       |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_12_classroom}})== |
+| **Data limite para entrega**: =={{lab_vm_1_deadline}}==                       |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_vm_1_classroom}})== |
 | =={lab_12_points}==                                                            |
 
 !!! info "💰 Laboratório com pontos"
