@@ -1,10 +1,10 @@
-# Lab 16: VM
+# Lab 12: VM
 
-| Lab 16                                                                      |
+| Lab 12                                                                      |
 |-----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_16_deadline}}==                       |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_16_classroom}})== |
-| =={lab_16_points}==                                                            |
+| **Data limite para entrega**: =={{lab_12_deadline}}==                       |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_12_classroom}})== |
+| =={lab_12_points}==                                                            |
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
@@ -39,7 +39,7 @@ Primeiro iremos praticar o conceito básico da linguagem VM, que é a notação 
 
 Agora vamos trabalhar com a nossa vm, vocês terão que implementar os programas a seguir e testar com o pytest:
 
-!!! exercise "💰 (00 HW/ 01 SW) add"
+!!! exercise "💰 (0 HW/ 1 SW) add"
     - File: `1a-add.vm`
     - Teste: `pytest -k 1a`
 
@@ -47,7 +47,7 @@ Agora vamos trabalhar com a nossa vm, vocês terão que implementar os programas
     
     ==Tip: Para salvar em `temp 0` use: `pop temp 0`.==
 
-!!! exercise "💰 (00 HW/ 01 SW) calc"
+!!! exercise "💰 (0 HW/ 1 SW) calc"
     - File: `1b-calc.vm`
     - Teste: `pytest -k 1b`
 
@@ -61,47 +61,14 @@ Nossa linguagem vm suporta realizar condições e loops, vamos ver como isso é 
 !!! info "TEORIA"
     Leia a [Teoria/VM - jump](https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-vm-jump/) antes de seguir.
     
-!!! exercise "💰 (00 HW/ 01 SW) loop"
+!!! exercise "💰 (0 HW/ 2 SW) loop"
     - File: `1c-loop.vm`
     - Teste: `pytest -k 1c`
     
-!!! exercise "💰 (00 HW/ 04 SW) div"
+!!! exercise "💰 (0 HW/ 2 SW) div"
     - File: `1d-div.vm`
     - Teste: `pytest -k 1d`
     
-!!! exercise "💰 (00 HW/ 01 SW) mult"    
+!!! exercise "💰 (0 HW/ 2 SW) mult"    
     - File: `1e-mult.vm`
     - Teste: `pytest -k 1e`
-
-## Funções
-
-Vamos agora fazer o uso de funções em VM, o que irá nos permitir fazer as seguintes operações: $10/2 + 15*3*\sqrt{121}/2^5$, lembre que no nosso hardware não possuímos os operadores de multiplicação, divisão, raiz quadrada e muito menos exponencial. Mas com o uso de funções podemos implementar isso em código e usar para implementar a equação anterior.
-
-```
-div(10,2) + div(mult(mult(15,3), sqrt(121.2))), exp(2,5))
-``` 
-
-- note que os operadores viraram chamadas de funções.
-
-!!! info "TEORIA"
-    Leia a [Teoria/VM - Funções](https://insper.github.io/bits-e-proc/commum-content/teoria/Teoria-vm-funcoes/) antes de seguir.
-    
-Vamos agora trabalhar com funções na nossa VM, implementem os códigos a seguir:
-
-!!! exercise "💰 (00 HW/ 01 SW) call"
-    - File: `2a-calculadora/Main.vm`
-    - Teste: `pytest -k 2a`
-    
-    Neste exercício a funções `mult` já foi dada pronta, você deve agora apenas fazer uso dela na função `main`.
-    
-!!! exercise "💰 (00 HW/ 02 SW) div function"
-    - File: `2b-calculadora/div.vm`
-    - Teste: `pytest -k 2b`
-
-    Neste exercício você deve implementar uma funções `div` que recebe dois argumentos e faz a divisão. Para isso, declare no comeco do arquivo: `function div X` onde X é o número de variáveis temporária que deseja utilizar.
-
-!!! exercise "💰 (00 HW/ 04 SW) pow"
-    - File: `2c-calculadora/pow.vm`
-    - Teste: `pytest -k 2c`
-
-    Neste exercício você deve implementar uma funções `pow` que recebe dois argumentos e faz `x^y`, onde **x** é o primeiro argumento e **y** o segundo. Para isso, declare no comeco do arquivo: `function pow X` onde X é o número de variáveis temporária que deseja utilizar. Note que na pasta existe a funçõe `mult`, faća uso dela!
