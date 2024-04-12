@@ -1,10 +1,10 @@
 # Lab 12: VM
 
-| Lab 12                                                                      |
-|-----------------------------------------------------------------------------|
+| Lab 12                                                                        |
+|-------------------------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_vm_1_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_vm_1_classroom}})== |
-| =={lab_1_vm_points}==                                                            |
+| =={lab_vm_1_points}==                                                         |
 
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
