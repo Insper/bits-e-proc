@@ -7,7 +7,7 @@
 !!! info "💰 Laboratório com pontos"
     Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
     
-    Neste laboratório você pode receber até: **({{lab_11_points}})**.
+    Neste laboratório você pode receber até: **({{lab_nasm_2_points}})**.
 
 Ao final desse lab você deve ser capaz de:
 
