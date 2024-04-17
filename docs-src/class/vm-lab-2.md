@@ -1,11 +1,10 @@
-# Lab 13: VM
+# Lab 13: VM - 2
 
 | Lab 13                                                                        |
 |-------------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_vm_2_deadline}}==                        |
+| **Data limite para entrega**: =={{lab_vm_2_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_vm_2_classroom}})== |
-| =={lab_vm_2_points}==                                                         |
-
+| =={{lab_vm_2_points}}==                                                       |
 
 ## Funções
 

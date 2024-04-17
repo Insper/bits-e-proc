@@ -1,19 +1,10 @@
-# Lab 12: VM
+# Lab 12: VM - 1
 
 | Lab 12                                                                        |
 |-------------------------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_vm_1_deadline}}==                       |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_vm_1_classroom}})== |
-| =={lab_vm_1_points}==                                                         |
-
-!!! info "💰 Laboratório com pontos"
-    Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
-    
-    Neste laboratório você pode receber até: **({{lab_1_vm_points}})**.
-
-!!! tip
-    - Realizar o laboratório individualmente. Mas trabalhar no grupo e trocar ideias.
-
+| =={{lab_vm_1_points}}==                                                       |
 
 No laboratório iremos praticar a linguagem VM para o nosso Z01.1, essa entrega é individual e **vale nota**. Esse laboratório mistura exercícios com leitura de teoria, é essencial que você realize as leituras recomendadas para cada secção e então voltar para fazer os exercícios. 
 
