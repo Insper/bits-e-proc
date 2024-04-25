@@ -6,6 +6,8 @@
 
 Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
 
+Mini projeto individual de bits e processadores, na qual vocês vão estudar um processador real.
+
 ## Processadores
 
 Você deverá escolher um dos processadores listados a seguir:
