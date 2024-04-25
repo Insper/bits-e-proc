@@ -1,10 +1,10 @@
-# Lab 17 - VM translator
+# Lab 14 - VM translator
 
 | Lab 17                                                                      |
 |-----------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_17_deadline}}==                       |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_17_classroom}})== |
-| Pontos: =={{lab_17_points}}==                                             |
+| **Data limite para entrega**: =={{lab_vm_translator_1_deadline}}==                       |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_vm_translator_1_classroom}})== |
+| Pontos: =={{lab_vm_translator_1_points}}==                                             |
 
 Neste laboratório iremos implementar parte do código que executa a tradução do VM para NASM.
 
