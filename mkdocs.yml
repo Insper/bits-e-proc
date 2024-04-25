@@ -112,7 +112,6 @@ nav:
 #      - 4 - Assembly: class/asm-proj.md
 #      - 5 - Assembler: class/assembler-proj.md
 #      - 6 - VM translator: class/vmtranslator-proj.md
-#      - X - Mundo Real: class/x-proj.md
   - Labs:
       - Lab 1  - Visão geral: class/intro-benchmark-lab.md
       #- Lab 2  - Configurando Github: class/intro-lab-1.md
@@ -180,12 +179,13 @@ nav:
       - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
       - VM translator: https://docs.google.com/spreadsheets/d/1dywPIHgpUztDtpqzuEuGzAuTlcK9ryVUTp9-b84stJ4/edit?usp=sharing
 
-  - Útil:
-    #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
-      - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md
-      - "Ixi, sou dev": util/Util-vixi-sou-dev.md
-      - "Codespace Projeto": util/Util-projet-codespace.md
-      - "Codespace": util/infra-codespace.md
+  - Projeto Mundo Real: class/x-proj.md
+ # - Útil:
+ #   #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
+ #     - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md
+ #     - "Ixi, sou dev": util/Util-vixi-sou-dev.md
+ #     - "Codespace Projeto": util/Util-projet-codespace.md
+ #     - "Codespace": util/infra-codespace.md
 
   - Avaliações: Avaliacoes.md
 #- História:

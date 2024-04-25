@@ -1,17 +1,10 @@
 # Mundo Real
 
-!!! warning ""
-    Entregar até dia 10/11, via google forms:
-
-    - https://docs.google.com/forms/d/e/1FAIpQLSdrK0lW169gaH0LXzBQNKAjnU_NtO7quFaJkMxuSH3FQAd4hQ/viewform?usp=sf_link
-
 | HW | SW |
 |----|----|
 | 15 | 10 |
 
 Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
-
-- 
 
 ## Processadores
 
@@ -22,7 +15,7 @@ Você deverá escolher um dos processadores listados a seguir:
     
     ==Não pode repetir!==
     
-    - https://docs.google.com/spreadsheets/d/1OxFfHGUkG75fUT7L98yiP4Zbd6KUCgrEO_ih38b4g5s/edit?usp=sharing
+    - https://docs.google.com/spreadsheets/d/1mH5wtVWM12W8EY2jeRJ3-DBCcob1pC0D3yUPiQZnUD4/edit?usp=sharing
     
 ## Entrega
 
@@ -33,9 +26,7 @@ Você deve entregar um vídeo que explica a CPU em questão, este vídeo ==de ap
 
 A entrega deve ser realizada pelo link a seguir, o vídeo deve estar no youtube (lembre de deixar acessível para qualquer um com o link):
 
-- [Link para entrega](https://docs.google.com/forms/d/e/1FAIpQLSeTF5fCUlGqZBWhO6w_9HVgQ5nIxPIgawWLaW3n7M1L_bKaew/viewform?usp=sf_link)
-
-!!! warning
+!!! tip
     ==Muito importante que sempre que possível realizar uma comparação com a nossa CPU==
     
 ### (**15 HW**) CPU
