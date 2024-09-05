@@ -2,23 +2,20 @@
 
 | Descritivo                                                                     |
 |--------------------------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_myhdl_deadline}}==                       |
-| Pointos: {{lab_myhdl_points}}
+| Pontos: {{lab_myhdl_points}}
 | Fazer em dupla!                                                                |
-| Entregue o código pelo repositório do ==[Classroom]({{lab_myhdl_classroom}})== |
-| **Todos do grupo devem acessar o classroom para ganharem os pontos!**          |
+| Accessar pelo: [Classroom]({{lab_myhdl_classroom}}){.ah-button} |
 
 !!! info "💰 Laboratório com pontos"
-    Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
-    
     Neste laboratório você pode receber até: **({{lab_myhdl_points}})**.
+    
+    - 1 ponto até o final da aula
+    - 2 pontos até próxima aula
 
-    ==Realizar em dupla!==, para ganhar os pontos os dois alunos devem acessar o classroom com a conta do github! Mesmo sendo em dupla, sugerimos para todos fazerem, pois esse tipo de exercício vai ser cobrado em quiz.
+    ==Realizar em dupla!==. Para os dois ganharem os pontos todos devem acessar o classroom com a sua respectiva conta do github! Mesmo sendo em dupla, sugerimos para todos fazerem, pois esse tipo de exercício vai ser cobrado em quiz.
 
 !!! exercise
-    Leitura prévia necessária:
-
-    - https://insper.github.io/bits-e-proc/myhdl/basico/
+    Antes de seguir, leia a teoria.
 
 Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-Combinacional`](/bits-e-proc/class/logiComb-Projeto)), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
 
@@ -88,23 +85,39 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
 
 Agora é por sua conta, você deve descrever alguns circuitos lógicos combinacionais bem simples em MyHDL. 
 
-!!! exercise "💰 1 ponto"
+!!! exercise "💰 1 ponto - até o final da aula"
     Para cada exercício implemente a solução no arquivo `comb_modules.py` e teste com `pytest`. A descrição do exercício está no próprio módulo.
 
     - `pytest -s -k exe2`
     - `pytest -s -k exe3`
 
-!!! progress
-    Continuar...
 
-## Executando na FPGA 
+## Testando no hardware
 
-!!! exercise
-    Instalar o fpgaLoader conforme [instrucões para cada OS](
-    https://insper.github.io/bits-e-proc/util/infra-codespace/)
+Faća o download do programa que facilita a programacão da FPGA (desenvolvido internamente pelo Eduardo Marossi):
+
+- https://github.com/Insper/fpgaloader/releases
+
+E com a FPGA plugada no computador execute o programa.
+
+!!! warning "Usuários Windows"
+
+    Vocês vão precisar baixar também o programa Zadig (está também no github, em releases). Executem o Zadig, e pluguem a placa, deverá aparecer "USB Blaster II", escolha o driver "libusb-K" conforme a imagem e clique em "Install Driver". Em seguida pode prosseguir abrindo o programa "fpgaloader"
+
+![](figs/windowsZadig.png)
+
     
-!!! progress
-    Continuar...
+!!! warning "Usuários macOS (M1/M2 ou Intel)"
+
+    Baixem a versão apropriada para o seu macOS, se você tem M1 ou M2 baixe a versão aarch64. Caso seja Intel baixe a versão x86_64. Descompacte e arraste o aplicativo fpgaloader para pasta Applications no seu macOS. Para abrir a primeira vez, será necessário clicar com o botão direito do mouse em cima do executável, e clicar em "Abrir".
+
+![](figs/macosOpen.png)
+
+!!! warning "Usuários Linux"
+    Executem o comando com `sudo` por conta do acesso ao USB.
+
+
+### Executando na FPGA 
     
 !!! video
     ![](https://www.youtube.com/watch?v=KVWXYP08llg)
@@ -223,9 +236,8 @@ Vamos praticar um pouco mais, agora usando a FPGA. Para cada um dos módulos a s
     leds[1].next = not led0
     ```
 
-!!! exercise "💰 1 ponto"
+!!! exercise "💰 2 pontos"
     - Modulo: `sw2hex`
-    - ==Mostrar para o professor!==
     
     Modifique o `toplevel.py` adicionando o módulo novo para acionar o `HEX0` controlado pelo `sw2hex`:
     

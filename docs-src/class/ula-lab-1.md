@@ -41,7 +41,7 @@ A modelagem estrutural em hardware pode ser entendida como a utilização de dif
 
 Para isso devemos criar "instancias" de um componente, por exemplo: Podemos criar uma instância do *halfAdder* e outra do *fullAdder* para implementarmos um somador de dois bits. Podemos pensar nessas instâncias como "ir até o armário do laboratório e pegar um CI de cada tipo", cada instância é executada em paralelo e consume recursos próprios, quanto mais instâncias mais complexo é o hardware e mais recursos são utilizados.
 
-#### halfAdder
+#### Full-Adder
 
 Como exemplo do processo vamos reimplementar o fullAdder, mas agora utilizando dois halfAdders, como demonstrado no diagrama a seguir:
 
