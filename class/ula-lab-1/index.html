@@ -543,7 +543,7 @@
 </div>
 <p>A modelagem estrutural em hardware pode ser entendida como a utilização de diferentes módulos para construir um novo. Lembre que estamos desenvolvendo um hardware e não criando um software, e que esse hardware deve ser sintetizável (possível de implementar na FPGA ou em ASIC). </p>
 <p>Para isso devemos criar "instancias" de um componente, por exemplo: Podemos criar uma instância do <em>halfAdder</em> e outra do <em>fullAdder</em> para implementarmos um somador de dois bits. Podemos pensar nessas instâncias como "ir até o armário do laboratório e pegar um CI de cada tipo", cada instância é executada em paralelo e consume recursos próprios, quanto mais instâncias mais complexo é o hardware e mais recursos são utilizados.</p>
-<h4 id="halfadder">halfAdder</h4>
+<h4 id="full-adder">Full-Adder</h4>
 <p>Como exemplo do processo vamos reimplementar o fullAdder, mas agora utilizando dois halfAdders, como demonstrado no diagrama a seguir:</p>
 <p><a class="glightbox" href="../figs/ula/full-adder.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../figs/ula/full-adder.svg" /></a></p>
 <p>O código em python fica:</p>
