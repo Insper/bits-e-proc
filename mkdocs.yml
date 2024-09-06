@@ -37,8 +37,8 @@ extra:
     lab_4_points: '3 HW / 0 SW'
 
     lab_ula_deadline: Final da aula (07/03)
-    lab_ula_points: '2 HW/ 2 SW'
-    lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSe04qyCZJUSCZvL4FlESN2QbSQyarw753vA0yitZ7o29zARRQ/viewform?usp=sf_link
+    lab_ula_points: '3 HW/ 3 SW'
+    lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link
 
     lab_seq_points: '2 HW/ 0 SW'
     lab_seq_classroom: https://classroom.github.com/a/ZR9oi2yP
@@ -142,7 +142,7 @@ nav:
     - Lab. 2 🪙: class/ula-lab-2.md
   - Aula 10 - ULA:
     - Teoria: commum-content/teoria/Teoria-ULA.md
-    - Lab: class/ula-lab-4.md
+    - Lab 🪙: class/ula-lab-4.md
 
 #  - Projetos:
 #      # - A - Ambiente de desenvolvimento: class/intro-proj.md

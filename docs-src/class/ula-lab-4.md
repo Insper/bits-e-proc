@@ -3,11 +3,8 @@
 | Descritivo                                                   |
 |--------------------------------------------------------------|
 | **Data limite para entrega**: =={{lab_ula_deadline}}==       |
-| Pointos: {{lab_myhdl_points}}                                |
+| Pointos: {{lab_ula_points}}                                |
 | Entregue resposta pelo ==[google forms]({{lab_ula_forms}})== |
-
-!!! info
-    Faca a atividade em dupla, so que cada um submete a sua resposta no forms.
 
 O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da ULA para entendermos as operações da unidade de processamento do nosso computador. Para isso iremos:
 
@@ -47,9 +44,13 @@ cd z01.1-ula
 pip3 install -r requirements.txt
 python3 main.py
 ```
-!!! Dica - Caso o programa não abrir, tente instalar esses pacotes a seguir: 
+
+!!! info "Dica"
+   
+    Caso o programa não abrir, tente instalar esses pacotes a seguir" 
+
     ```sh
-        sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+    sudo apt-get install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
     ```
 
 Você deve obter a seguinte interface:
