@@ -116,7 +116,7 @@ nav:
     - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
     - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
     - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
-    - Prairielearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
+    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
   - Aula 4 - Transistores:
     - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing
     - Teoria: commum-content/teoria/Teoria-RTL.md
@@ -125,7 +125,7 @@ nav:
     - Teoria: commum-content/teoria/Teoria-Dados.md
     - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
     - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
-    - Prairielearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158
+    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158
   - Aula 6 - FPGA:
     - Teoria: myhdl/basico.md
     - Lab 🪙: class/comb-lab-1.md
@@ -136,14 +136,14 @@ nav:
     - Teoria 1: commum-content/teoria/Teoria-Aritmetica-Binaria.md
     - Exercícios: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
     - Teoria 2: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
-    - Prairielearn 🪙: https://us.prairielearn.com/pl/course_instance/159409
+    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409
   - Aula 9 - Adders:
     - Lab. 1 🪙: class/ula-lab-1.md
     - Lab. 2 🪙: class/ula-lab-2.md
   - Aula 10 - ULA:
     - Teoria: commum-content/teoria/Teoria-ULA.md
     - Lab 🪙: class/ula-lab-4.md
-
+    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2453997
 #  - Projetos:
 #      # - A - Ambiente de desenvolvimento: class/intro-proj.md
 #      - 1 - Lógica Combinacional: class/comb-proj.md
