@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
       
-        <title>Lab - Bits e Processadores</title>
+        <title>Lab 🪙 - Bits e Processadores</title>
       
     
     <link rel="stylesheet"
@@ -204,7 +204,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156">PrairieLearn 🪙</a>
     </li>
   
 
@@ -278,7 +278,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158">PrairieLearn 🪙</a>
     </li>
   
 
@@ -369,7 +369,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409">PrairieLearn 🪙</a>
     </li>
   
 
@@ -399,6 +399,14 @@
   
 
       
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409">PrairieLearn  🪙</a>
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -420,7 +428,7 @@
   
 
     <li class="active ah-togglable-item opened">
-      <span class="ah-togglable-handle">Lab</span>
+      <span class="ah-togglable-handle">Lab 🪙</span>
       <ul>
         
           
@@ -440,6 +448,64 @@
             
         
       </ul>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2453997">PrairieLearn 🪙</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 11 - QUIZ 2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../quiz">Quiz 2 🪙</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 12 - Síncrono</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../seq-lab-1/">Lab</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../prairielearn/">PrairieLearn 🪙</a>
     </li>
   
 
@@ -480,17 +546,13 @@
 <td><strong>Data limite para entrega</strong>: <mark>Final da aula (07/03)</mark></td>
 </tr>
 <tr>
-<td>Pointos: 3 HW / 0 SW</td>
+<td>Pointos: 3 HW/ 3 SW</td>
 </tr>
 <tr>
-<td>Entregue resposta pelo <mark><a href="https://docs.google.com/forms/d/e/1FAIpQLSe04qyCZJUSCZvL4FlESN2QbSQyarw753vA0yitZ7o29zARRQ/viewform?usp=sf_link">google forms</a></mark></td>
+<td>Entregue resposta pelo <mark><a href="https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link">google forms</a></mark></td>
 </tr>
 </tbody>
 </table>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Faca a atividade em dupla, so que cada um submete a sua resposta no forms.</p>
-</div>
 <p>O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da ULA para entendermos as operações da unidade de processamento do nosso computador. Para isso iremos:</p>
 <ol>
 <li>Programar a ULA na FPGA</li>
@@ -521,14 +583,17 @@
 <p>Para cada exercício, anote a operação no papel e entenda o que está acontecendo, use o simulador para validar e testar as operações.</p>
 <h2 id="simulador">Simulador</h2>
 <p>Quer testar em casa? Use simulador da ULA feito em python + Qt. Siga os passos a seguir (execute no seu computador Linux):</p>
-<p><div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eduardomarossi/z01.1-ula
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eduardomarossi/z01.1-ula
 <span class="nb">cd</span><span class="w"> </span>z01.1-ula
 pip3<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 python3<span class="w"> </span>main.py
 </code></pre></div>
-!!! Dica - Caso o programa não abrir, tente instalar esses pacotes a seguir: 
-    <div class="highlight"><pre><span></span><code><span class="w">    </span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;^libxcb.*-dev&#39;</span><span class="w"> </span>libx11-xcb-dev<span class="w"> </span>libglu1-mesa-dev<span class="w"> </span>libxrender-dev<span class="w"> </span>libxi-dev<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libxkbcommon-x11-dev
-</code></pre></div></p>
+<div class="admonition info">
+<p class="admonition-title">Dica</p>
+<p>Caso o programa não abrir, tente instalar esses pacotes a seguir" </p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span><span class="s1">&#39;^libxcb.*-dev&#39;</span><span class="w"> </span>libx11-xcb-dev<span class="w"> </span>libglu1-mesa-dev<span class="w"> </span>libxrender-dev<span class="w"> </span>libxi-dev<span class="w"> </span>libxkbcommon-dev<span class="w"> </span>libxkbcommon-x11-dev
+</code></pre></div>
+</div>
 <p>Você deve obter a seguinte interface:</p>
 <p><a class="glightbox" href="https://raw.githubusercontent.com/eduardomarossi/z01.1-ula/master/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="https://raw.githubusercontent.com/eduardomarossi/z01.1-ula/master/image.png" /></a></p>
 
@@ -547,6 +612,13 @@ python3<span class="w"> </span>main.py
               <span class="nav-title">Teoria</span>
             </a>
           
+          
+            <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/"
+               class="ah-next"
+               title="Teoria">
+              <span class="nav-label">Next</span>
+              <span class="nav-title">Teoria</span>
+            </a>
           
         </div>
       </footer>

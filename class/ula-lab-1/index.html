@@ -204,7 +204,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156">PrairieLearn 🪙</a>
     </li>
   
 
@@ -278,7 +278,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158">PrairieLearn 🪙</a>
     </li>
   
 
@@ -369,7 +369,7 @@
         
   
     <li>
-      <a href="https://us.prairielearn.com/pl/course_instance/159409">Prairielearn 🪙</a>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409">PrairieLearn 🪙</a>
     </li>
   
 
@@ -419,6 +419,14 @@
   
 
       
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409">PrairieLearn  🪙</a>
+    </li>
+  
+
+      
     </ul>
   </li>
 
@@ -439,7 +447,65 @@
         
   
     <li>
-      <a href="../ula-lab-4/">Lab</a>
+      <a href="../ula-lab-4/">Lab 🪙</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/159409/assessment/2453997">PrairieLearn 🪙</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 11 - QUIZ 2</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../quiz">Quiz 2 🪙</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 12 - Síncrono</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Sequencial-Componentes/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../seq-lab-1/">Lab</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../prairielearn/">PrairieLearn 🪙</a>
     </li>
   
 
@@ -549,16 +615,16 @@
 <p>O código em python fica:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
 <span class="k">def</span> <span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
-    <span class="n">s0</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># (1)</span>
-    <span class="n">s1</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> 
-    <span class="n">s2</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+    <span class="n">s1</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># (1)</span>
+    <span class="n">s2</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> 
+    <span class="n">s3</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
-    <span class="n">half_1</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span> <span class="c1"># (2)</span>
-    <span class="n">half_2</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span> <span class="c1"># (3)</span>
+    <span class="n">half_1</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">)</span> 
+    <span class="n">half_2</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span> 
 
     <span class="nd">@always_comb</span>
     <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
-        <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s2</span> <span class="o">|</span> <span class="n">s3</span> <span class="c1"># (4)</span>
+        <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s2</span> <span class="o">|</span> <span class="n">s3</span> 
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
 </code></pre></div>
