@@ -165,19 +165,11 @@ nav:
   - Aula 16 - Prática Assembly 2:
     - PrairieLearn: prairielearn.md
   - Aula 16 - Linguagem de máquina:
-      - Toeria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+      - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
  #     - Teoria: commum-content/teoria/Teoria-Assembler.md
       - Consulta: commum-content/z01/z01-InstructionSet.md
       - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
       - PrairieLearn: prairielearn.md
-#  - Projetos:
-#      # - A - Ambiente de desenvolvimento: class/intro-proj.md
-#      - 1 - Lógica Combinacional: class/comb-proj.md
-#      - 2 - ULA: class/ula-proj.md
-#      - 3 - Lógica Sequencial: class/seq-proj.md
-#      - 4 - Assembly: class/asm-proj.md
-#      - 5 - Assembler: class/assembler-proj.md
-#      - 6 - VM translator: class/vmtranslator-proj.md
 #  - Labs:
 #      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
 #      - Lab 11 - (nasm) Praticando 2: class/asm-lab-5.md
