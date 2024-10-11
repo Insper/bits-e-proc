@@ -40,8 +40,8 @@ extra:
     lab_ula_points: '3 HW/ 3 SW'
     lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link
 
-    lab_seq_points: '2 HW/ 0 SW'
-    lab_seq_classroom: https://classroom.github.com/a/ZR9oi2yP
+    lab_seq_points: '3 HW/ 0 SW'
+    lab_seq_classroom: https://classroom.github.com/a/1W7qVfb_
 
     lab_nasm_1_classroom: https://classroom.github.com/a/E-_Z77Tn
     lab_nasm_1_points: '0 HW/ 3 SW'
@@ -140,10 +140,35 @@ nav:
   - Aula 9 - Adders:
     - Lab. 1 🪙: class/ula-lab-1.md
     - Lab. 2 🪙: class/ula-lab-2.md
+    - PrairieLearn  🪙: https://us.prairielearn.com/pl/course_instance/159409
   - Aula 10 - ULA:
     - Teoria: commum-content/teoria/Teoria-ULA.md
     - Lab 🪙: class/ula-lab-4.md
     - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2453997
+  - Aula 11 - QUIZ 2:
+    - Quiz 2 🪙: quiz
+  - Aula 12 - Síncrono:
+    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+    - Lab: class/seq-lab-1.md
+    - PrairieLearn 🪙: prairielearn.md
+  - Aula 13 - Assembly:
+    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2461415
+  - Aula 14 - Assembly jump:
+    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+    - PrairieLearn: prairielearn.md
+  - Aula 15 - Prática Assembly 1:
+    - PrairieLearn: prairielearn.md
+  - Aula 16 - Prática Assembly 2:
+    - PrairieLearn: prairielearn.md
+  - Aula 16 - Assembler:
+      - Teoria: commum-content/teoria/Teoria-Assembler.md
+      - Consulta: commum-content/z01/z01-InstructionSet.md
+      - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
+      - PrairieLearn: prairielearn.md
 #  - Projetos:
 #      # - A - Ambiente de desenvolvimento: class/intro-proj.md
 #      - 1 - Lógica Combinacional: class/comb-proj.md
@@ -153,12 +178,6 @@ nav:
 #      - 5 - Assembler: class/assembler-proj.md
 #      - 6 - VM translator: class/vmtranslator-proj.md
 #  - Labs:
-#      - Lab 1  - Visão geral: class/intro-benchmark-lab.md
-#      #- Lab 2  - Configurando Github: class/intro-lab-1.md
-#      #- Lab 3  - Github: class/intro-lab-2.md
-#      - Lab 7  - Lógica Sequencial: class/seq-lab-1.md
-#      - Lab 8  - (nasm) Assembly: class/asm-lab-1.md
-#      - Lab 9  - (nasm) Saltos: class/asm-lab-3.md
 #      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
 #      - Lab 11 - (nasm) Praticando 2: class/asm-lab-5.md
 ##      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
@@ -168,17 +187,7 @@ nav:
 #      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
 #
 #  - Teoria:
-#      - Componentes Digitais: commum-content/teoria/Teoria-Componentes.md
-#      - Aritmética Binária: commum-content/teoria/Teoria-Aritmetica-Binaria.md
-#      - Aritmética Binária - HW: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
-#      - Lógica Sequencial: commum-content/teoria/Teoria-Logica-Sequencial.md
-#      - Componentes Síncronos: commum-content/teoria/Teoria-Sequencial-Componentes.md
-#      - Z01: commum-content/teoria/Teoria-Z01.md
-#      - ASM - Assembly: commum-content/teoria/Teoria-Assembly.md
-#      - ASM - Mapa de memória: commum-content/teoria/Teoria-Z01-mapadeMemoria.md
-#      - ASM - jump: commum-content/teoria/Teoria-nasm-jump.md
 #      - Linguagem de máquina: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
-#      - Assembler: commum-content/teoria/Teoria-Assembler.md
 #      - Tabela de Símbolos: commum-content/teoria/Teoria-Assembler-SymbolTable.md
 #      - VM: commum-content/teoria/Teoria-vm.md
 #      - VM - Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
@@ -190,16 +199,10 @@ nav:
 #      - Depurando: myhdl/depurando.md
 #
 #  - Z01:
-#      - Resumo Assembly: commum-content/z01/z01-Resumo-Assembly.md
 #      - Z01.1 Cheat Sheet: commum-content/z01/z01-Cheat-Sheet.md
-#      - Instruction Set: commum-content/z01/z01-InstructionSet.md
 #      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
 #
 #  - Exercícios:
-#      - Algebra Booleana - 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1a.md
-#      - Aritmética Binária: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
-#      - Lógica Sequencial: https://forms.gle/XMsFCDMYsmz1qUP86
-#      - Linguagem de Máquina: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
 #      - commum-content/exercicios/Exercicio-CPU-1.md
 #      - commum-content/exercicios/Exercicio-CPU-2.md
 #      - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
