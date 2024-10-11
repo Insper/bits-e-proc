@@ -164,8 +164,9 @@ nav:
     - PrairieLearn: prairielearn.md
   - Aula 16 - Prática Assembly 2:
     - PrairieLearn: prairielearn.md
-  - Aula 16 - Assembler:
-      - Teoria: commum-content/teoria/Teoria-Assembler.md
+  - Aula 16 - Linguagem de máquina:
+      - Toeria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+ #     - Teoria: commum-content/teoria/Teoria-Assembler.md
       - Consulta: commum-content/z01/z01-InstructionSet.md
       - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
       - PrairieLearn: prairielearn.md
@@ -187,7 +188,6 @@ nav:
 #      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
 #
 #  - Teoria:
-#      - Linguagem de máquina: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
 #      - Tabela de Símbolos: commum-content/teoria/Teoria-Assembler-SymbolTable.md
 #      - VM: commum-content/teoria/Teoria-vm.md
 #      - VM - Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
