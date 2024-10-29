@@ -1,21 +1,14 @@
-# Lab 7: Lógica Sequencial
+# Lab: Lógica Sequencial
 
-| Lab 7                                                                      |
+| Lab                                                                       |
 |----------------------------------------------------------------------------|
 | Entregue o código pelo repositório do ==[Classroom]({{lab_seq_classroom}})== |
 
 !!! info "💰 Laboratório com pontos"
-    Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
-    
-    Neste laboratório você pode receber até: **({{lab_seq_points}})**.
+    Pode ser feito em dupla! 
 
 !!! warning
     :zap: O laboratório só pode ser realizado com FPGA. 
-
-Este laboratório é referente a teoria de lógica sequencial:
-
-- Teoria/Lógica Sequencial
-- Teoria/Componentes Síncronos 
 
 ## Começando
 

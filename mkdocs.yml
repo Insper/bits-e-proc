@@ -159,40 +159,43 @@ nav:
     - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2461415
   - Aula 14 - Assembly jump:
     - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-    - PrairieLearn: prairielearn.md
+    - PrairieLearn  🪙: prairielearn.md
   - Aula 15 - Prática Assembly 1:
-    - PrairieLearn: prairielearn.md
+    - PrairieLearn 🪙: prairielearn.md
   - Aula 16 - Prática Assembly 2:
-    - PrairieLearn: prairielearn.md
+    - PrairieLearn 🪙: prairielearn.md
   - Aula 16 - Linguagem de máquina:
       - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
  #     - Teoria: commum-content/teoria/Teoria-Assembler.md
       - Consulta: commum-content/z01/z01-InstructionSet.md
       - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
+      - PrairieLearn 🪙: prairielearn.md
+  - Aula 17 - VM:
+      - Teoria: commum-content/teoria/Teoria-vm.md
+      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
+      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
+      - PrairieLearn 🪙: prairielearn.md
+  - Aula 18 - VM condições:
+      - Teoria: commum-content/teoria/Teoria-vm-jump.md
       - PrairieLearn: prairielearn.md
+  - Aula 19 - VM funções:
+      - Funções: commum-content/teoria/Teoria-vm-funcoes.md
+      - Memória: commum-content/teoria/Teoria-vm-memoria.md
+      - PrairieLearn 🪙: prairielearn.md
+
 #  - Labs:
-#      - Lab 10 - (nasm) Praticando: class/asm-lab-4.md
-#      - Lab 11 - (nasm) Praticando 2: class/asm-lab-5.md
-##      - Lab 12 - (nasm) Periféricos: class/asm-lab-2.md
-##      - Lab 13 - Linguagem de máquina: exercicios/linguagem-de-maquina.pdf
 #      - Lab 12 - (vm) Básico: class/vm-lab-1.md
 #      - Lab 13 - (vm) Funções: class/vm-lab-2.md
 #      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
 #
 #  - Teoria:
 #      - Tabela de Símbolos: commum-content/teoria/Teoria-Assembler-SymbolTable.md
-#      - VM: commum-content/teoria/Teoria-vm.md
-#      - VM - Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
-#      - VM - jump: commum-content/teoria/Teoria-vm-jump.md
-#      - VM - Funções: commum-content/teoria/Teoria-vm-funcoes.md
-#      - VM - Memória: commum-content/teoria/Teoria-vm-memoria.md
 #
 #  - MyHDL:
 #      - Depurando: myhdl/depurando.md
 #
 #  - Z01:
 #      - Z01.1 Cheat Sheet: commum-content/z01/z01-Cheat-Sheet.md
-#      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
 #
 #  - Exercícios:
 #      - commum-content/exercicios/Exercicio-CPU-1.md
