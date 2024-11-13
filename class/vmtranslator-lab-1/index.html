@@ -798,10 +798,6 @@
                 <a href="#lab">LAB</a>
               </li>
             
-              <li class="ah-toc-item">
-                <a href="#praticando">Praticando</a>
-              </li>
-            
         
       </ul>
     </li>
@@ -841,34 +837,9 @@
           
             <section class="progress-section show">
 <h1 id="lab-14-vm-translator">Lab 14 - VM translator</h1>
-<table>
-<thead>
-<tr>
-<th>Lab 17</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Data limite para entrega</strong>: <mark>None</mark></td>
-</tr>
-<tr>
-<td>Entregue o código pelo repositório do <mark><a href="https://classroom.github.com/a/4jh6p4G9">Classroom</a></mark></td>
-</tr>
-<tr>
-<td>Pontos: <mark>5 HW / 5 SW</mark></td>
-</tr>
-</tbody>
-</table>
 <p>Neste laboratório iremos implementar parte do código que executa a tradução do VM para NASM.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Lembre de autenticar na telemetria, executando uma única vez no terminal:</p>
-<ul>
-<li><code>telemetry auth</code></li>
-</ul>
-</div>
 <h2 id="estrutura">Estrutura</h2>
-<p>O VMtranslator já foi fornecido quase todo pronto (ufa!!) vocês só precisam implementar a parte que faz a tradução de um comando <code>vm</code> (pilha) em <code>nasm</code> (registrador-memória). O único arquivo que vocês vão precisar mexer de todo o repositório é o <code>Code.py</code>. Mas se tiver energia, de uma olhada na estrutura geral do projeto.</p>
+<p>O VMtranslator já foi fornecido quase todo pronto (ufa!!) vocês só precisam implementar a parte que faz a tradução de um comando <code>vm</code> (pilha) em <code>nasm</code> (registrador-memória). </p>
 <h2 id="lab">LAB</h2>
 <p>Vamos implementar parte do VMtranslator.</p>
 <h3 id="aritmetica">Aritmética</h3>
@@ -888,136 +859,8 @@
 <div class="admonition tip">
 <p>Você pode remover o <code>pass</code>, eu só coloco para o pytest não reclamar que o código python está errado.</p>
 </div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_1" id="exercise_1_0">
-<p class="admonition-title">Exercise</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>/Code.py</code></li>
-<li>Command: <code>add</code></li>
-<li>Test: <code>pytest -k add</code></li>
-</ul>
-<p>Termine de implementar o comando <code>add</code> e teste com <code>pytest -k add</code></p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
 <h3 id="como-o-teste-funciona">Como o teste funciona?</h3>
 <p>Com o teste passando, abra a pasta <code>test_assets</code> e repare que vários arquivos foram criados, para cada teste temos um arquivo <code>.vm</code> (neste caso <code>add.vm</code>) que gera um arquivo <code>.nasm</code> (no exemplo <code>add.nasm</code>) que possui o comando <code>VM</code> traduzido para assembly, este arquivo então é passado pelo assembler que gera o <code>add.hack</code>. Com o arquivo de linguagem de máquina, uma simulacão é executada e o teste realizado (analisasse os valores na memória RAM).</p>
-<h2 id="praticando">Praticando</h2>
-<p>Agora vamos praticar um pouco.</p>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_2" id="exercise_2_0">
-<p class="admonition-title">💰 (1 HW/ 1 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Command: <code>neg</code></li>
-<li>Test: <code>pytest -k neg</code></li>
-</ul>
-<p>Implemente o comando <code>neg</code> e teste com <code>pytest -s -k neg</code>.</p>
-<p>Dica: Faça no papel antes e só depois implemente.</p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_3" id="exercise_3_0">
-<p class="admonition-title">💰 (1 HW/ 1 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Command: <code>sub</code></li>
-<li>Test: <code>pytest -k sub</code></li>
-</ul>
-<p>Implemente o comando <code>sub</code> e teste com <code>pytest -s -k sub</code>.</p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_4" id="exercise_4_0">
-<p class="admonition-title">💰 (2 HW/ 2 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Method: <code>writePush</code></li>
-<li>Command: <code>push constant</code></li>
-<li>Test: <code>pytest -s -k push_constant</code></li>
-</ul>
-<p>Agora implemente um comando de uma outra classe, a do push. Procure pelo comando na classe <code>writePush</code>.</p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<p>Os próximos exercícios são de classe diferente da aritméticas.</p>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_5" id="exercise_5_0">
-<p class="admonition-title">💰 (1 HW/ 1 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Method: <code>writePop</code></li>
-<li>Command: <code>pop local</code></li>
-<li>Test: <code>pytest -s -k pop_local</code></li>
-</ul>
-<p>Implemente o comando <code>pop local</code>.</p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_6" id="exercise_6_0">
-<p class="admonition-title">💰 (2 HW/ 2 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Method: <code>writePop</code></li>
-<li>Command: <code>pop temp</code></li>
-<li>Test: <code>pytest -s -k pop_temp</code></li>
-</ul>
-<p>Implemente o comando <code>pop temp N</code>.</p>
-<blockquote>
-<p>Dica: Você vai precisar do argumento <code>index</code> que fornece o valor de N.</p>
-</blockquote>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_7" id="exercise_7_0">
-<p class="admonition-title">💰 (3 HW/ 3 SW)</p>
-<form class="exercise-form">
-<ul>
-<li>File: <code>sw/vmtranlator/Code.py</code></li>
-<li>Method: <code>writeArithmetic</code></li>
-<li>Command: <code>gt</code></li>
-<li>Test: <code>pytest -s -k gt</code></li>
-</ul>
-<p>Implemente o comando <code>gt</code>. </p>
-<p>Dica: Você vai ter que fazer um label para poder saltar, mas o label tem que ser único em todo o código <code>nasm</code> criado, para isso, utilize a função <code>self.getUniqLabel()</code> que retorna uma string única em todo o programa. </p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
-<div class="admonition exercise self-progress" data-slug="class/vmtranslator-lab-1/exercise_8" id="exercise_8_0">
-<p class="admonition-title">Exercise</p>
-<form class="exercise-form">
-<p>Tem uma infinidade de comandos para implementar, todos possuem teste. Você pode brincar e estudar mais por conta. </p>
-<p>A parte mais díficil é o <code>call</code> e o <code>return</code>.</p>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
 
 
 </section>
