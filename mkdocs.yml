@@ -106,6 +106,7 @@ nav:
   - Home:
       - index: index.md
   - Critérios de Avaliação: Sobre-Criterios-de-Avaliacao.md
+  - Projeto Mundo Real: class/x-proj.md
   - Aula 1 - Visão geral:
     - Laboratório: class/intro-benchmark-lab.md
   - Aula 2 - Álgebra Booleana :
@@ -182,11 +183,17 @@ nav:
       - Funções: commum-content/teoria/Teoria-vm-funcoes.md
       - Memória: commum-content/teoria/Teoria-vm-memoria.md
       - PrairieLearn 🪙: prairielearn.md
+      - Codespace: class/vm-lab-function.md
+  - Aula 20 - Quiz 3 VM:
+      - PrairieLearn 🪙: prairielearn.md
+  - Aula 21 - VM translator:
+
+      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
+      - PrairieLearn 🪙: prairielearn.md
 
 #  - Labs:
 #      - Lab 12 - (vm) Básico: class/vm-lab-1.md
 #      - Lab 13 - (vm) Funções: class/vm-lab-2.md
-#      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
 #
 #  - Teoria:
 #      - Tabela de Símbolos: commum-content/teoria/Teoria-Assembler-SymbolTable.md
@@ -203,7 +210,6 @@ nav:
 #      - linguagem de máquina: commum-content/exercicios/Linguagem_de_maquina.pdf
 #      - VM translator: https://docs.google.com/spreadsheets/d/1dywPIHgpUztDtpqzuEuGzAuTlcK9ryVUTp9-b84stJ4/edit?usp=sharing
 #
-#  - Projeto Mundo Real: class/x-proj.md
 # # - Útil:
 # #   #  - "Novo projeto": util/Util-Comecando-novo-projeto.md
 # #     - "Ixi, sou scrum": util/Util-vixi-sou-scrum.md

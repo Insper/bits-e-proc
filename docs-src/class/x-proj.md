@@ -4,6 +4,11 @@
 |----|----|
 | 15 | 10 |
 
+!!! tip
+    Entregar via o forms a seguir:
+    
+    - [Eantrega vi forms]()
+
 Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
 
 Mini projeto individual de bits e processadores, na qual vocês vão estudar um processador real.
@@ -17,7 +22,7 @@ Você deverá escolher um dos processadores listados a seguir:
     
     ==Não pode repetir!==
     
-    - https://docs.google.com/spreadsheets/d/1mH5wtVWM12W8EY2jeRJ3-DBCcob1pC0D3yUPiQZnUD4/edit?usp=sharing
+    - https://docs.google.com/spreadsheets/d/16siV8hP87C1_HIAR69rt8snscjSr9tbvjacT9Cs1Ctw/edit?usp=sharing
     
 ## Entrega
 

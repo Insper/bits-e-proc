@@ -5,7 +5,7 @@ Tive um problema com o PL, e códigos que demoram mais para executar não estão
 
 ## Prática
 
-Acesse  m o código pelo repositório do **[Classroom](https://classroom.github.com/a/s1t4Av8Q)** |
+Acesse  m o código pelo repositório do **[Classroom](https://classroom.github.com/a/BICQqHQU)** |
 
 Lembrem-se de que, pelo classroom, vocês precisam executar uma vez:
 
