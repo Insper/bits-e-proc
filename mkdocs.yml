@@ -20,8 +20,7 @@ plugins:
 
 extra:
   custom_variables:
-    lab_1_groups_spreadsheet: https://docs.google.com/spreadsheets/d/1V1h8e0awIF-E_OVm-Vc4zupaBRAQf-PcWidCq1knw74/edit?usp=sharing
-    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1707341403650/21ec9f6d8deb01b63040c273903f818ca821a099?sender=ub569a9273c6e285461187641
+    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1738811769178/328de1c916fa88a683e29c6830dba7ece69ebcd3?sender=ub569a9273c6e285461187641
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
 
     infra_test_classroom: https://classroom.github.com/a/2Hp8zB83

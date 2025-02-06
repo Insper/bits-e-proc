@@ -7,7 +7,7 @@
 !!! tip
     Entregar via o forms a seguir:
     
-    - [Eantrega vi forms]()
+    - [Eantrega via forms](https://docs.google.com/forms/d/e/1FAIpQLSczJrbxWKooApTPXylCJ6MUx4Mz77x6Ma-vGV_5W6mD4fMI9g/viewform?usp=sf_link)
 
 Fornece **15 pontos** de **Hardware** e **10 pontos** de **Software**. 
 
