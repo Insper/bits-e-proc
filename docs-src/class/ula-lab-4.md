@@ -1,11 +1,5 @@
 # Lab 6: ULA 
 
-| Descritivo                                                   |
-|--------------------------------------------------------------|
-| **Data limite para entrega**: =={{lab_ula_deadline}}==       |
-| Pointos: {{lab_ula_points}}                                |
-| Entregue resposta pelo ==[google forms]({{lab_ula_forms}})== |
-
 O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da ULA para entendermos as operações da unidade de processamento do nosso computador. Para isso iremos:
 
 1. Programar a ULA na FPGA

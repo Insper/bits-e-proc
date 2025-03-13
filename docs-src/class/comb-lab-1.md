@@ -7,15 +7,10 @@
 | Accessar pelo: [Classroom]({{lab_myhdl_classroom}}){.ah-button} |
 
 !!! info "💰 Laboratório com pontos"
-    Neste laboratório você pode receber até: **({{lab_myhdl_points}})**.
-    
-    - 1 ponto até o final da aula
-    - 2 pontos até próxima aula
-
     ==Realizar em dupla!==. Para os dois ganharem os pontos todos devem acessar o classroom com a sua respectiva conta do github! Mesmo sendo em dupla, sugerimos para todos fazerem, pois esse tipo de exercício vai ser cobrado em quiz.
 
 !!! exercise
-    Antes de seguir, leia a teoria.
+    Antes de seguir, leia a teoria desta aula.
 
 Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-Combinacional`](/bits-e-proc/class/logiComb-Projeto)), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
 
@@ -34,24 +29,6 @@ Agora iremos fazer todo o desenvolvimento da disciplina usando o codespaces:
 
 !!! video
     ![](https://youtu.be/u03nflB7V6o)
-
-### Autenticando
-
-Para podermos executar os testes será necessário autenticar, execute no terminal do codespaces:
-
-```bash
-telemetry auth
-```
-
-1. Autentique com seu user do github
-1. Cole o token no terminal
-
-Verifique executando novamente o mesmo comando, você deve obter:
-
-```
-$ telemetry check
-All set! Configuration ok
-```
 
 ### pytest
 

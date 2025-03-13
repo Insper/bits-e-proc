@@ -28,11 +28,11 @@ extra:
     lab_transistores_points: '3 HW / 0 SW'
     lab_transistores_deadline: Final da aula
 
-    lab_myhdl_classroom: https://classroom.github.com/a/31H_3pL1
+    lab_myhdl_classroom:  https://classroom.github.com/a/hbFb6TFG
     lab_myhdl_points: '3 HW / 0 SW'
     lab_myhdl_deadline: final da aula
 
-    lab_4_classroom: https://classroom.github.com/a/RfvmJmsh
+    lab_4_classroom:  https://classroom.github.com/a/l0GDAHvd
     lab_4_points: '3 HW / 0 SW'
 
     lab_ula_deadline: Final da aula (07/03)
@@ -110,85 +110,84 @@ nav:
     - Laboratório: class/intro-benchmark-lab.md
   - Aula 2 - Álgebra Booleana :
     - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-    - Exercício: commum-content/exercicios/Exercicio-Algebra-Booleana-1a.md
-    - Prairielearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438157
-  - Aula 3 - Simplificação:
-    - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
-    - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
-    - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
-    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
+    - PrairieLearn: https://us.prairielearn.com/pl/course_instance/177856
+  - Aula 3 - Dados Digitais:
+    - Teoria: commum-content/teoria/Teoria-Dados.md
+   # - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
+   # - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
+    - PrairieLearn 🪙: prairielearn.md
+  #- Aula 3 - Simplificação:
+  #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
+  #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
+  #  - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
+  #  - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
   - Aula 4 - Transistores:
     - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing
     - Teoria: commum-content/teoria/Teoria-RTL.md
     - Ĺaboratório 🪙: class/transistores-lab-1.md
-  - Aula 5 - Dados Digitais:
-    - Teoria: commum-content/teoria/Teoria-Dados.md
-    - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
-    - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
-    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438158
+  - Aula 5 - Aritmética Binária:
+    - Teoria 1: commum-content/teoria/Teoria-Aritmetica-Binaria.md
+    - Exercícios: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
+    - Teoria 2: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
+    - PrairieLearn 🪙: prairielearn.md
   - Aula 6 - FPGA:
     - Teoria: myhdl/basico.md
     - Lab 🪙: class/comb-lab-1.md
   - Aula 7 - Quiz 1:
     - Sobre: quiz/about-quiz-1.md
-    - Questionário 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2448204
-  - Aula 8 - Aritmética Binária:
-    - Teoria 1: commum-content/teoria/Teoria-Aritmetica-Binaria.md
-    - Exercícios: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
-    - Teoria 2: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
-    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409
+  - Aula 8 - Componentes digitais:
+    - Teoria: commum-content/teoria/Teoria-Componentes.md
+    - PrairieLearn 🪙: prairielearn.md
   - Aula 9 - Adders:
     - Lab. 1 🪙: class/ula-lab-1.md
-    - Lab. 2 🪙: class/ula-lab-2.md
-    - PrairieLearn  🪙: https://us.prairielearn.com/pl/course_instance/159409
   - Aula 10 - ULA:
     - Teoria: commum-content/teoria/Teoria-ULA.md
     - Lab 🪙: class/ula-lab-4.md
-    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2453997
-  - Aula 11 - QUIZ 2:
-    - Quiz 2 🪙: quiz
-  - Aula 12 - Síncrono:
-    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
-    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-    - Lab: class/seq-lab-1.md
     - PrairieLearn 🪙: prairielearn.md
-  - Aula 13 - Assembly:
-    - Teoria 1: commum-content/teoria/Teoria-Z01.md
-    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
-    - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2461415
-  - Aula 14 - Assembly jump:
-    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-    - PrairieLearn  🪙: prairielearn.md
-  - Aula 15 - Prática Assembly 1:
-    - PrairieLearn 🪙: prairielearn.md
-  - Aula 16 - Prática Assembly 2:
-    - PrairieLearn 🪙: prairielearn.md
-  - Aula 16 - Linguagem de máquina:
-      - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
- #     - Teoria: commum-content/teoria/Teoria-Assembler.md
-      - Consulta: commum-content/z01/z01-InstructionSet.md
-      - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
-      - PrairieLearn 🪙: prairielearn.md
-  - Aula 17 - VM:
-      - Teoria: commum-content/teoria/Teoria-vm.md
-      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
-      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
-      - PrairieLearn 🪙: prairielearn.md
-  - Aula 18 - VM condições:
-      - Teoria: commum-content/teoria/Teoria-vm-jump.md
-      - PrairieLearn: prairielearn.md
-  - Aula 19 - VM funções:
-      - Funções: commum-content/teoria/Teoria-vm-funcoes.md
-      - Memória: commum-content/teoria/Teoria-vm-memoria.md
-      - PrairieLearn 🪙: prairielearn.md
-      - Codespace: class/vm-lab-function.md
-  - Aula 20 - Quiz 3 VM:
-      - PrairieLearn 🪙: prairielearn.md
-  - Aula 21 - VM translator:
-
-      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
-      - PrairieLearn 🪙: prairielearn.md
+#  - Aula 11 - Síncrono:
+#    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+#    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+#    - Lab: class/seq-lab-1.md
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 12 - QUIZ 2:
+#    - Quiz 2 🪙: quiz
+#  - Aula 13 - Assembly:
+#    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+#    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+#    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 14 - Assembly jump:
+#    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+#    - PrairieLearn  🪙: prairielearn.md
+#  - Aula 15 - Prática Assembly 1:
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 16 - Prática Assembly 2:
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 16 - Linguagem de máquina:
+#      - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+# #     - Teoria: commum-content/teoria/Teoria-Assembler.md
+#      - Consulta: commum-content/z01/z01-InstructionSet.md
+#      - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
+#      - PrairieLearn 🪙: prairielearn.md
+#  - Aula 17 - VM:
+#      - Teoria: commum-content/teoria/Teoria-vm.md
+#      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
+#      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
+#      - PrairieLearn 🪙: prairielearn.md
+#  - Aula 18 - VM condições:
+#      - Teoria: commum-content/teoria/Teoria-vm-jump.md
+#      - PrairieLearn: prairielearn.md
+#  - Aula 19 - VM funções:
+#      - Funções: commum-content/teoria/Teoria-vm-funcoes.md
+#      - Memória: commum-content/teoria/Teoria-vm-memoria.md
+#      - PrairieLearn 🪙: prairielearn.md
+#      - Codespace: class/vm-lab-function.md
+#  - Aula 20 - Quiz 3 VM:
+#      - PrairieLearn 🪙: prairielearn.md
+#  - Aula 21 - VM translator:
+#
+#      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
+#      - PrairieLearn 🪙: prairielearn.md
 
 #  - Labs:
 #      - Lab 12 - (vm) Básico: class/vm-lab-1.md

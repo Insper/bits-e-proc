@@ -1,19 +1,13 @@
-# Lab 6: Adders
+# Lab: Adders
 
 | Lab 6                                                                      |
 |----------------------------------------------------------------------------|
-| **Data limite para entrega**: ==3 HW, 0 SW==                               |
 | Entregue o código pelo repositório do ==[Classroom]({{lab_4_classroom}})== |
 
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
-!!! info "💰 Laboratório com pontos"
-    Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.
-    
-    Neste laboratório você pode receber até: **({{lab_4_points}})**.
-
 !!! exercise
-    1. Acesse o lab 6 pelo link {{lab_6_classroom}}
+    1. Acesse o lab pelo link {{lab_4_classroom}}
     1. Trabalhe no codespace
     1. Lembre de executar `telemetry auth` uma única vez antes de começar o lab.
 

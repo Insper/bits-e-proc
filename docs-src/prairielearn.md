@@ -1,6 +1,7 @@
 # PrarieLearn
 
-Exercícios no PL serão liberados no início da semana que vem, para serem realizados até a aula de quinta-feira. 
+
+Acessem o PrarieLearn e façam os exercícios.
 
 !!! info
-    A ideia é que façam os exercícios de sala e os laboratórios antes e usem o PL para estudarem o conteúdo antes da próxima aula.ula.
+    A ideia é que façam os exercícios de sala e os laboratórios antes e usem o PL para estudarem o conteúdo antes da próxima aula.
