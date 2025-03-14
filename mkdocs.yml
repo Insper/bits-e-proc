@@ -40,7 +40,7 @@ extra:
     lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link
 
     lab_seq_points: '3 HW/ 0 SW'
-    lab_seq_classroom: https://classroom.github.com/a/1W7qVfb_
+    lab_seq_classroom: https://classroom.github.com/a/bSss671W
 
     lab_nasm_1_classroom: https://classroom.github.com/a/E-_Z77Tn
     lab_nasm_1_points: '0 HW/ 3 SW'
@@ -144,11 +144,11 @@ nav:
     - Teoria: commum-content/teoria/Teoria-ULA.md
     - Lab 🪙: class/ula-lab-4.md
     - PrairieLearn 🪙: prairielearn.md
-#  - Aula 11 - Síncrono:
-#    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
-#    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-#    - Lab: class/seq-lab-1.md
-#    - PrairieLearn 🪙: prairielearn.md
+  - Aula 11 - Síncrono:
+    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+    - Lab 🪙: class/seq-lab-1.md
+    - PrairieLearn 🪙: prairielearn.md
 #  - Aula 12 - QUIZ 2:
 #    - Quiz 2 🪙: quiz
 #  - Aula 13 - Assembly:
