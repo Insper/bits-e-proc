@@ -151,15 +151,15 @@ nav:
     - PrairieLearn 🪙: prairielearn.md
 #  - Aula 12 - QUIZ 2:
 #    - Quiz 2 🪙: quiz
-#  - Aula 13 - Assembly:
-#    - Teoria 1: commum-content/teoria/Teoria-Z01.md
-#    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-#    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
-#    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 14 - Assembly jump:
-#    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-#    - PrairieLearn  🪙: prairielearn.md
-#  - Aula 15 - Prática Assembly 1:
+  - Aula 12 - Assembly:
+    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+    - PrairieLearn 🪙: prairielearn.md
+  - Aula 13 - Assembly jump:
+    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+    - PrairieLearn  🪙: prairielearn.md
+#  - Aula 14 - Prática Assembly 1:
 #    - PrairieLearn 🪙: prairielearn.md
 #  - Aula 16 - Prática Assembly 2:
 #    - PrairieLearn 🪙: prairielearn.md
