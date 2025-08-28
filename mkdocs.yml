@@ -20,10 +20,8 @@ plugins:
 
 extra:
   custom_variables:
-    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1738811769178/328de1c916fa88a683e29c6830dba7ece69ebcd3?sender=ub569a9273c6e285461187641
+    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1755095370214/ffea680752cd61ec1c0270af225ce3c81ee6224d?sender=ub569a9273c6e285461187641
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
-
-    infra_test_classroom: https://classroom.github.com/a/2Hp8zB83
 
     lab_transistores_points: '3 HW / 0 SW'
     lab_transistores_deadline: Final da aula
@@ -110,12 +108,12 @@ nav:
     - Laboratório: class/intro-benchmark-lab.md
   - Aula 2 - Álgebra Booleana :
     - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-    - PrairieLearn: https://us.prairielearn.com/pl/course_instance/177856
+    - https://us.prairielearn.com/pl/course_instance/188053
   - Aula 3 - Dados Digitais:
     - Teoria: commum-content/teoria/Teoria-Dados.md
    # - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
    # - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
-    - PrairieLearn 🪙: prairielearn.md
+    - https://us.prairielearn.com/pl/course_instance/188053
   #- Aula 3 - Simplificação:
   #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
   #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b

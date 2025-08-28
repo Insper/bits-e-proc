@@ -2,7 +2,6 @@
 
 Página com informações sobre as avaliações de bits e proc
 
-
 ## AI
 
 A avaliação ter duas partes: Teórica e Prática, a parte teórica será realizada em papel e terá o conteúdo do PrairieLearn, já a parte prática terá o conteúdo dos Labs.  

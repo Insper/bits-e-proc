@@ -31,9 +31,6 @@ $ git clone $URL_DO_FORK
 !!! Linux
     Para abrir o terminal no Linux: `meta`+`t` 
 
-!!! progress 
-    Cheguei Aqui!
-
 ## Adicionando nomes ao `GRUPO.yml`
 
 !!! warning "Individual"

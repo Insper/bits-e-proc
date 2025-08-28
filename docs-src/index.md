@@ -1,10 +1,11 @@
 # Bits e Processadores
 
 - **Curso:** Ciência da Computacão do [Insper](https://www.insper.edu.br/)
-- **Disciplina:** [Bits e Processadores]()[^1]- 
+- **Disciplina:** [Bits e Processadores]()[^1] 
 - **Prof:** Rafael Corsi - rafael.corsi@insper.edu.br
-- **Equipe:** Eduardo Marossi, Arnaldo Jr, Daniel Pinto
-- **Local:** Dev. Space
+- **Equipe:** Eduardo Marossi, ~~Arnaldo Jr~~, ~~Daniel Pinto~~
+- **Ninja:** Giovanna Barros Scalco (25b)
+- **Local:** Salas do quinto andar do PD2
 - **© Todos os direitos reservados**
 
 [^1]:![](assets/bits.png)
@@ -12,7 +13,6 @@
 Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de Sistemas](github.com/insper/z01.1).
 
 -------------------------
-
 
 ## Objetivos de aprendizagem
 
