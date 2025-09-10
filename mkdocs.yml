@@ -23,51 +23,51 @@ extra:
     lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1755095370214/ffea680752cd61ec1c0270af225ce3c81ee6224d?sender=ub569a9273c6e285461187641
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
 
-    lab_transistores_points: '3 HW / 0 SW'
+    lab_transistores_points: 'Pontos de HW!'
     lab_transistores_deadline: Final da aula
 
-    lab_myhdl_classroom:  https://classroom.github.com/a/hbFb6TFG
-    lab_myhdl_points: '3 HW / 0 SW'
-    lab_myhdl_deadline: final da aula
+    lab_myhdl_classroom:  https://classroom.github.com/a/eDwnCy_u
+    lab_myhdl_points: 'Pontos de HW!'
+    lab_myhdl_deadline: Final da aula
 
-    lab_4_classroom:  https://classroom.github.com/a/l0GDAHvd
-    lab_4_points: '3 HW / 0 SW'
+    lab_4_classroom: https://classroom.github.com/a/NGErx3zi
+    lab_4_points: 'Pontos de HW!'
 
-    lab_ula_deadline: Final da aula (07/03)
-    lab_ula_points: '3 HW/ 3 SW'
+    lab_ula_deadline:
+    lab_ula_points:
     lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link
 
-    lab_seq_points: '3 HW/ 0 SW'
-    lab_seq_classroom: https://classroom.github.com/a/bSss671W
+    lab_seq_points:
+    lab_seq_classroom:
 
-    lab_nasm_1_classroom: https://classroom.github.com/a/E-_Z77Tn
-    lab_nasm_1_points: '0 HW/ 3 SW'
+    lab_nasm_1_classroom:
+    lab_nasm_1_points: 'Pontos de SW'
 
-    lab_nasm_2_points: '0 HW/ 3 SW'
-    lab_nasm_2_classroom: https://classroom.github.com/a/ARyD-cq9
+    lab_nasm_2_points: 'Pontos de SW'
+    lab_nasm_2_classroom:
 
-    lab_nasm_3_points: '0 HW/ 4 SW'
-    lab_nasm_3_classroom: https://classroom.github.com/a/AkOQR7ru
+    lab_nasm_3_points: 'Pontos de SW'
+    lab_nasm_3_classroom:
 
-    lab_nasm_4_deadline: '11/04'
-    lab_nasm_4_points: '0 HW/ 6 SW'
-    lab_nasm_4_classroom: https://classroom.github.com/a/-ODT6P_Z
+    lab_nasm_4_deadline: ''
+    lab_nasm_4_points:  'Pontos de SW'
+    lab_nasm_4_classroom:
 
-    lab_nasm_5_deadline: '17/04'
-    lab_nasm_5_points: '0 HW/ 8 SW'
-    lab_nasm_5_classroom: https://classroom.github.com/a/1wfC-Qgt
+    lab_nasm_5_deadline: ''
+    lab_nasm_5_points:  'Pontos de SW'
+    lab_nasm_5_classroom:
 
-    lab_vm_1_deadline: '17/04'
-    lab_vm_1_points: '0 HW/ 8 SW'
-    lab_vm_1_classroom: https://classroom.github.com/a/dD95RkS3
+    lab_vm_1_deadline: ''
+    lab_vm_1_points:  'Pontos de SW'
+    lab_vm_1_classroom:
 
-    lab_vm_2_deadline: '24/04'
-    lab_vm_2_points: '0 HW/ 7 SW'
-    lab_vm_2_classroom: https://classroom.github.com/a/6Cv6dLQq
+    lab_vm_2_deadline: ''
+    lab_vm_2_points:  'Pontos de SW'
+    lab_vm_2_classroom:
 
     lab_vm_translator_1_deadline:
-    lab_vm_translator_1_classroom: https://classroom.github.com/a/4jh6p4G9
-    lab_vm_translator_1_points: '5 HW / 5 SW'
+    lab_vm_translator_1_classroom:
+    lab_vm_translator_1_points:
 
     av2_simulado_classroom:   https://classroom.github.com/a/_BZEsoXf
     av2_simulado_2_classroom: https://classroom.github.com/a/LD2ztn4N
@@ -126,37 +126,38 @@ nav:
   - Aula 5 - Aritmética Binária:
     - Teoria 1: commum-content/teoria/Teoria-Aritmetica-Binaria.md
     - Exercícios: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
-    - Teoria 2: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
-    - PrairieLearn 🪙: prairielearn.md
   - Aula 6 - FPGA:
     - Teoria: myhdl/basico.md
-    - Lab 🪙: class/comb-lab-1.md
-  - Aula 7 - Quiz 1:
-    - Sobre: quiz/about-quiz-1.md
-  - Aula 8 - Componentes digitais:
-    - Teoria: commum-content/teoria/Teoria-Componentes.md
+    - Laboratório 🪙: class/comb-lab-1.md
+  - Aula 7 - Somadores:
+    - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
     - PrairieLearn 🪙: prairielearn.md
-  - Aula 9 - Adders:
-    - Lab. 1 🪙: class/ula-lab-1.md
-  - Aula 10 - ULA:
-    - Teoria: commum-content/teoria/Teoria-ULA.md
-    - Lab 🪙: class/ula-lab-4.md
-    - PrairieLearn 🪙: prairielearn.md
-  - Aula 11 - Síncrono:
-    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
-    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-    - Lab 🪙: class/seq-lab-1.md
-    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 12 - QUIZ 2:
-#    - Quiz 2 🪙: quiz
-  - Aula 12 - Assembly:
-    - Teoria 1: commum-content/teoria/Teoria-Z01.md
-    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
-    - PrairieLearn 🪙: prairielearn.md
-  - Aula 13 - Assembly jump:
-    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-    - PrairieLearn  🪙: prairielearn.md
+#  -  - Quiz 1:
+#    - Sobre: quiz/about-quiz-1.md
+#  - Aula 8 - Componentes digitais:
+#    - Teoria 1: commum-content/teoria/Teoria-Componentes.md
+#    - PrairieLearn 🪙: prairielearn.md
+  - Aula 8 - Adders:
+    - Laboratório 🪙: class/ula-lab-1.md
+#  - Aula 10 - ULA:
+#    - Teoria: commum-content/teoria/Teoria-ULA.md
+#    - Lab 🪙: class/ula-lab-4.md
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 11 - Síncrono:
+#    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+#    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+#    - Lab 🪙: class/seq-lab-1.md
+#    - PrairieLearn 🪙: prairielearn.md
+##  - Aula 12 - QUIZ 2:
+##    - Quiz 2 🪙: quiz
+#  - Aula 12 - Assembly:
+#    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+#    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+#    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+#    - PrairieLearn 🪙: prairielearn.md
+#  - Aula 13 - Assembly jump:
+#    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+#    - PrairieLearn  🪙: prairielearn.md
 #  - Aula 14 - Prática Assembly 1:
 #    - PrairieLearn 🪙: prairielearn.md
 #  - Aula 16 - Prática Assembly 2:
