@@ -384,23 +384,9 @@
 </tbody>
 </table>
 <p>Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.</p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_1" id="exercise_1_0">
-<p class="admonition-title">Exercise</p>
-<form class="exercise-form">
-<ol>
-<li>Acesse o lab pelo link <a href="https://classroom.github.com/a/NGErx3zi">https://classroom.github.com/a/NGErx3zi</a></li>
-<li>Trabalhe no codespace</li>
-<li>Lembre de executar <code>telemetry auth</code> uma única vez antes de começar o lab.</li>
-</ol>
-<div class="form-elements">
-<input type="hidden" name="data" value="OK" />
-<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done" />
-</div>
-</form>
-</div>
 <h2 id="half-e-full-adder">Half e Full adder</h2>
 <p>Vamos começar implementando as duas unidades básicas de um somador: o <em>half-adder</em> e <em>full-adder</em>. </p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_2" id="exercise_2_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_1" id="exercise_1_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <ul>
@@ -414,7 +400,7 @@
 </div>
 </form>
 </div>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_3" id="exercise_3_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_2" id="exercise_2_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <ul>
@@ -463,7 +449,7 @@
 <li>Implementação da porta <code>or</code> entre as saídas dos <code>carrys</code> </li>
 </ol>
 <p>Notem que na implementação anterior utilizamos três sinais binários interno (<code>s0</code>, <code>s1</code> e <code>s2</code>) no módulo para a conexão entre os componentes e que a lógica do <code>OR</code> entre os carrys é implementada em um bloco combinacional <code>def comb</code>.</p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_4" id="exercise_4_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_3" id="exercise_3_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <ul>
@@ -489,7 +475,7 @@
 <p class="admonition-title">Tip</p>
 <p>O MyHDL possui um tipo próprio para tratar um vetor de bits (<code>intbv</code> ou <code>modbv</code>), mas por enquanto vamos usar o vetor criado por vários bools. A diferença entre os dois métodos é que no <code>intbv</code> os bits são interpretados como um único sinal (<code>unsigned</code> ou <code>signed</code>, como se fosse uma variável) e no vetor criado por <code>bools</code> os bits são independentes!</p>
 </div>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_5" id="exercise_5_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_4" id="exercise_4_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <p>Modifique novamenge o <code>fullAdder</code>, mas agora usando um vetor de bits <code>s[]</code> no lugar dos três sinais <code>s0</code>, <code>s1</code> e <code>s2</code>.</p>
@@ -536,7 +522,7 @@
     <span class="c1"># adder de 2 bits!</span>
 </code></pre></div>
 <p>Onde <code>x</code>, <code>y</code> e <code>s</code> são vetores do tipo <code>bool</code> de duas posições.</p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_6" id="exercise_6_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_5" id="exercise_5_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <p>Explique o que está acontecendo para o seu colega, você entendeu o porque dessa ligação e como ela funciona? </p>
@@ -546,7 +532,7 @@
 </div>
 </form>
 </div>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_7" id="exercise_7_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_6" id="exercise_6_0">
 <p class="admonition-title">💰 Somador (1 HW, 0 SW), exercício </p>
 <form class="exercise-form">
 <ul>
@@ -595,7 +581,7 @@
 <ol>
 <li>Lista de dois componentes não inicializada </li>
 </ol>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_8" id="exercise_8_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_7" id="exercise_7_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <ul>
@@ -611,7 +597,7 @@
 </form>
 </div>
 <p>Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a implementação do adder que se adapta a quantidade de bits que ele recebe. Isso é interessante pois podemos usar o mesmo adder instanciado de diferentes maneiras como um hardware dedicado para somar vetores de <code>2</code> bits, <code>8</code> ou quanto quisermos. Vamos ver mais para frente que a largura do somador é determinada pela arquitetura da CPU, já reparou que alguns programas quando você vai baixar possuem a opção <code>x64</code> ou <code>x86</code>? Isso determina entre outras coisas, qual a largura de dados da CPU em questão, <code>64</code> ou <code>32</code> bits.</p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_9" id="exercise_9_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_8" id="exercise_8_0">
 <p class="admonition-title">💰 adder (2 HW, 0 SW), exercício </p>
 <form class="exercise-form">
 <ul>
@@ -645,7 +631,7 @@
 <p>Agora vamos executar o adder na FPGA! Vamos usar a implementação do <code>adder</code> genérico com 4 bits para o vetor <code>x</code> e 4 bits para o <code>y</code>, vamos mapear os bits para as chaves da FPGA e a saída do adder para os LEDs, o carry vai ser o último LED.</p>
 <p><a class="glightbox" href="../figs/ula/adder.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../figs/ula/adder.svg" width="400" /></a></p>
 <p>No <code>toplevel.py</code> eu estou usando o <code>bin2hex</code> do laboratório anterior para mostrar no display HEX0 o resultado da soma.</p>
-<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_10" id="exercise_10_0">
+<div class="admonition exercise self-progress" data-slug="class/ula-lab-1/exercise_9" id="exercise_9_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
 <p>Modifique o <code>toplevel.py</code>:</p>
