@@ -135,9 +135,9 @@ nav:
 #  -  - Quiz 1:
 #    - Sobre: quiz/about-quiz-1.md
 #  - Aula 8 - Componentes digitais:
-#    - Teoria 1: commum-content/teoria/Teoria-Componentes.md
 #    - PrairieLearn 🪙: prairielearn.md
-  - Aula 8 - Adders:
+  - Aula 8 - Componentes:
+    - Teoria 1: commum-content/teoria/Teoria-Componentes.md
     - Laboratório 🪙: class/ula-lab-1.md
 #  - Aula 10 - ULA:
 #    - Teoria: commum-content/teoria/Teoria-ULA.md

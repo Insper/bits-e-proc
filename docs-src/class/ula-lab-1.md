@@ -6,11 +6,6 @@
 
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
-!!! exercise
-    1. Acesse o lab pelo link {{lab_4_classroom}}
-    1. Trabalhe no codespace
-    1. Lembre de executar `telemetry auth` uma única vez antes de começar o lab.
-
 ## Half e Full adder 
 
 Vamos começar implementando as duas unidades básicas de um somador: o *half-adder* e *full-adder*. 
