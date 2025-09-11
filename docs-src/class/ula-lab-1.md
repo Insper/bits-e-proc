@@ -145,7 +145,7 @@ Onde `x`, `y` e `s` são vetores do tipo `bool` de duas posições.
     
     - Modifique o `adder2bits` para implementar um somador de dois bits como demonstrado no diagrama anterior.
     - Teste com `pytest`
-    - Você pode testar o módulo executando ele: `./run_adder2bits`. Você deve dar como entrada os valores de `x` e `y` em decimal. ==Lembre que para dois bits o valor máximo é 3==.
+    - Você pode testar o módulo executando ele: `./run_adder2bits.py`. Você deve dar como entrada os valores de `x` e `y` em decimal. ==Lembre que para dois bits o valor máximo é 3==.
     
     Nota:
     
@@ -198,7 +198,7 @@ Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a i
 !!! exercise "💰 adder (2 HW, 0 SW), exercício "
     - Modulo: `def adder(x, y, soma, carry):`
     - Test: `pytest -k adder`
-    - Run: `./run_adder.py`
+    - Run: `./run_adderModbv.py`
 
     Tarefa:
 
