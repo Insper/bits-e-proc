@@ -139,15 +139,15 @@ nav:
   - Aula 8 - Componentes:
     - Teoria 1: commum-content/teoria/Teoria-Componentes.md
     - Laboratório 🪙: class/ula-lab-1.md
-#  - Aula 10 - ULA:
-#    - Teoria: commum-content/teoria/Teoria-ULA.md
-#    - Lab 🪙: class/ula-lab-4.md
-#    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 11 - Síncrono:
-#    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
-#    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-#    - Lab 🪙: class/seq-lab-1.md
-#    - PrairieLearn 🪙: prairielearn.md
+  - Aula 10 - ULA:
+    - Teoria: commum-content/teoria/Teoria-ULA.md
+    - Lab 🪙: class/ula-lab-4.md
+    - PrairieLearn 🪙: prairielearn.md
+  - Aula 11 - Síncrono:
+    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+    - Lab 🪙: class/seq-lab-1.md
+    - PrairieLearn 🪙: prairielearn.md
 ##  - Aula 12 - QUIZ 2:
 ##    - Quiz 2 🪙: quiz
 #  - Aula 12 - Assembly:
