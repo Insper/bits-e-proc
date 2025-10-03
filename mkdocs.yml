@@ -150,10 +150,10 @@ nav:
     - PrairieLearn 🪙: prairielearn.md
 ##  - Aula 12 - QUIZ 2:
 ##    - Quiz 2 🪙: quiz
-#  - Aula 12 - Assembly:
-#    - Teoria 1: commum-content/teoria/Teoria-Z01.md
-#    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-#    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+  - Aula 12 - Assembly:
+    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
 #    - PrairieLearn 🪙: prairielearn.md
 #  - Aula 13 - Assembly jump:
 #    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
