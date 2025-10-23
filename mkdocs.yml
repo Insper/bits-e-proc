@@ -155,38 +155,35 @@ nav:
     - Teoria 2: commum-content/teoria/Teoria-Assembly.md
     - Comandos: commum-content/z01/z01-Resumo-Assembly.md
 #    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 13 - Assembly jump:
-#    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+  - Aula 13 - Assembly jump:
+    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
 #    - PrairieLearn  🪙: prairielearn.md
-#  - Aula 14 - Prática Assembly 1:
-#    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 16 - Prática Assembly 2:
-#    - PrairieLearn 🪙: prairielearn.md
-#  - Aula 16 - Linguagem de máquina:
-#      - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
-# #     - Teoria: commum-content/teoria/Teoria-Assembler.md
-#      - Consulta: commum-content/z01/z01-InstructionSet.md
-#      - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
+  - Aula 14 - Prática Assembly 1:
+    - PrairieLearn 🪙: prairielearn.md
+  - Aula 15 - Linguagem de máquina:
+    - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+ #     - Teoria: commum-content/teoria/Teoria-Assembler.md
+    - Consulta: commum-content/z01/z01-InstructionSet.md
+    - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
 #      - PrairieLearn 🪙: prairielearn.md
-#  - Aula 17 - VM:
-#      - Teoria: commum-content/teoria/Teoria-vm.md
-#      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
-#      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
-#      - PrairieLearn 🪙: prairielearn.md
+  - Aula 16 - VM:
+      - Teoria: commum-content/teoria/Teoria-vm.md
+      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
+      - Teoria: commum-content/teoria/Teoria-vm-jump.md
+      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
+      - PrairieLearn 🪙: prairielearn.md
 #  - Aula 18 - VM condições:
-#      - Teoria: commum-content/teoria/Teoria-vm-jump.md
 #      - PrairieLearn: prairielearn.md
-#  - Aula 19 - VM funções:
-#      - Funções: commum-content/teoria/Teoria-vm-funcoes.md
-#      - Memória: commum-content/teoria/Teoria-vm-memoria.md
-#      - PrairieLearn 🪙: prairielearn.md
-#      - Codespace: class/vm-lab-function.md
+   - Aula 17 - VM funções:
+      - Funções: commum-content/teoria/Teoria-vm-funcoes.md
+      - Memória: commum-content/teoria/Teoria-vm-memoria.md
+      - PrairieLearn 🪙: prairielearn.md
+      - Codespace: class/vm-lab-function.md
 #  - Aula 20 - Quiz 3 VM:
 #      - PrairieLearn 🪙: prairielearn.md
-#  - Aula 21 - VM translator:
-#
-#      - Lab 14 - VM translator: class/vmtranslator-lab-1.md
-#      - PrairieLearn 🪙: prairielearn.md
+   - Aula 18 - VM translator:
+      - Lab - VM translator: class/vmtranslator-lab-1.md
+      - PrairieLearn 🪙: prairielearn.md
 
 #  - Labs:
 #      - Lab 12 - (vm) Básico: class/vm-lab-1.md
