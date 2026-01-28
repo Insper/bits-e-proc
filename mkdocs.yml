@@ -108,12 +108,12 @@ nav:
     - Laboratório: class/intro-benchmark-lab.md
   - Aula 2 - Álgebra Booleana :
     - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-    - https://us.prairielearn.com/pl/course_instance/188053
+    - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
   - Aula 3 - Dados Digitais:
     - Teoria: commum-content/teoria/Teoria-Dados.md
    # - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
    # - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
-    - https://us.prairielearn.com/pl/course_instance/188053
+    - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
   #- Aula 3 - Simplificação:
   #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
   #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
@@ -174,14 +174,14 @@ nav:
       - PrairieLearn 🪙: prairielearn.md
 #  - Aula 18 - VM condições:
 #      - PrairieLearn: prairielearn.md
-   - Aula 17 - VM funções:
+  - Aula 17 - VM funções:
       - Funções: commum-content/teoria/Teoria-vm-funcoes.md
       - Memória: commum-content/teoria/Teoria-vm-memoria.md
       - PrairieLearn 🪙: prairielearn.md
       - Codespace: class/vm-lab-function.md
 #  - Aula 20 - Quiz 3 VM:
 #      - PrairieLearn 🪙: prairielearn.md
-   - Aula 18 - VM translator:
+  - Aula 18 - VM translator:
       - Lab - VM translator: class/vmtranslator-lab-1.md
       - PrairieLearn 🪙: prairielearn.md
 

@@ -2,9 +2,8 @@
 
 - **Curso:** Ciência da Computacão do [Insper](https://www.insper.edu.br/)
 - **Disciplina:** [Bits e Processadores]()[^1] 
-- **Prof:** Rafael Corsi - rafael.corsi@insper.edu.br
-- **Equipe:** Eduardo Marossi, ~~Arnaldo Jr~~, ~~Daniel Pinto~~
-- **Ninja:** Giovanna Barros Scalco (25b)
+- **Prof:** Luciano Soares - lpsoares@insper.edu.br
+- **Auxiliar:** Eduardo Marossi 
 - **Local:** Salas do quinto andar do PD2
 - **© Todos os direitos reservados**
 
@@ -20,9 +19,8 @@ Ao final da disciplina o estudante será capaz de:
 
 1. Implementar um computador digital simples a partir de componentes eletrônicos.
 2. Integrar as camadas de programação e execução de um computador simples.
-3. Trabalhar de forma colaborativa no desenvolvimento de um sistema computacional.
-4. Compreender a evolução da informática.
-5. Descrever como dados e instruções são armazenados e tratados em computadores.
+3. Compreender a evolução da informática.
+4. Descrever como dados e instruções são armazenados e tratados em computadores.
 
 ## Motivação
 
