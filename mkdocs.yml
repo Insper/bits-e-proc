@@ -20,7 +20,7 @@ plugins:
 
 extra:
   custom_variables:
-    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1755095370214/ffea680752cd61ec1c0270af225ce3c81ee6224d?sender=ub569a9273c6e285461187641
+    lab_1_mural: https://app.mural.co/t/bitsprocessadores3866/m/bitsprocessadores3866/1770576553075/e7f5ae192741182c7c5fb4edacdfa21ff53c01d5?sender=u154845be7420b5a36f432010
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
 
     lab_transistores_points: 'Pontos de HW!'
