@@ -9,7 +9,7 @@
 
 [^1]:![](assets/bits.png)
 
-Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de Sistemas](github.com/insper/z01.1).
+Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de Sistemas](http://github.com/insper/z01.1).
 
 -------------------------
 

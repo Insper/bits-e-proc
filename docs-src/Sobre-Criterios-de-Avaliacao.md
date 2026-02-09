@@ -6,15 +6,15 @@ Os critérios de avaliação a seguir serão aplicados a disciplina:
 
 Os alunos devem:
 
-1. Ter acumulado no mínimo 50 pontos de `HW` (Álgebra booleana, lógica combinacional, unidade lógica aritmética, lógica sequencial, CPU) nas provas.
-1. Ter acumulado no mínimo 50 pontos de `SW` (Dados digitais, assembly, assembler, máquina virtual, VM translator) nas provas.
+1. Ter acumulado no mínimo 50 pontos (média 5.0 de 10.0) de `HW` (Álgebra booleana, lógica combinacional, unidade lógica aritmética, lógica sequencial, CPU) nas provas.
+1. Ter acumulado no mínimo 50 pontos (média 5.0 de 10.0) de `SW` (Dados digitais, assembly, assembler, máquina virtual, VM translator) nas provas.
 
 ## Avaliações
 
 - PrairieLearn: Atividades em sala de aula e de estudos que valem ==40% da nota== de HW e de SW.
-- Quizes: Quatro provas espalahadas pelo semestre que valem ==60% da nota==.
+- Quizes: Quatro provas espalhadas pelo semestre que valem ==60% da nota==.
 
-1101## Conceito
+## Conceito
 
 A seguinte tabela será aplicada para o cálculo dos conceitos (100 mapeado para 10).
 

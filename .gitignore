@@ -13,4 +13,6 @@ tmp/
 E-Assembly/
 myhdl2dot/
 
+# Luciano incluiu
 site/
+exercise_data.json

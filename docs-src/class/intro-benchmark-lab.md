@@ -3,7 +3,8 @@
 Neste laboratório iremos explorar o que é arquitetura de computadores e qual o impacto disso na nossa vida.
 
 !!! exercise
-    Apresentação inicial [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/)
+    Apresentação inicial [Prezi](https://prezi.com/view/InQMPs4wjxMtznUGlW6L/){:target="_blank" rel="noopener"}
+
 
 !!! exercise
 
