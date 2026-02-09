@@ -20,8 +20,8 @@ plugins:
 
 extra:
   custom_variables:
-    lab_1_mural: https://app.mural.co/t/elementos9119/m/elementos9119/1755095370214/ffea680752cd61ec1c0270af225ce3c81ee6224d?sender=ub569a9273c6e285461187641
-    lab_1_benchmark: https://docs.google.com/spreadsheets/d/1-wJcqGsZMZzgkiVMG4cb2BI__cL7_cRLNCoCHIYf-GA/edit?usp=sharing
+    lab_1_mural: https://app.mural.co/t/bitsprocessadores3866/m/bitsprocessadores3866/1770576553075/e7f5ae192741182c7c5fb4edacdfa21ff53c01d5?sender=u154845be7420b5a36f432010
+    lab_1_benchmark: https://docs.google.com/spreadsheets/d/1m7QE4FXZ0VeI97nuKhf2YQEhiMpWFsQYdCo5pbPsJ10/edit?usp=sharing
 
     lab_transistores_points: 'Pontos de HW!'
     lab_transistores_deadline: Final da aula
@@ -106,19 +106,19 @@ nav:
   # - Projeto Mundo Real: class/x-proj.md
   - Aula 1 - Visão geral:
     - Laboratório: class/intro-benchmark-lab.md
-  # - Aula 2 - Álgebra Booleana :
-  #   - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-  #   - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
-  # - Aula 3 - Dados Digitais:
-  #   - Teoria: commum-content/teoria/Teoria-Dados.md
-   # - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
-   # - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
-    # - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
-  #- Aula 3 - Simplificação:
-  #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
-  #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
-  #  - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
-  #  - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
+  - Aula 2 - Álgebra Booleana :
+    - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
+    - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
+#   - Aula 3 - Dados Digitais:
+#     - Teoria: commum-content/teoria/Teoria-Dados.md
+#    # - Exercício 1: https://docs.google.com/spreadsheets/d/1rN_zQqYaVI8PjAhKqEBCmY-_06I0X9dD0RddcI-miJs/edit?usp=sharing
+#    # - Exercício 2: commum-content/exercicios/Exercicio-Dados-2.md
+#     - Exercícios: https://us.prairielearn.com/pl/course_instance/188053
+#   #- Aula 3 - Simplificação:
+#   #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
+#   #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
+#   #  - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
+#   #  - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/159409/assessment/2438156
 #   - Aula 4 - Transistores:
 #     - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing
 #     - Teoria: commum-content/teoria/Teoria-RTL.md
