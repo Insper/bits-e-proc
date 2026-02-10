@@ -20,6 +20,9 @@ plugins:
 
 extra:
   custom_variables:
+
+    prairielearn_link: https://us.prairielearn.com/pl/course_instance/209305
+
     lab_1_mural: https://app.mural.co/t/bitsprocessadores3866/m/bitsprocessadores3866/1770576553075/e7f5ae192741182c7c5fb4edacdfa21ff53c01d5?sender=u154845be7420b5a36f432010
     lab_1_benchmark: https://docs.google.com/spreadsheets/d/1m7QE4FXZ0VeI97nuKhf2YQEhiMpWFsQYdCo5pbPsJ10/edit?usp=sharing
 
@@ -110,21 +113,19 @@ nav:
 
   - Aula 2 - Álgebra Booleana :
     - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-    - Exercícios: https://us.prairielearn.com/pl/course_instance/209305
+    - Exercícios: &prairielearn_link https://us.prairielearn.com/pl/course_instance/209305
+    # - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md   # REVER PARA INCLUSÃO
 
   - Aula 3 - Dados Digitais:
     - Teoria: commum-content/teoria/Teoria-Dados.md
-    - Exercícios: https://us.prairielearn.com/pl/course_instance/209305
+    - Exercícios: *prairielearn_link
 
-#   #- Aula 3 - Simplificação:
-#   #  - Teoria: commum-content/teoria/Teoria-Algebra-Booleana-Simplificacao.md
-#   #  - Exercício 1: commum-content/exercicios/Exercicio-Algebra-Booleana-1b
-#   #  - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md
-#   #  - PrairieLearn 🪙: https://us.prairielearn.com/pl/course_instance/209305
-#   - Aula 4 - Transistores:
-#     - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing
-#     - Teoria: commum-content/teoria/Teoria-RTL.md
-#     - Ĺaboratório 🪙: class/transistores-lab-1.md
+  - Aula 4 - Transistores:
+    # - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing     # REVER ISSO COM ATENÇÃO PARA JUNÇÃO NO VÍDEO
+    - Teoria: commum-content/teoria/Teoria-RTL.md
+    - Ĺaboratório 🪙: class/transistores-lab-1.md
+    - Exercícios: *prairielearn_link
+
 #   - Aula 5 - Aritmética Binária:
 #     - Teoria 1: commum-content/teoria/Teoria-Aritmetica-Binaria.md
 #     - Exercícios: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md

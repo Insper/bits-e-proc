@@ -11,7 +11,7 @@ Esse laboratório tem como objetivo trabalhar com os conceitos básicos de porta
 
 Existem basicamente três níveis de simulação de componentes eletrônicos: a primeira, puramente lógica utiliza de portas lógicas "ideais" (https://simulator.io/board). Um simulador mais preciso irá utilizar transistores para a implementação dessas portas lógicas porém não leva em consideração todos os fatores físicos-eletrônicos dos componentes (http://falstad.com/circuit/). Já um simulador que leva em consideração as propriedades dos componentes é chamado de SPICE e irá gerar uma simulação mais precisa em termos físicos do circuito original (http://circuitlab.com).
 
-## Parte 1 - Circuito misterioso
+## Circuito misterioso
 
 Vamos usar o simulador do site falstad para implementar um circuito feito com transistores que implementa uma equação booleana. 
 
@@ -24,7 +24,7 @@ Vamos usar o simulador do site falstad para implementar um circuito feito com tr
     ![](figs/A-Transistores/simulacao.gif){width=400}
 
 !!! example "Tarefa"
-    Com o circuito carreado no site:
+    Com o circuito carregado no site:
     
     1. Encontre a tabela verdade do circuito.
         - Faça todas as combinações possíveis de entradas (H/L) e verifique o valor da saída (H/L)
@@ -46,7 +46,7 @@ Vamos usar o simulador do site falstad para implementar um circuito feito com tr
     1. A partir da tabela verdade encontre a equação lógica.
     1. Desenhar o diagrama da equação (simplificado).
 
-## Parte 2 - RTL
+## RTL (Resiresistor Transistor Logic)
 
 Iremos implementar portas lógicas e equações booleanas com transistores BJT. Para isso vamos utilizar o [TinkerCad](https://www.tinkercad.com/), que irá permitir realizarmos uma montagem similar a que seria feito no laboratório.
 
