@@ -1,0 +1,598 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Seq proj - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="3-logica-sequencial">3 - Lógica Sequencial</h1>
+<table>
+<thead>
+<tr>
+<th>Deadline: {{ proj_seq_deadline }}</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="{{ proj_seq_classroom }}">Classroom</a></td>
+</tr>
+<tr>
+<td><ins>AO FINAL:</ins> Preencher para entregar <a href="{{ proj_forms_mediador }}"><mark>Mediador</mark></a></td>
+</tr>
+<tr>
+<td><ins>AO FINAL:</ins> Preencher para entregar <a href="{{ proj_forms_dev }}"><mark>Dev</mark></a></td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/E-LogSeq/sistema-seq.png" data-desc-position="bottom"><img alt="" src="../figs/E-LogSeq/sistema-seq.png"></a></p>
+<p>Neste projeto você terá que desenvolver os componentes síncronos que serão utilizados na construção do nosso computador Z01.</p>
+<h2 id="instrucoes">Instruções</h2>
+<div class="admonition exercise self-progress" data-slug="class/seq-proj/exercise_1" id="exercise_1_0">
+<p class="admonition-title">Começando novo projeto</p>
+<form class="exercise-form">
+<p>O grupo deve escolher um novo mediador para o projeto (não pode repetir) e os demais integrantes serão desenvolvedores.</p>
+<ul>
+<li>Você é o mediador do projeto? Leia: <a href="/bits-e-proc/util/Util-vixi-sou-scrum">Vixi sou mediador</a></li>
+<li>Seu papel é o de desenvolvedor? Leia: <a href="/bits-e-proc/util/Util-vixi-sou-dev/">Vixi sou dev</a></li>
+</ul>
+<p>Para o desenvolvimento do projeto iremos usar o codespace (todos devem fazer), como vamos estar trabalhando em grupo no mesmo repositório, devemos criar um workspace por aluno, siga os passos em:</p>
+<ul>
+<li><a href="/bits-e-proc/util/Util-projeto-codespace">github codespace</a></li>
+</ul>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h2 id="instrucoes_1">Instruções</h2>
+<p>Os arquivos referentes ao projeto são:</p>
+<ul>
+<li><code>hw/seq.py</code>: Script python com os módulos a serem implementados</li>
+<li><code>hw/test_seq.py</code>: Script de teste </li>
+</ul>
+<h3 id="executando-o-script-de-teste">Executando o Script de Teste</h3>
+<p>Abra o terminal na pasta <code>hw</code> execute o pytest:</p>
+<div class="highlight"><pre><span></span><code><span class="nv">$pytest</span><span class="w"> </span>-s<span class="w"> </span>test_seq.py<span class="w"> </span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Você pode usar o <code>-k MODULO</code> para executar apenas o teste o do módulo que deseja, exemplo (para testar o PC):</p>
+<div class="highlight"><pre><span></span><code>pytest<span class="w"> </span>test_seq.py<span class="w"> </span>-s<span class="w"> </span>-k<span class="w"> </span>pc
+</code></pre></div>
+</div>
+<h2 id="projeto">Projeto</h2>
+<p>O projeto consistem em:</p>
+<ul>
+<li>Implementar os módulos descritos a seguir.</li>
+<li>Para cada módulo vocês devem gerar uma forma de onda <code>vcd</code> e salvar na pasta <code>hw/waveform</code></li>
+<li>Analisar a forma de onda gerada </li>
+</ul>
+<h3 id="modulos">Módulos</h3>
+<p>Os modulos a serem desenvolvidos na entrega estão detalhados no livro base do curso: <a href="https://docs.wixstatic.com/ugd/44046b_862828b3a3464a809cda6f44d9ad2ec9.pdf"><strong>Capítulo 3 - The Elements of Computing Systems</strong></a></p>
+<ul>
+<li><code>dff(q, d, clear, presset, clk, rst)</code></li>
+<li><code>binaryDigit(i, load, output, clk, rst)</code></li>
+<li><code>register8(i, load, output, clk, rst)</code></li>
+<li><code>registerN(i, load, output, width, clk, rst)</code></li>
+<li><code>pc(increment, load, i, output, width, clk, rst)</code></li>
+<li><code>ram(dout, din, addr, we, clk, rst, width, depth)</code></li>
+</ul>
+<hr>
+<ul>
+<li>Flip-flop</li>
+<li><strong>Módulo:</strong> <code>dff(q, d, clear, presset, clk, rst)</code></li>
+<li><strong>Dependência</strong>:</li>
+<li><strong>Test:</strong> <code>pytest test_seq.py -k dff</code></li>
+<li>Módulo já implementado.</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/E-LogSeq/ffd.png" data-desc-position="bottom"><img alt="FlipFlop D" src="../figs/E-LogSeq/ffd.png"></a></p>
+<hr>
+<ul>
+<li>Binary Digit<ul>
+<li><strong>Módulo</strong>: <code>binaryDigit(i, load, output, clk, rst)</code></li>
+<li><strong>Dependência</strong>: <code>dff</code> </li>
+<li><strong>Descrição</strong> : É um registrador feito para armazenar um único bit de informação (0 ou 1). A interface do módulo consiste em uma entrada (d) para o bit a ser armazenado, um sinal de <strong>load</strong> para indicar quando o bit de entrada deve ser armazenado um sinal de <em>clock</em> e a saída <em>output*</em> que é o bit armazenado:</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/E-LogSeq/binarydigit_v2.svg" data-desc-position="bottom"><img alt="Binary Digit" src="../figs/E-LogSeq/binarydigit_v2.svg" width="500"></a></p>
+<hr>
+<ul>
+<li>Register 8<ul>
+<li><strong>Módulo</strong>   : <code>register8(i, load, output, clk, rst)</code></li>
+<li><strong>Dependência</strong> : <code>binaryDigit</code></li>
+<li><strong>Descrição</strong> : É um registrador de 8 bits criado a partir do <code>binaryDigit</code> porém agora para armazenar um vetor de entrada de 8 bits de tamanho.</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/E-LogSeq/register8.png" data-desc-position="bottom"><img alt="Register 8" src="../figs/E-LogSeq/register8.png"></a></p>
+<hr>
+<ul>
+<li>Register N<ul>
+<li><strong>Módulo</strong>   : <code>registerN(i, load, output, width, clk, rst)</code></li>
+<li><strong>Dependência</strong> : <code>binaryDigit</code> (ou register8)</li>
+<li><strong>Descrição</strong> : É um registrador de N bits criado a partir do <code>binaryDigit</code> porém agora para armazenar um vetor de entrada de N bits de tamanho.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Program Counter<ul>
+<li><strong>Módulo</strong>   : <code>pc(increment, load, i, output, width, clk, rst)</code></li>
+<li><strong>Dependência</strong> : <code>registerN</code> (pode usar <code>inc16</code>, <code>mux</code>)</li>
+<li><strong>Descrição</strong> : O program counter será o nosso endereçador de memória da CPU, ele será responsável por apontar para a próxima instrução a ser executada. Como normalmente um código segue um fluxo sequencial (uma linha na sequência da outra) o PC possui a habilidade de se auto incrementar a cada clock (apontando assim para  a próxima instrução), mas ele tem que suportar <strong>condições</strong> (if, while, ...) rompendo com esse fluxo contínuo.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>Para maiores detalhes consulte o livro texto do curso.   </p>
+</blockquote>
+<hr>
+<ul>
+<li>
+<p>ram</p>
+<ul>
+<li><strong>Módulo</strong>   : <code>ram(dout, din, addr, we, clk, rst, width, depth)</code></li>
+<li><strong>Dependência</strong> : <code>RegisterN</code> (pode depender de <code>mux</code>, <code>demux8</code>)</li>
+<li>
+<p><strong>Descrição</strong> : É uma memória de 8 endereços com 16 bits de largura. O componente possui como entrada o vetor input de 16 bits, o endereço a ser armazenado (address) o sinal <strong>load</strong> que indica quando é para ser armazenado e o clock. Como saída temos o valor lido no endereço especificado quando load for igual a 0.
+ Note que sinal LOAD tem como função similar o do READ/WRITE, quando zero, indica que queremos ler o valor armazenado, quando 1 indica que queremos escrever (write) nessa posição.</p>
+</li>
+<li>
+<p><code>width</code>: É a largura dos dados da memória RAM</p>
+</li>
+<li><code>depth</code>: É a quantidade de endereços que a memória possui</li>
+</ul>
+</li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/E-LogSeq/ram.png" data-desc-position="bottom"><img alt="RAM" src="../figs/E-LogSeq/ram.png"></a></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Todos esses módulos estão bem documentados no livro The Elements of Computer System. Cap 3.</p>
+</div>
+<h3 id="forma-de-onda">Forma de onda</h3>
+<p>Para cada teste realizado, deve-se carregar o <code>vcd</code> e tirar um <strong>print</strong> da forma de onda do módulo com os testes aplicados a ele. Essa imagem deve ser salva na mesma pasta <code>hw/waveform/</code> e com o mesmo nome dos módulos. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Não basta só gerar a imagem, você precisa analisar e entender. Isso será cobrado nas avaliações.</p>
+</div>
+<h3 id="projeto_1">Projeto</h3>
+<table>
+<thead>
+<tr>
+<th>Conceito</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B</td>
+<td></td>
+</tr>
+<tr>
+<td>C</td>
+<td>Todos os módulos testados no github actions</td>
+</tr>
+<tr>
+<td></td>
+<td>Todos os módulos básicos passam nos testes</td>
+</tr>
+<tr>
+<td></td>
+<td>Vídeo explicando os módulos</td>
+</tr>
+<tr>
+<td>D</td>
+<td>Ao menos um módulo não foi implementando ou não passa no testes.</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Menos da metade dos módulos funcionando</td>
+</tr>
+</tbody>
+</table>
+<h2 id="c">C</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Atualizar o README.md do repositório com o link para os vídeos!</p>
+</div>
+<p>Para o conceito C o grupo (um módulo por integrante) deve escrever um pequeno descritivo no <code>README.md</code> do repositório contendo uma breve explicacão de que como cada um dos módulos foram desenvolvidos e para que eles funcionam. Para cada módulo vocês devem escrever:</p>
+<ol>
+<li>Para que serve o componente</li>
+<li>O diagrama (<code>hardware</code>) do módulo (pode fazer no drawio) </li>
+<li>A forma de onda da simulacão (<code>vcd</code>) explicada</li>
+</ol>
+<h2 id="b">B</h2>
+<p>Aqui vocês devem gravar um pequeno vídeo explicando cada módulo, o vídeo de no máximo 4min por módulo deve possuir:</p>
+<ol>
+<li>Para que serve o componente</li>
+<li>O <code>MyHDL</code> que descreve o módulo</li>
+<li>O diagrama (<code>hardware</code>) do módulo (pode fazer no drawio) </li>
+<li>A forma de onda da simulacão (<code>vcd</code>) explicada</li>
+</ol>
+<p>Atualizar o <code>README</code> adicionando o vídeo.</p>
+<h2 id="a">A</h2>
+<p>Vamos estudar mais alguns componentes muito utilizados em sistemas digitais para armazenamento de dados, para cada componente vocês devem escrever uma pequena secćão no <code>README</code> e gravar um vídeo explicando:</p>
+<ol>
+<li>Para que serve</li>
+<li>Um diagrama <code>hardware</code> do módulo (entrada e saída, pode ser tipo "caixa preta")</li>
+</ol>
+<p>Os componentes a serem estudados são:</p>
+<ul>
+<li>FIFO: First-in First-out (<code>FIFO</code>)</li>
+<li>LIFO: Last-in First-out (<code>LIFO</code>) </li>
+<li>Shift Register</li>
+</ul>
+<h2 id="a_1">A</h2>
+<!--
+
+Para testar utilize a FPGA e o `toplevel.py` fornecido de exemplo, cada módulo deve ser testado na FPGA e um vídeo explicativo gravado (com um diagrama de blocos, o myhdl e o hardware funcionando).
+
+### FIFO
+
+First-in First-out (`FIFO`) é um componente que implementa uma FILA, onde o primeiro dado salvo é o primeiro dado a ser lido. Este componente é muito utilizado para armazenamento de dados e pós processamento. Uma FIFO pode ser implementada tanto em `hw` quando em `sw` (no python você pode usar `queue`).$pytest
+
+!!! video
+    ![](https://www.youtube.com/watch?v=Nr8q5VW-mXI)
+
+A nossa FIFO vai possuir os seguintes sinais de entrada e saída:
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fifo</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">din</span><span class="p">,</span> <span class="n">we</span><span class="p">,</span> <span class="n">re</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">full</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+</code></pre></div>
+
+Onde:
+
+- `din`: Entrada, dado a ser armazenado
+- `dout`: Saída, dado lido 
+- `we`: Entrada, se `1` a operacão é de armazenamento 
+- `re`: Entrada,  se `1` a operacão é de leitura 
+- `empty`: Saída, se `1` a FIFO está fazia
+- `full`: Saída, se `1` a FIFO está cheia
+
+O módulo possui os seguintes valores de configuraćão:
+
+- `width`: Largura do dado a ser armazenado
+- `height`: Quantidade de dados possíveis na fila
+
+![](figs/E-LogSeq/fifo.png)
+
+### LIFO
+
+Last-in First-out (`LIFO`) é um componente que implementa uma PILHA, onde o primeiro dado salvo é o ==ultimo== dado a ser lido. Este componente é muito utilizado para armazenamento de dados e pós processamento. Uma FIFO pode ser implementada tanto em `hw` quando em `sw`.
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lifo_stack.svg/350px-Lifo_stack.svg.png)
+
+A nossa LIFO vai possuir os mesmo sinais da FIFO:
+
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fifo</span><span class="p">(</span><span class="n">dout</span><span class="p">,</span> <span class="n">din</span><span class="p">,</span> <span class="n">we</span><span class="p">,</span> <span class="n">re</span><span class="p">,</span> <span class="n">empty</span><span class="p">,</span> <span class="n">full</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">depth</span><span class="p">):</span>
+</code></pre></div>
+
+![](figs/E-LogSeq/lifo.png)
+
+Onde:
+
+- `din`: Entrada, dado a ser armazenado
+- `dout`: Saída, dado lido 
+- `we`: Entrada, se `1` a operacão é de armazenamento 
+- `re`: Entrada,  se `1` a operacão é de leitura 
+- `empty`: Saída, se `1` a LIFO está fazia
+- `full`: Saída, se `1` a LIFO está cheia
+
+O módulo possui os seguintes valores de configuraćão:
+
+- `width`: Largura do dado a ser armazenado
+- `height`: Quantidade de dados possíveis na fila
+-->
+
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Util VM Linux - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../class/intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../teoria/Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../teoria/Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../teoria/Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../../class/transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../teoria/Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../../class/comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="boot-ssd-via-virtualbox">Boot SSD via VirtualBox</h1>
+<p>Através deste guia, você conseguirá criar uma máquina virtual no VirtualBox que realiza o boot de um HD Externo, este roteiro foi feito e testado no Windows 10 (mas com o devido cuidado funciona no Mac OS e Linux também).</p>
+<ol>
+<li>
+<p>Antes, verifique se não há nenhum pendrive, se sim, ejete ele no Windows Explorer.</p>
+</li>
+<li>
+<p>Conecte o HD Externo de tipo A (MBR) no Windows, neste momento deverá aparecer uma mensagem dizendo para formatar a unidade para poder utiliza-la, clique em Não.</p>
+</li>
+<li>
+<p>Agora, abra o Painel de Controle, procure por Ferramentas Administrativas e em seguida Gerenciamento do Computador (Cuidado para não confundir com Gerenciador de Dispositivos!).
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="figs/VM/win_vm_1.png" data-desc-position="bottom"><img alt="Gerenciamento do Computador" src="figs/VM/win_vm_1.png"></a></p>
+</li>
+<li>
+<p>Agora no menu lateral, procure por Gerenciamento de Discos, na parte central, você deve ser capaz de ver o seu HD e o HD Externo conectado, caso contrário, verifique a conexão USB e certifique-se que clicou no botão Ignorar ao conecta-lo.</p>
+</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="figs/VM/win_vm_2.png" data-desc-position="bottom"><img alt="Gerenciamento de Discos" src="figs/VM/win_vm_2.png"></a></p>
+<ol>
+<li>
+<p>Com foco no HD Externo e procure pelo número do Disco (geralmente fica na parte inferior em baixo do nome, no gráfico de barras). Deve haver algo como <code>Disco 2</code> ou <code>Disco 1</code>. </p>
+</li>
+<li>
+<p>Agora, abra uma Linha de Comando como Administrador (botão direito, e executar como Administrador). Navegue até a pasta do VirtualBox em <code>C:\Program Files\Oracle\VirtualBox</code> e execute o seguinte comando, substituindo o N pelo número de disco corresponde visto anteriormente (deve-se manter o \.\PhysicalDrive).
+<code>VBoxManage internalcommands createrawvmdk -filename Elementos.vmdk -rawdisk \\.\PhysicalDriveN</code></p>
+</li>
+</ol>
+<p>Se tudo ocorrer bem, deve aparecer a mensagem <code>RAW host disk access VMDK file Elementos.vmdk created successfully.</code> Caso sim, continue, caso contrário, verifique o comando digitado.</p>
+<ol>
+<li>
+<p>No passo 6, criamos um disco virtual, que na realidade não armazena dados e sim diz ao VirtualBox procurar pelo HD Externo. No entanto, este acesso ao HD Externo em nível de partições de boot, necessita de acesso de administrador ao computador. Portanto, vamos ter que abrir o VirtualBox como administrador no Windows. Primeiro, certifique-se que o VirtualBox está fechado completamente. Procure qualquer atalho ou no menu Iniciar pelo VirtualBox e clique com botão direito e Executar como Administrador.</p>
+</li>
+<li>
+<p>Com êxito, a janela do VirtualBox deve aparecer. Clique para criar uma nova máquina virtual, clique em seguida no modo Expert, de um nome apropriado a máquina virtual, na pasta da máquina virtual, sugiro que mude o caminho para C:\Users\SEU_USUARIO\VirtualBox VMs (crie caso não exista). Ele irá utilizar esta pasta apenas para arquivos de configuração. Troque o Tipo para Linux e Versão para Ubuntu (64-bits). É recomendável que aloque pelo menos 4GB (4096 MB) para o sistema. Na opção de Disco Rígido, escolha a opção Utilizar um disco virtual existente, e selecione o arquivo Elementos.vmdk criado no passo 6. Clique em Criar.</p>
+</li>
+<li>
+<p>Clique para executar a máquina virtual criada, se tudo ocorrer bem, você deve ver o boot do Ubuntu iniciando, não esqueça depois de ligar, de verificar a resolução da tela e se a aceleração de vídeo está habilitada.</p>
+</li>
+</ol>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

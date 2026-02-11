@@ -1,0 +1,382 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Teoria Assembler - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../../assets/js/main.js"></script>
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../class/intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../../class/transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../../class/comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="assembler">Assembler</h1>
+<div class="admonition info">
+<p class="admonition-title">EDSAC</p>
+<p>O EDSAC (Electronic Delay Storage Automatic Calculator) é creditado como um dos primeiros computadores a utilizar um Assembler.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.i-programmer.info/images/stories/ComputerCreators/wilkes/edsac1.jpg" data-desc-position="bottom"><img alt="" src="https://www.i-programmer.info/images/stories/ComputerCreators/wilkes/edsac1.jpg"></a></p>
+<blockquote>
+<p><a href="https://people.cs.clemson.edu/~mark/edsac.html">https://people.cs.clemson.edu/~mark/edsac.html</a></p>
+</blockquote>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Grace Hopper</p>
+<p>Foi uma das primeiras pessoas a programar os computadores Mark I, Mark II, Mark III, UNIVAC I e UNIVAC II o que tornou ela uma das grandes pioneiras da computação e seus trabalhos influenciaram futuras gerações. Ela desenvolveu compiladores como o A-O e B-O que levaram ao desenvolvimento do COBOL, que foi usada durante muito tempo em diversos sistemas computacionais e ainda hoje, possui uso em sistemas críticos de <a href="https://www.nextgov.com/ideas/2020/05/learning-new-jersey-why-government-organizations-should-cut-ties-cobol/165356/">governos</a> e <a href="https://www.quora.com/Who-still-uses-COBOL">instituições financeiras</a> ao redor do mundo.</p>
+<p>Também um fato curioso, é que o primeiro bug de computadores se atribui a ela, no caso ela encontrou uma mariposa preso a um relay do Mark II que interrompeu uma execução de um programa dela.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://upload.wikimedia.org/wikipedia/commons/3/37/Grace_Hopper_and_UNIVAC.jpg" data-desc-position="bottom"><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/3/37/Grace_Hopper_and_UNIVAC.jpg"></a></p>
+<blockquote>
+<p><a href="https://en.wikipedia.org/wiki/Grace_Hopper">https://en.wikipedia.org/wiki/Grace_Hopper</a></p>
+</blockquote>
+</div>
+<p>Linguagens Assembly são as representações simbólicas dos comandos binários do computador (linguagem de máquina), facilitando o desenvolvimento de programas. Essa é uma linguagem que chamamos de baixo nível, ou seja, ela não é tão sofisticada como uma linguagem Java onde os comandos abstraem o hardware, e não possuem uma relação direta com o hardware. Em geral instruções Assembly são convertidas diretamente para uma instrução de linguagem de máquina. </p>
+<p>Podemos dizer que é um mapeamento um para um, assim cada instrução Assembly vira uma instrução de máquina.</p>
+<h2 id="o-que-um-assembler-faz">O que um assembler faz?</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/Assembler-assembler.svg" data-desc-position="bottom"><img alt="" src="../figs/Assembler-assembler.svg"></a></p>
+<div class="admonition info">
+<p class="admonition-title">Assembler</p>
+<p>Em português é conhecido como <strong>montador</strong>.</p>
+</div>
+<p>As CPUs tem suas linguagens máquinas, que são descritas pelas sequências de bits, ou seja, seus <code>0</code>s e <code>1</code>s. O assembly é um formalismo que permite a criação dos programas em uma linguagem mais humanamente tratável, porém os computadores não conseguem executar diretamente esse tipo de instrução, uma série de tratamentos e conversões são necessárias e o que o Assembler faz é justamente traduzir essa linguagem de mnemônicos para os códigos binários da arquitetura em questão, ou seja, os <code>0</code>s e <code>1</code>s que o computador consegue diretamente executar.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Os Assemblers presentes nos sistemas operacionais disponíveis são normalmente o NASM para a sintaxe intel e o GAS para a sintaxe AT&amp;T, mas podem haver variações.</p>
+<p><a href="http://www.ibm.com/developerworks/library/l-gas-nasm/">http://www.ibm.com/developerworks/library/l-gas-nasm/</a></p>
+</div>
+<h2 id="etapas-de-montagem">Etapas de montagem</h2>
+<p>O montador proposto nesse curso tem as seguintes etapas:</p>
+<ol>
+<li>Abrir arquivo</li>
+<li>Análise sintática</li>
+<li>Parsing (Tabela de Símbolos)</li>
+<li>Geração de código (code)</li>
+</ol>
+<h3 id="analise-sintatica">Análise Sintática</h3>
+<p>O assemble faz a análise sintática (parsing) dos arquivos, identificando cada sequencia de caracteres, e posteriormente gerando os códigos binários para uma determinada arquitetura.</p>
+<p>Fazer o Parsing significa detectar cada símbolo para determinar a estrutura sintática de uma expressão, que é escrita de acordo com as regras de uma determinada gramática. Para analisar essa expressão, você tem que dividi-la no que chamamos de tokens:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/Assembler-parsing.svg" data-desc-position="bottom"><img alt="" src="../figs/Assembler-parsing.svg"></a></p>
+<h3 id="simbolos">Símbolos</h3>
+<p>Uma das dificuldades em se programar em Assembly está relacionada ao gerenciamento de memória, ou seja, como saber em que endereço de memória devemos armazenar um valor ou para qual endereço realizar um salto, ou seja, um JUMP, ou Branching.</p>
+<p>Para isso podemos usar referências simbólicas nos programas para endereçar memórias físicas no computador. Usamos uma variável como em linguagens de alto nível e esses símbolos são posteriormente convertidos em números pelo Assembler. </p>
+<div class="highlight"><pre><span></span><code><span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="nv">END</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+</code></pre></div>
+<p>Para as variáveis de valores podemos escolher endereços seguindo alguma regra, que posteriormente podem ser recuperados e armazenados em uma tabela que relaciona o nome ao valor. </p>
+<div class="highlight"><pre><span></span><code><span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="nv">var1</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+<span class="nf">movw</span><span class="w"> </span><span class="o">%</span><span class="nv">D</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">)</span>
+</code></pre></div>
+<p>Já para os saltos, como a tradução do Assembly é direta, ou seja, as instruções em Assembly se mapeiam em instruções em linguagem de máquina como uma função bijetora, A tabela de símbolos pode ser usada para localizar onde estão marcados os marcadores que vamos chamar aqui de <mark>Labels</mark> e também armazenar na memória.</p>
+<p>Finalmente vale ressaltar que a tabela de símbolos muitas vezes vem com uma série de símbolos pré definidos, que podem acessar posições de memória padronizadas para algo específico da arquitetura.</p>
+<div class="highlight"><pre><span></span><code><span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="nb">R0</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+<span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="nv">LED</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+</code></pre></div>
+<p>O programa assembler varre o código em busca desses símbolos e cria uma tabela relacionando o seu nome a um valor que pode ser convertido em binário:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/Assembler-symbol.svg" data-desc-position="bottom"><img alt="" src="../figs/Assembler-symbol.svg"></a></p>
+<p>Sempre que o assembler encontrar um símbolo, ele consulta essa tabela em busca do valor associado a ele.</p>
+<h3 id="geracao-de-codigo">Geração de código</h3>
+<p>O assembler necessita ler os opcodes e transformar em linguagem de máquina. É essa etapa que irá realmente criar uma saída binária. A geração de código deve identificar o tipo do comando que está sendo executado, os seus parâmetros e símbolos e então gerar a saída binária com base no instruction set de referência.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/Assembler-code.svg" data-desc-position="bottom"><img alt="" src="../figs/Assembler-code.svg"></a></p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
