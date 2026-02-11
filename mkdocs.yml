@@ -29,7 +29,7 @@ extra:
     lab_transistores_points: 'Pontos de HW!'
     lab_transistores_deadline: Final da aula
 
-    lab_myhdl_classroom:  https://classroom.github.com/a/eDwnCy_u
+    lab_myhdl_classroom:  https://classroom.github.com/a/6CfJSQBq
     lab_myhdl_points: 'Pontos de HW!'
     lab_myhdl_deadline: Final da aula
 
@@ -132,9 +132,9 @@ nav:
     - Exercícios: *prairielearn_link
     - Exercícios Extra: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
 
-#   - Aula 6 - FPGA:
-#     - Teoria: myhdl/basico.md
-#     - Laboratório: class/comb-lab-1.md
+  - Aula 6 - FPGA:
+    - Teoria: myhdl/basico.md
+    - Laboratório: class/comb-lab-1.md
 
 #   - Aula 7 - Somadores:
 #     - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
