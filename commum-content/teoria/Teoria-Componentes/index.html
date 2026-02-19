@@ -342,9 +342,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">mux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">mux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">o</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">in0</span>
         <span class="k">else</span><span class="p">:</span>
@@ -430,9 +430,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">deMux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">deMux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">out0</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span>
             <span class="n">out1</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
@@ -580,9 +580,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="o">...</span>
     <span class="k">return</span> <span class="n">comb</span>
 </code></pre></div>
@@ -766,9 +766,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eq</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eq</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">gt</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span>  <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
         <span class="n">eq</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="n">comb</span>
@@ -800,9 +800,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">adder</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">o</span> <span class="o">=</span> <span class="n">in1</span> <span class="o">+</span> <span class="n">in2</span>
     <span class="k">return</span> <span class="n">comb</span>
 </code></pre></div>
