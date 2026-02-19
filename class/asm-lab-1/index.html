@@ -1,0 +1,498 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Asm lab 1 - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="lab-8-nasm-assembly">Lab 8: (nasm) Assembly</h1>
+<table>
+<thead>
+<tr>
+<th>Lab 8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entregue o código pelo repositório do <mark><a href="None">Classroom</a></mark></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">💰 Laboratório com pontos</p>
+<p>Algumas tarefas deste laboratório fornecem pontos de nota individual (hardware ou software), os exercícios marcados com 💰 são os que fornecem os pontos. Os pontos apenas são validados quando contabilizados pelo CI do github. Fiquem atentos para o deadline da entrega.</p>
+<p>Neste laboratório você pode receber até: <strong>(Pontos de SW)</strong>.</p>
+</div>
+<p>Ao final desse lab você deve ser capaz de:</p>
+<ol>
+<li>Usar o simulador gráfico </li>
+<li>Fazer pequenas modificações em um código assembly</li>
+<li>Depurar a execução do assembly</li>
+</ol>
+<h2 id="simulador">Simulador</h2>
+<p>Nosso código assembly pode ser executado em hardware de verdade (FPGA) porém nesse primeiro momento iremos trabalhar em um ambiente simulado que nos dará maior facilidade de programação e depuração.</p>
+<p>Um pouco de contexto: O livro texto (The Elements Of Computer System) disponibiliza um simulador da CPU original todo escrito em java, esse código é fechado e não permite nenhuma customização. Em 2017 o Prof. Luciano Pereira iniciou a criação de um simulador Z0 (versão anterior) também em Java, onde teríamos controle total do software.</p>
+<p>Percebemos alguns pontos negativos de utilizar um simulador em Java sendo o principal: Qualquer alteração no Hardware iria demandar uma alteração no simulador, sendo necessário mantermos dois projetos independentes e sincronizados.</p>
+<p>Nesta versão do curso iremos utilizar um simulador que utiliza uma implementacão em MyHDL como descrição da CPU (e de tudo envolvido), uma alteração no hardware irá automaticamente alterar o simulador e o comportamento do computador.</p>
+<p>O simulador possui como entradas (para cada simulação): a arquitetura do computador (hardware); o conteúdo da memória RAM o conteúdo da memória ROM e um tempo de execução.</p>
+<p>Após o término da simulação é exportado diversos sinais internos da CPU, o estado final da memória RAM e ROM. Esses sinais são então lidos pela interface gráfica e exibida de uma forma amigável, ou usados nos testes.</p>
+<h2 id="testando">Testando</h2>
+<p>Temos um pytest para testar a execucao do programa, para executar pasta usar o mesmo padrão dos anteriores: </p>
+<div class="highlight"><pre><span></span><code>pytest -s -k MODULO
+</code></pre></div>
+<p>Esse script:</p>
+<ol>
+<li>Inicializa a memória RAM com valores pré estabelecidos </li>
+<li>Converte o <code>nasm</code> para <code>hack</code> e inicializa a memória ROM</li>
+<li>Executa o Hardware por um tempo</li>
+<li>Compara a memória RAM após a simulação com um padrão de testes.</li>
+</ol>
+<p>Exemplo de teste:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_exe1</span><span class="p">():</span>
+    <span class="n">ram</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span> <span class="mi">0</span><span class="p">}</span>
+    <span class="n">tst</span> <span class="o">=</span> <span class="p">{</span><span class="mi">10</span><span class="p">:</span> <span class="mi">5</span><span class="p">}</span>
+    <span class="k">assert</span> <span class="n">nasm_test</span><span class="p">(</span><span class="s2">"exe1.nasm"</span><span class="p">,</span> <span class="n">ram</span><span class="p">,</span> <span class="n">tst</span><span class="p">)</span>
+</code></pre></div>
+<p>Onde:</p>
+<ul>
+<li><code>ram</code>: É a memória RAM inicial da aplicação</li>
+<li><code>tst</code>: É o teste que será executado na memória RAM ao final do processamento</li>
+</ul>
+<div class="admonition exercise self-progress" data-slug="class/asm-lab-1/exercise_1" id="exercise_1_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<p>Abra o arquivo <code>exe1.nasm</code> e implemente o código a seguir que supostamente faz:</p>
+<ul>
+<li>RAM[10] = 5</li>
+</ul>
+<p>Código</p>
+<div class="highlight"><pre><span></span><code><span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+<span class="nf">movw</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">D</span>
+<span class="nf">leaw</span><span class="w"> </span><span class="kc">$</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+<span class="nf">movw</span><span class="w"> </span><span class="o">%</span><span class="nv">D</span><span class="p">,</span><span class="w"> </span><span class="o">%</span><span class="nv">A</span>
+</code></pre></div>
+<p>Execute o teste: </p>
+<div class="highlight"><pre><span></span><code>pytest -s -k exe1
+</code></pre></div>
+<p>E repare que o código <mark>falha</mark>.</p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h3 id="entendendo-o-problema">Entendendo o problema</h3>
+<p>O código anterior falha, e agora precisamos entender o que está acontecendo com ele, para isso vamos depurar a execução do código assembly, para isso utilize o comando a seguir:</p>
+<div class="highlight"><pre><span></span><code>bits debug nasm exe1
+</code></pre></div>
+<blockquote>
+<p>Note que toda teste gera um arquivo com extensão <code>.lst</code>, este arquivo possui a execucao passo a passo do código na nossa CPU.</p>
+</blockquote>
+<p>Você deve obter algo assim:</p>
+<div class="highlight"><pre><span></span><code>┏━━━━━━━━┳━━━━━━━━━━━━━━┳━━━━┳━━━━┳━━━━━┓
+┃ pcount ┃ OP           ┃ %A ┃ %D ┃ RAM ┃
+┡━━━━━━━━╇━━━━━━━━━━━━━━╇━━━━╇━━━━╇━━━━━┩
+│ 1      │ leaw $5, %A  │ 0  │ 0  │     │
+│ 2      │ movw %A, %D  │ 5  │ 0  │     │
+│ 3      │ leaw $10, %A │ 5  │ 5  │     │
+│ 4      │ movw %D, %A  │ 10 │ 5  │     │
+└────────┴──────────────┴────┴────┴─────┘
+RAM FINAL (APENAS ENDERECOS ALTERADOS)
+┏━━━━━━━━━┳━━━━━━━┓
+┃ Address ┃ Value ┃
+┡━━━━━━━━━╇━━━━━━━┩
+└─────────┴───────┘
+</code></pre></div>
+<div class="admonition exercise short question tag-short-text tag-text-exercise editable" data-slug="class/asm-lab-1/short_1" id="short_1_0">
+<p class="admonition-title">Exercise<button class="editable-button"></button></p>
+<form class="exercise-form">
+<p>Consegue entender o que está errado?</p>
+<div class="form-elements">
+<input type="text" value="" name="data">
+
+<input class="ah-button ah-button--primary" type="submit" value="Submit">
+</div>
+</form>
+<div class="admonition answer no-indent">
+<p class="admonition-title">Answer</p>
+<p>Note que não fazemos nenhuma escrita na memória RAM, a última instrução deveria ser: </p>
+<div class="highlight"><pre><span></span><code><span class="gd">- movw %D, %A</span>
+<span class="gi">+ movw %D, (%A)</span>
+</code></pre></div>
+<p>O <code>(%A)</code> indica que deve salvar o resultado de <code>%D</code> onde <code>%A</code> aponta, ou seja, <code>RAM[%A]=%D</code>. </p>
+</div>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/asm-lab-1/exercise_2" id="exercise_2_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ol>
+<li>Corrija o código anterior</li>
+<li>Teste com <code>pytest -k exe1</code></li>
+<li>Analise a execução com <code>bits debug nasm exe1</code></li>
+</ol>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h2 id="praticando">💰  Praticando</h2>
+<p>Vamos praticar um pouco agora programar em assembly, no começo parece bem difícil, mas com a prática as coisas vão ficando mais fáceis.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Consulte a teoria e o resumo das instruções: <a href="https://insper.github.io/bits-e-proc/commum-content/z01/z01-Resumo-Assembly/">AssemblyZ1</a> para saber as instruções disponíveis.</p>
+</div>
+<p>Vamos implementar alguns códigos assembly, a descrição do que eles devem fazer estão no próprio arquivo <code>.nasm</code>.</p>
+<div class="admonition exercise self-progress" data-slug="class/asm-lab-1/exercise_3" id="exercise_3_0">
+<p class="admonition-title">💰 (0 HW / 1 SW)</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>add.nasm</code></li>
+<li>Test: <code>pytest -k add</code></li>
+</ul>
+<p>Tarefa: Leia o cabeçalho do arquivo e implemente o programa nasm que executa o que está descrito, teste com o <code>pytest</code></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/asm-lab-1/exercise_4" id="exercise_4_0">
+<p class="admonition-title">💰 (0 HW / 1 SW)</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>sub.nasm</code></li>
+<li>Test: <code>pytest -k sub</code></li>
+</ul>
+<p>Tarefa: Leia o cabeçalho do arquivo e implemente o programa nasm que executa o que está descrito, teste com o <code>pytest</code></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/asm-lab-1/exercise_5" id="exercise_5_0">
+<p class="admonition-title">💰 (0 HW / 1 SW)</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>mov.nasm</code></li>
+<li>Test: <code>pytest -k mov</code></li>
+</ul>
+<p>Tarefa: Leia o cabeçalho do arquivo e implemente o programa nasm que executa o que está descrito, teste com o <code>pytest</code></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

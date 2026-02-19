@@ -1,0 +1,653 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Seq lab 1 - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="lab-logica-sequencial">Lab: Lógica Sequencial</h1>
+<table>
+<thead>
+<tr>
+<th>Lab</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Entregue o código pelo repositório do <mark><a href="None">Classroom</a></mark></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition info">
+<p class="admonition-title">💰 Laboratório com pontos</p>
+<p>Pode ser feito em dupla! </p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><img alt="⚡️" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/26a1.svg" title=":zap:"> O laboratório só pode ser realizado com FPGA. </p>
+</div>
+<h2 id="comecando">Começando</h2>
+<p>Agora vamos ver como implementamos uma lógica sequencia em MyHDL! Até agora temos utilizado o <code>decorator</code>: <code>@always_comb</code> para indicar que uma função deve ser interpretada como um trecho combinacional:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@always_comb</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
+</code></pre></div>
+<p>Agora vamos começar usar um novo <code>decorator</code> (<code>@always_seq</code>) para indicar que uma função deve ser sequencial e depender do <code>clock</code> e do <code>reset</code>. O módulo a seguir demonstra como implementar um flip-flop tipo D em MyHDL:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@block</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">dff</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+    <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
+        <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">d</span>
+
+    <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
+</code></pre></div>
+<p>Notem que estamos usando <code>@always_seq(clk.posedge, reset=rst)</code>, e indicando que o módulo deve ser acionado na borda de subida do sinal <code>clk</code> e que o sinal de <code>reset</code> deve ser o <code>rst</code>.</p>
+<p>Podemos interpretar o <code>def seq()</code> da seguinte maneira: Sempre que o sinal clock variar de <code>0</code> para <code>1</code> a função é acionada e então a saída <code>q</code> recebe a entrada <code>d</code>. Podemos visualizar isso como um <code>while True:</code> </p>
+<div class="highlight"><pre><span></span><code>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">d</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">CLOCK</span><span class="p">)</span>
+</code></pre></div>
+<p>Para todas as tarefas sigam o fluxo a seguir:</p>
+<ol>
+<li><code>make toplevel.rbf</code></li>
+<li>Programe a FPGA</li>
+<li>Teste e obeserve se o resultado é o esperado.</li>
+</ol>
+<h2 id="dff-flipflop-tipo-d">dff - FlipFlop tipo D</h2>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_1" id="exercise_1_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code> e <code>toplevel.py</code></li>
+</ul>
+<p>Vamos validar o flip-flop para isso definimos o <code>toplevel.py</code> com:</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">ic0</span> <span class="o">=</span> <span class="n">dff</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sw_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">key_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">RESET_N</span><span class="p">)</span>
+</code></pre></div>
+<p>Mapeamos o clock para o <code>KEY[0]</code> e a entrada do dff para o <code>SW[0]</code>, notem que ao mexer a chave <code>SW[0]</code> nada acontece, o valor do LED muda apenas após apertar o <code>KEY[0]</code> (que é o <code>clock</code>).</p>
+<p><mark>Tarefa: Execute na FPGA e teste com as chaves e botões.</mark></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h3 id="aplicando">Aplicando</h3>
+<p>Com a possibilidade de executarmos uma acão por clock, conseguimos realizar tarefas que não eram possíveis antes como por exemplo contar eventos. </p>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_2" id="exercise_2_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code></li>
+<li>Módulo <code>contador(cnt, clk, rst)</code></li>
+</ul>
+<p>Vamos implementar um contador, a ideia aqui é contar quantas vezes o <code>clk</code> foi gerado:</p>
+<ul>
+<li><code>cnt</code>: Vetor de saída indicando quantas vezes o clock foi gerado:</li>
+</ul>
+<p>Tarefa:</p>
+<p>Implemente o <code>contador</code> e teste na FPGA (note que devemos comentar o <code>always_comb</code>). Toda vez que você apertar o botão <code>key_s[0]</code> o valor dos LEDs deve ser incrementado.</p>
+<div class="highlight"><pre><span></span><code>    <span class="n">ic1</span> <span class="o">=</span> <span class="n">contador</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">key_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">RESET_N</span><span class="p">)</span>
+
+<span class="c1">#    @always_comb</span>
+<span class="c1">#    def comb():</span>
+<span class="c1">#        for i in range(len(ledr_s)):</span>
+<span class="c1">#            LEDR[i].next = ledr_s[i]</span>
+</code></pre></div>
+<details class="tip">
+<summary>Solução</summary>
+<div class="highlight"><pre><span></span><code><span class="nd">@block</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">contador</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+    <span class="n">tmp</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">modbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">10</span><span class="p">:])</span>
+
+    <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
+        <span class="n">tmp</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">leds</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">tmp</span>
+
+    <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
+</code></pre></div>
+<p>Seria muito tentador fazer algo como:</p>
+<div class="highlight"><pre><span></span><code>leds.next = leds + 1
+</code></pre></div>
+<p>Mas precisamos lembrar que um sinal do módulo (argumento) não pode ser <em>entrada</em> e <em>saída</em> ao mesmo tempo. Por isso temos que criar o sinal auxiliar <code>tmp</code>. Sinais auxiliares podem ser entradas e saídas... na verdade não podemos dizer que ele é entrada ou saída pois só existe dentro do módulo.</p>
+</details>
+<p><mark>Tarefa: Execute na FPGA e teste com as chaves e botões.</mark></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h3 id="clock">Clock</h3>
+<p>Os dois módulos anteriores foram realizados utilizando o botão 0 (<code>key_s[0]</code>) como sinal de clock para o nosso módulo, mas isso não é o jeito certo de trabalharmos com lógica sequência. O cenário correto, seria de usar um clock gerado em hardware e não pelo botão. A partir de agora iremos usar na entrada do clock o sinal <code>CLOCK_50</code> que é um clock de <mark>50Mhz</mark> gerado pela placa. Notem que <code>50Mhz</code> significa <code>50 000 000</code> vezes por segundo! Isso parece muito né? Mas, dependendo do projeto, podemos elevar o clock para 200Mhz ou usar FPGAs mais rápidas que chegam próximo do 1GHz.</p>
+<h2 id="piscando-o-led">Piscando o LED</h2>
+<p>Agora com o uso da lógica sequencial conseguimos contar 'tempo' e gerar eventos em determinado momento. Ou seja: podemos contar 0.5 segundos e mudar o valor do led (usando como base o nosso clock que é um valor fixo), contar mais 0.5 s e mudar novamente (fazer o famoso <strong>pisca led</strong>). Para isso, teremos que conseguir contar eventos de clock, e quando o valor chegar em <strong>25 000 000</strong> inverter o valor do LED e zerar o contador e ficar nesse loop para sempre.</p>
+<p>Podemos usar o nosso <code>adder</code> do lab anterior como módulo de contador, conectando a saída do <code>adder</code> na entrada <code>x</code>, mas passando por um registrador antes (para apenas mudar a cada clock). A entrada <code>y</code> será conectado ao valor <code>1</code>, como resultado teremos: <code>s = x + 1</code>. A expressão será executada a cada subida do clock. E <code>x</code> será:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">MAX</span><span class="p">:</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">x</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div>
+<p>Se o valor de <code>s</code> for menor que o valor máximo (define a velocidade que o LED irá piscar) copiamos a saída do somador para a entrada, e se o valor <code>MAX</code> for atingido, iremos zerar o somador, para começarmos novamente. O HW que queremos gerar é algo como:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/seq/lab-blink.svg" data-desc-position="bottom"><img alt="" src="../figs/seq/lab-blink.svg"></a></p>
+<p>A ideia de piscar o LED é que temos que mudar uma variável a cada ciclo do contador. </p>
+<div class="highlight"><pre><span></span><code>-----------           -------------
+           |          |            |           Status
+           |          |            |
+            -----------            ----------
+
+           _ 25000000  _            _
+         / |         / |          / |      
+      /    |      /    |       /    |          Contador
+   /       |   /       |    /       |
+/          |/          | /          |
+</code></pre></div>
+<p>A implementação em MyHDL fica:</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@block</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">32</span><span class="p">:])</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+    <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="mi">25000000</span><span class="p">:</span>
+            <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">l</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">l</span>
+
+    <span class="nd">@always_comb</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+        <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
+
+    <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
+</code></pre></div>
+<p>Alguns detalhes devem ser levados em consideração na implementação do componente:</p>
+<ol>
+<li>O <code>seq</code> acontece a cada mudança do clock</li>
+<li>O <code>comb</code> acontece sempre</li>
+<li>Não podemos <code>ler</code> uma saída</li>
+<li>Em hardware as coisas acontecem ao mesmo tempo!</li>
+</ol>
+<p>E então atribuímos o valor de <code>l</code> para a saída <code>led</code> na parte combinacional do módulo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
+</code></pre></div>
+<p>Essa atribuição poderia ser feita dentro da parte sequencial do componente:</p>
+<div class="highlight"><pre><span></span><code><span class="gu">@always_seq(clk.posedge, reset=rst)</span>
+def seq():
+<span class="w"> </span>   if cnt &lt; 25000000:
+<span class="w"> </span>       cnt.next = cnt + 1
+<span class="w"> </span>   else:
+<span class="w"> </span>       cnt.next = 0
+<span class="w"> </span>       l.next = not l
+
+<span class="w"> </span>   led.next = l
+</code></pre></div>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_3" id="exercise_3_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<p>File: <code>toplevel.py</code></p>
+<p>Modifiquem o toplevel para conter o componente <code>blinkLed</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ic1</span> <span class="o">=</span> <span class="n">blinkLed</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
+
+<span class="c1"># descomente!  </span>
+<span class="nd">@always_comb</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">)):</span>
+        <span class="n">LEDR</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ledr_s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</code></pre></div>
+<p><mark>Tarefa: Execute na FPGA e teste com as chaves e botões.</mark></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise short tag-short-text tag-text-exercise editable" data-slug="class/seq-lab-1/short_1" id="short_1_0">
+<p class="admonition-title">Exercise<button class="editable-button"></button></p>
+<form class="exercise-form">
+<p>O <code>cnt</code> de 32 bits está bem dimensionado? Esse valor faz alguma diferença? Qual o maior tempo que podemos contar com o contador de 32bits?</p>
+<div class="highlight"><pre><span></span><code><span class="n">cnt</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">32</span><span class="p">:])</span><span class="err">`</span>
+</code></pre></div>
+<div class="form-elements">
+<input type="text" value="" name="data">
+
+<input class="ah-button ah-button--primary" type="submit" value="Submit">
+</div>
+</form>
+<div class="admonition answer no-indent">
+<p class="admonition-title">Answer</p>
+<ul>
+<li>32 bits = 4294967296</li>
+<li>al/50M = 85s ! (maior tempo entre piscada dos leds)</li>
+</ul>
+<p>Faz diferença sim! Quando mais bits, mais registradores temos que usar e maior ficar o hardware.</p>
+<p>Poderíamos dimensionar o tamanho do vetor de acordo com o <code>time_ms</code> que foi passado para o módulo.</p>
+</div>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_4" id="exercise_4_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code></li>
+<li>File: <code>toplevel.py</code></li>
+<li>Função: <code>blinkLed</code></li>
+</ul>
+<p>Vamos deixar o componente mais genérico? Para isso modifique a função <code>blinkLed</code> para receber mais um argumento:  O valor em <code>ms</code> na qual o LED irá piscar, e então faca a implementação da função que agora depende da variável tempo.</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+</code></pre></div>
+<p>Depois modifique o toplevel para validar diferentes valores em diferentes leds:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ic2</span> <span class="o">=</span> <span class="n">blinkLed</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">100</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
+<span class="n">ic3</span> <span class="o">=</span> <span class="n">blinkLed</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">50</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
+<span class="n">ic4</span> <span class="o">=</span> <span class="n">blinkLed</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
+</code></pre></div>
+<p><mark>Tarefa: Execute na FPGA e teste com as chaves e botões.</mark></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_5" id="exercise_5_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code></li>
+<li>Função: <code>barLed</code></li>
+</ul>
+<p>Tarefa:</p>
+<p>Vamos praticar mais! Agora faça com que os LEDs da FPGA acendam em sequência: Primeiro o LED0, depois o LED1, LED2, ..., LED9 (como uma animação), ao chegar no final apague tudo e comece novamente.</p>
+<p>Dica:</p>
+<p>Você vai precisar de um contador para contar clocks.</p>
+<p>Toplevel:</p>
+<div class="highlight"><pre><span></span><code><span class="n">ic5</span> <span class="o">=</span> <span class="n">barLed</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
+
+<span class="c1">#@always_comb</span>
+<span class="c1">#Def comb():</span>
+<span class="c1">#    for i in range(len(ledr_s)):</span>
+<span class="c1">#        LEDR[i].next = ledr_s[i]</span>
+</code></pre></div>
+<details class="tip">
+<summary>Solução</summary>
+<div class="highlight"><pre><span></span><code><span class="n">cnt</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">32</span><span class="p">:])</span>
+<span class="n">l</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="mi">25000000</span><span class="p">:</span>
+        <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">l</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">l</span>
+
+<span class="nd">@always_comb</span> 
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
+
+<span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
+</code></pre></div>
+<p>Aqui é a mesma coisa, os sinais <code>l</code> e <code>cnt</code> são internos e podem ser lidos e escritos. A cada contagem de tempo eu inverto o valor do sinal booleano <code>l</code> e atualizo a saída <code>led</code> com o valor.</p>
+</details>
+<p><mark>Valide na FPGA!</mark> </p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_6" id="exercise_6_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code></li>
+<li>Função: <code>barLed</code></li>
+</ul>
+<p>Modifique a barLed adicionando duas entradas ao hardawre:</p>
+<ul>
+<li><code>vel</code> (binário) controla a velocidade dos LEDs: Rápido ou Lento</li>
+<li><code>dir</code> (binário) controla a direção (esquerda/ direita)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">barLed</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+</code></pre></div>
+<p>E no toplevel iremos mapear a chave <code>SW[0]</code> para a velocidade e <code>SW[1]</code> para a direção.</p>
+<p><mark>Valide na FPGA!</mark> </p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<div class="admonition exercise self-progress" data-slug="class/seq-lab-1/exercise_7" id="exercise_7_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li>File: <code>seq_modules.py</code></li>
+<li>Função: <code>barLed2</code></li>
+</ul>
+<p>Tarefa:</p>
+<p>O barLed2 é similar ao LED porém só um LED aceso por vez!</p>
+<p>Dica:</p>
+<p>Aplique um shift de <code>cntLed</code> ao valor em binário <code>000000001</code>, onde <code>cntLed</code> é o contador de 0, 9.</p>
+<div class="highlight"><pre><span></span><code><span class="nd">@always_comb</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="n">leds</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">intbv</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">10</span><span class="p">:]</span> <span class="o">&lt;&lt;</span> <span class="n">cntLed</span>
+</code></pre></div>
+<p><mark>Valide na FPGA!</mark> </p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>

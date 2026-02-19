@@ -1,0 +1,450 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+        <title>Infra docker - Bits e Processadores</title>
+      
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed:700|Oxygen+Mono|Source+Sans+Pro:700|Source+Serif+Pro&amp;display=swap">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <script>
+      // SETUP GLOBAL CONSTANTS
+      var base_url = '../..';
+      
+      var telemetryEnabled = true;
+      var backendUrl = "https://devlife-api.insper-comp.com.br/";
+      var courseSlug = "26a bits";
+      
+      
+      var dashboardEnabled = false;
+      var tagTree = {};
+      
+
+      // SETUP PLUGIN
+      window.initialized = false;
+      if (!window.initializers) window.initializers = [];
+      window.registerInitializer = (initialize) => {
+        if (window.initialized) initialize();
+        else window.initializers.push(initialize);
+      };
+    </script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="https://unpkg.com/hyperscript.org"></script>
+    <script src="https://unpkg.com/htmx.org@1.8.4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="../../assets/js/main.js"></script>
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+        </style></head>
+  <body>
+    <div class="ah-main-container">
+      <header class="ah-header">
+        <button class="ah-menu-btn ah-button ah-button--borderless" aria-label="toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"></path>
+</svg>
+        </button>
+        <a href="../.." title="Bits e Processadores" class="ah-logo" aria-label="Bits e Processadores">
+          Bits e Processadores
+        </a>
+        <div class="ah-header--right">
+          
+          
+          
+          <button id="resetHandoutButton">
+            <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"></path>
+</svg></span>
+          </button>
+          
+
+          
+          <div id="user-menu" hx-get="https://devlife-api.insper-comp.com.br/user-menu" hx-trigger="load"> </div>
+          
+        </div>
+      </header>
+      <nav class="ah-navigation preload">
+        <div class="ah-nav-container">
+          <button class="ah-menu-btn ah-button ah-button--borderless close-menu" aria-label="close menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+  <!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+  <path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"></path>
+</svg>
+          </button>
+          <ul class="ah-nav-body">
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Home</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../..">index</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  
+    <li>
+      <a href="../../Sobre-Criterios-de-Avaliacao/">Critérios de Avaliação</a>
+    </li>
+  
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 1 - Visão geral</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../class/intro-benchmark-lab/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 2 - Álgebra Booleana</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Algebra-Booleana/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 3 - Dados Digitais</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Dados/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicio-Dados-2/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 4 - Transistores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-RTL/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../class/transistores-lab-1/">Ĺaboratório</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 5 - Aritmética Binária</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">Exercícios</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/exercicios/Exercicios-Aritmetica-Booleana/">Exercícios Extra</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+              
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 6 - FPGA</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../myhdl/basico/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../class/comb-lab-1/">Laboratório</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+            
+          </ul>
+        </div>
+      </nav>
+      <main class="ah-content ah-typeset">
+        
+          <div class="ah-title-box">
+            <ul class="ah-breadcrumbs">
+              
+                
+                <li></li>
+            </ul>
+            
+            
+          </div>
+          
+            <section class="progress-section show">
+<h1 id="configurando-a-infra">Configurando a Infra</h1>
+<p>Vamos configurar os softwares que usaremos para desenvolver o nosso processador. Para isso teremos que:</p>
+<ol>
+<li>Ter o Vscode instalado</li>
+<li>Configurar um pacote python (telemetry)</li>
+<li>Instalar docker</li>
+<li>Instalar o FPGALoader</li>
+<li>Teste</li>
+</ol>
+<h2 id="1-vscode">1. VScode</h2>
+<p>Vamos usar o vscode para fazer todo o desenvolvimento da matéria, e iremos usar uma extensão especifica chamada: <strong>Dev Containers</strong>:</p>
+<ol>
+<li>Abra o VSCode e pressione <strong>Ctrl + Shift + X</strong> para abrir o Extensions</li>
+<li>Pesquiste por <strong>ms-vscode-remote.remote-containers</strong> e instale o mesmo, conforme a imagem abaixo:</li>
+</ol>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/addExtension.png" data-desc-position="bottom"><img alt="" src="../figs/addExtension.png"></a></p>
+<h2 id="2-telemetry">2. Telemetry</h2>
+<p>Primeiro vamos configurar o plugin de telemetria (python), uma coleta de dados que fazemos em algumas disciplinas, os dados são usados anonimamentes a fim de entender e melhorar as dinâmicas de sala de aula.</p>
+<div class="admonition exercise self-progress" data-slug="util/infra-docker/exercise_1" id="exercise_1_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ul>
+<li><mark>Execute fora do docker no seu terminal do vscode</mark></li>
+</ul>
+<p>Fazer dentro de um venv</p>
+<div class="highlight"><pre><span></span><code>python3 -m venv venv
+. venv/bin/activate    
+pip3 install git+https://github.com/insper-education/telemetry-pytest
+telemetry auth
+</code></pre></div>
+<p>Isso ira abrir um navegador que você devera logar com sua conta do github e então o sistema irá gerar um token, que deve ser <strong>colado no terminal</strong>. </p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/telemetryAuth.png" data-desc-position="bottom"><img alt="" src="../figs/telemetryAuth.png"></a></p>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<h2 id="3-docker">3. Docker</h2>
+<p>A infraestrutura da disciplina utiliza Docker para rodar containers com imagens padronizadas com todas as ferramentas
+instaladas e configuradas, de forma a ser mais prático, rápido e eficiente para o desenvolvedor.</p>
+<p>Atualmente, containers é uma forma altamente popular e consolidada no mercado de software para distribuir sistemas, softwares, ambientes de desenvolvimento de forma padronizada.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"><input id="__tabbed_1_2" name="__tabbed_1" type="radio"><input id="__tabbed_1_3" name="__tabbed_1" type="radio"><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Mac OS (Intel ou ARM)</label><label for="__tabbed_1_3">Linux (Ubuntu)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Para o docker funcionar no Windows é necessário instalar primeiro o WLS.</p>
+<h3 id="wsl2">WSL2</h3>
+<p>Abra o Command Prompt como administrador, encontre no menu iniciar, botão direito "Executar como administrador" e verifique a versão do Windows 10 instalada, através do comando <code>ver</code>. Você deverá ver algo como <code>10.0.xxxxxx</code>, sendo xxxxx a build do Windows, você precisa estar com 18362 ou superior. Se você tiver Windows 11, você não precisa verificar, visto que todas versões suportam o WSL2.</p>
+<ol>
+<li>Instale o WSL2 (Windows Subsystem for Linux): <code>wsl --install</code></li>
+<li>Se você já tiver ele instalado, garanta que esteja atualizado: <code>wsl --update</code></li>
+<li>Para garantir que o WSL rode sempre na versão 2, rode o comando: <code>wsl --set-default-version 2</code></li>
+</ol>
+<h3 id="docker">Docker</h3>
+<p>Agora, entre no site oficial do Docker, <a href="https://www.docker.com">https://www.docker.com</a>, e faça o download da última versão para Windows.</p>
+<ol>
+<li>Execute o instalador e siga os passos padrões, sem mistério.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<p>Antes de começar, assegure-se de que seu sistema operacional é macOS na versão Big Sur (11) ou superior (como Monterey, Ventura, etc.). Para usuários do Mac com chipset M1, não se preocupe, todos são compatíveis.</p>
+<ol>
+<li>Acesse o <a href="https://docs.docker.com/desktop/install/mac-install/">site oficial do Docker</a> e baixe o aplicativo Docker. Importante: existem duas versões para macOS, x64 e M1. <mark>Certifique-se de escolher a correta para o seu Mac</mark>.</li>
+<li>Execute o instalador e siga as instruções apresentadas.</li>
+<li>Uma vez instalado, abra o aplicativo Docker. Você pode localizá-lo na pasta 'Aplicativos' ou buscar no Spotlight usando o atalho Command+Space.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>No terminal, instale o Docker utilizando o seguinte comando:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>docker
+</code></pre></div>
+<ol>
+<li>Habilite as permissões necessárias para o seu usuário:</li>
+</ol>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>addgroup<span class="w"> </span>--system<span class="w"> </span>docker
+sudo<span class="w"> </span>adduser<span class="w"> </span><span class="nv">$USER</span><span class="w"> </span>docker
+newgrp<span class="w"> </span>docker
+sudo<span class="w"> </span>snap<span class="w"> </span>disable<span class="w"> </span>docker
+sudo<span class="w"> </span>snap<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>docker
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Reinicie o computador antes de seguir.</p>
+</div>
+<h2 id="4-fpgaloader">4. FpgaLoader</h2>
+<p>Faća o download do programa que facilita a programacão da FPGA (desenvolvido internamento pelo Eduardo Marossi):</p>
+<ul>
+<li><a href="https://github.com/Insper/fpgaloader/releases">https://github.com/Insper/fpgaloader/releases</a></li>
+</ul>
+<p>E com a FPGA plugada no computador execute o programa.</p>
+<div class="admonition warning">
+<p class="admonition-title">Usuários Windows</p>
+<p>Vocês vão precisar baixar também o programa Zadig (está também no github, em releases). Executem o Zadig, e pluguem a placa, deverá aparecer "USB Blaster II", escolha o driver "libusb-K" conforme a imagem e clique em "Install Driver". Em seguida pode prosseguir abrindo o programa "fpgaloader"</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/windowsZadig.png" data-desc-position="bottom"><img alt="" src="../figs/windowsZadig.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Usuários macOS (M1/M2 ou Intel)</p>
+<p>Baixem a versão apropriada para o seu macOS, se você tem M1 ou M2 baixe a versão aarch64. Caso seja Intel baixe a versão x86_64. Descompacte e arraste o aplicativo fpgaloader para pasta Applications no seu macOS. Para abrir a primeira vez, será necessário clicar com o botão direito do mouse em cima do executável, e clicar em "Abrir".</p>
+</div>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/macosOpen.png" data-desc-position="bottom"><img alt="" src="../figs/macosOpen.png"></a></p>
+<div class="admonition warning">
+<p class="admonition-title">Usuários Linux</p>
+<p>Executem o comando com <code>sudo</code> por conta do acesso ao USB.</p>
+</div>
+<h2 id="5-testando">5. Testando</h2>
+<div class="admonition exercise self-progress" data-slug="util/infra-docker/exercise_2" id="exercise_2_0">
+<p class="admonition-title">Exercise</p>
+<form class="exercise-form">
+<ol>
+<li>Criei um repositório usando o <a href="{{ infra_test_classroom }}">classroom</a></li>
+<li>Clone o repositório para a sua máquina</li>
+</ol>
+<div class="form-elements">
+<input type="hidden" name="data" value="OK">
+<input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
+</div>
+</form>
+</div>
+<p>E abra a pasta recém clonada no Vscode e carregue o projeto no contêiner executando o comando <strong>Open Folder in Container</strong>:</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/vscode.png" data-desc-position="bottom"><img alt="" src="../figs/vscode.png"></a></p>
+<p>No terminal:</p>
+<ol>
+<li>Execute <code>pytest</code> para testarmos a instalacão python</li>
+<li>Execute <code>make toplevel.rbf</code> para testarmos a parte de compilação e programacão da FPGA.</li>
+</ol>
+<p>Os scripts devem ter gerado um arquivo chamado <code>toplevel.rbf</code>, arraste o arquivo para o programa <code>fpgaloader</code>.</p>
+<p>Agora você deve observar que os LEDs da FPGA piscam.</p>
+
+
+</section>
+          
+        
+      </main>
+      <footer class="ah-footer ah-typeset">
+        <div class="ah-footer-nav">
+          
+          
+        </div>
+      </footer>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body></html>
