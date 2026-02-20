@@ -321,14 +321,14 @@
 <h2 id="comecando">Começando</h2>
 <p>Agora vamos ver como implementamos uma lógica sequencia em MyHDL! Até agora temos utilizado o <code>decorator</code>: <code>@always_comb</code> para indicar que uma função deve ser interpretada como um trecho combinacional:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@always_comb</span>
-<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
     <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
 </code></pre></div>
 <p>Agora vamos começar usar um novo <code>decorator</code> (<code>@always_seq</code>) para indicar que uma função deve ser sequencial e depender do <code>clock</code> e do <code>reset</code>. O módulo a seguir demonstra como implementar um flip-flop tipo D em MyHDL:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">dff</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">dff</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
     <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">seq</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
         <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">d</span>
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
@@ -388,11 +388,11 @@
 <details class="tip">
 <summary>Solução</summary>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">contador</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">contador</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
     <span class="n">tmp</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">modbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">10</span><span class="p">:])</span>
 
     <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">seq</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
         <span class="n">tmp</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">tmp</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="n">leds</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">tmp</span>
 
@@ -436,12 +436,12 @@
 </code></pre></div>
 <p>A implementação em MyHDL fica:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
     <span class="n">cnt</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">intbv</span><span class="p">(</span><span class="mi">0</span><span class="p">)[</span><span class="mi">32</span><span class="p">:])</span>
     <span class="n">l</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
     <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">seq</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="mi">25000000</span><span class="p">:</span>
             <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span>
         <span class="k">else</span><span class="p">:</span>
@@ -449,7 +449,7 @@
             <span class="n">l</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">l</span>
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
         <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
@@ -462,7 +462,7 @@
 <li>Em hardware as coisas acontecem ao mesmo tempo!</li>
 </ol>
 <p>E então atribuímos o valor de <code>l</code> para a saída <code>led</code> na parte combinacional do módulo:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
     <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
 </code></pre></div>
 <p>Essa atribuição poderia ser feita dentro da parte sequencial do componente:</p>
@@ -485,7 +485,7 @@ def seq():
 
 <span class="c1"># descomente!  </span>
 <span class="nd">@always_comb</span>
-<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">)):</span>
         <span class="n">LEDR</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ledr_s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
@@ -496,7 +496,7 @@ def seq():
 </div>
 </form>
 </div>
-<div class="admonition exercise short tag-text-exercise tag-short-text editable" data-slug="class/seq-lab-1/short_1" id="short_1_0">
+<div class="admonition exercise short tag-short-text tag-text-exercise editable" data-slug="class/seq-lab-1/short_1" id="short_1_0">
 <p class="admonition-title">Exercise<button class="editable-button"></button></p>
 <form class="exercise-form">
 <p>O <code>cnt</code> de 32 bits está bem dimensionado? Esse valor faz alguma diferença? Qual o maior tempo que podemos contar com o contador de 32bits?</p>
@@ -527,7 +527,7 @@ def seq():
 <li>Função: <code>blinkLed</code></li>
 </ul>
 <p>Vamos deixar o componente mais genérico? Para isso modifique a função <code>blinkLed</code> para receber mais um argumento:  O valor em <code>ms</code> na qual o LED irá piscar, e então faca a implementação da função que agora depende da variável tempo.</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">blinkLed</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
 </code></pre></div>
 <p>Depois modifique o toplevel para validar diferentes valores em diferentes leds:</p>
 <div class="highlight"><pre><span></span><code><span class="n">ic2</span> <span class="o">=</span> <span class="n">blinkLed</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">100</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">)</span>
@@ -566,7 +566,7 @@ def seq():
 <span class="n">l</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
 
 <span class="nd">@always_seq</span><span class="p">(</span><span class="n">clk</span><span class="o">.</span><span class="n">posedge</span><span class="p">,</span> <span class="n">reset</span><span class="o">=</span><span class="n">rst</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">seq</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">seq</span><span class="p">():</span>
     <span class="k">if</span> <span class="n">cnt</span> <span class="o">&lt;</span> <span class="mi">25000000</span><span class="p">:</span>
         <span class="n">cnt</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">cnt</span> <span class="o">+</span> <span class="mi">1</span>
     <span class="k">else</span><span class="p">:</span>
@@ -574,7 +574,7 @@ def seq():
         <span class="n">l</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">l</span>
 
 <span class="nd">@always_comb</span> 
-<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
     <span class="n">led</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">l</span>
 
 <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
@@ -600,7 +600,7 @@ def seq():
 <li><code>vel</code> (binário) controla a velocidade dos LEDs: Rápido ou Lento</li>
 <li><code>dir</code> (binário) controla a direção (esquerda/ direita)</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">barLed</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">barLed</span><span class="p">(</span><span class="n">leds</span><span class="p">,</span> <span class="n">time_ms</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">vel</span><span class="p">,</span> <span class="n">clk</span><span class="p">,</span> <span class="n">rst</span><span class="p">):</span>
 </code></pre></div>
 <p>E no toplevel iremos mapear a chave <code>SW[0]</code> para a velocidade e <code>SW[1]</code> para a direção.</p>
 <p><mark>Valide na FPGA!</mark> </p>
@@ -622,7 +622,7 @@ def seq():
 <p>Dica:</p>
 <p>Aplique um shift de <code>cntLed</code> ao valor em binário <code>000000001</code>, onde <code>cntLed</code> é o contador de 0, 9.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@always_comb</span>
-<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
     <span class="n">leds</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">intbv</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">10</span><span class="p">:]</span> <span class="o">&lt;&lt;</span> <span class="n">cntLed</span>
 </code></pre></div>
 <p><mark>Valide na FPGA!</mark> </p>

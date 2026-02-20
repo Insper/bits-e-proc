@@ -347,7 +347,7 @@
 </code></pre></div>
 <h3 id="bits">bits</h3>
 <p>O <code>modbv</code> possibilita acessarmos bits individualmente, assim como fazíamos com o vetor de bits:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">myhdl</span> <span class="kn">import</span> <span class="nb">bin</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span><span class="w"> </span><span class="nn">myhdl</span><span class="w"> </span><span class="kn">import</span> <span class="nb">bin</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">modbv</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
 <span class="o">&gt;&gt;&gt;</span> <span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="s1">'11000'</span>
@@ -384,9 +384,9 @@
 <h2 id="add">Add</h2>
 <p>Usando esse novo tipo, podemos reimplementar o <code>adder</code> assumindo que as entradas <code>x</code> e <code>y</code> e a saída <code>soma</code> são vetores, e que <code>carry</code> é um <code>bool</code>:</p>
 <div class="highlight"><span class="filename">ula_modules.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">adderIntbv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">adderIntbv</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
         <span class="nb">sum</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
         <span class="n">soma</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="nb">sum</span>
         <span class="k">if</span> <span class="nb">sum</span> <span class="o">&gt;</span> <span class="n">x</span><span class="o">.</span><span class="n">max</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
@@ -398,7 +398,7 @@
 </code></pre></div>
 <p>Note que para o <code>carry</code> utilizamos o valor máximo que <code>x</code> pode assumir e que isso é dinâmico, de acordo com o tamanho de <code>x</code>. Como no exemplo a seguir:</p>
 <div class="highlight"><span class="filename">runAdderIntbv.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">runAdder</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">runAdder</span><span class="p">():</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">modbv</span><span class="p">()[</span><span class="mi">2</span><span class="p">:])</span>
     <span class="n">y</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">modbv</span><span class="p">()[</span><span class="mi">2</span><span class="p">:])</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="n">modbv</span><span class="p">()[</span><span class="mi">2</span><span class="p">:])</span>

@@ -342,7 +342,15 @@
 </thead>
 <tbody>
 <tr>
-<td>Bibliografia</td>
+<td>Vídeos</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><iframe width="300" height="200" src="https://www.youtube.com/embed/YYIucfsQKl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+<tr>
+<td>Leituras</td>
 <td></td>
 </tr>
 <tr>
@@ -364,10 +372,6 @@
 <tr>
 <td>Vídeos (extra)</td>
 <td></td>
-</tr>
-<tr>
-<td><img alt="👍" class="emojione" src="https://cdnjs.cloudflare.com/ajax/libs/emojione/2.2.7/assets/svg/1f44d.svg" title=":+1:"></td>
-<td><iframe width="200" height="200" src="https://www.youtube.com/embed/YYIucfsQKl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
 </tr>
 <tr>
 <td></td>
@@ -396,11 +400,9 @@
 <iframe height="500" src="https://www.youtube.com/embed/ewokFOSxabs?autoplay=0" type="text/html" width="100%"></iframe>
 </div>
 </div>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-0"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h2 id="equacoes">Equações</h2>
 <p>Uma equação de lógica booleana pode possuir uma ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
 <div class="highlight"><pre><span></span><code>    X(A,B) = A . B
@@ -462,11 +464,9 @@ ao longo do curso.</p>
 <iframe height="500" src="https://www.youtube.com/embed/rZwCJWOhNG0?autoplay=0" type="text/html" width="100%"></iframe>
 </div>
 </div>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-1"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h2 id="operacoes">Operações</h2>
 <p>O <code>and</code> utilizado no exemplo anterior é um operador da lógica booleana, operadores possuem uma ou mais entradas e geram uma saída. Os operadores mais comuns são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>.</p>
 <div>
@@ -477,8 +477,8 @@ ao longo do curso.</p>
 <blockquote>
 <p>Uso: a luz interna do carro será acesa ('1') quando a porta estiver fechada ('0').</p>
 </blockquote>
-<p>Notação: <code>not</code>, <code>-</code>, <code>~</code>, <code>¬</code>:</p>
-<div class="highlight"><pre><span></span><code>X = not A  /  X = A  /  X = Ã / X = ¬ A
+<p>Notação: <code>not</code>, <code>'</code>, <code>-</code>, <code>~</code>, <code>¬</code>:</p>
+<div class="highlight"><pre><span></span><code>X = not A  /  X = A' / X = A̅ /  X = ~ A / X = ¬ A
 </code></pre></div>
 <p>Tabela Verdade:</p>
 <table>
@@ -506,8 +506,8 @@ ao longo do curso.</p>
 <blockquote>
 <p>Uso: o cofre será aberto somente quando as duas chaves de seguranças forem inseridas.</p>
 </blockquote>
-<p>Notação:  <code>and</code>, <code>.</code>, <code>^</code>:</p>
-<div class="highlight"><pre><span></span><code>X = A and B  /  X = A . B   /  X = A ^ B
+<p>Notação:  <code>and</code>, <code>.</code>, <code>*</code>, <code>^</code>:</p>
+<div class="highlight"><pre><span></span><code>X = A and B  /  X = A . B   /  X = A * B /  X = A ^ B
 </code></pre></div>
 <p>Tabela Verdade:</p>
 <table>
@@ -591,7 +591,7 @@ ao longo do curso.</p>
 <p>Uso: Soar o alarme se os sensores de batimento cardíaco e o de pressão falharem.  </p>
 </blockquote>
 <p>Notação:  <code>nand</code>, <code>¬( ∧ )</code></p>
-<div class="highlight"><pre><span></span><code>                    _____
+<div class="highlight"><pre><span></span><code>                     _____
 X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 </code></pre></div>
 <p>Tabela Verdade:</p>
@@ -735,11 +735,9 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <p>.</p>
 </div>
 </div>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-2"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h2 id="tabela-verdade">Tabela Verdade</h2>
 <p>Nessa tabela criamos colunas para cada variável de entrada e de saída e colocamos as situações possíveis (resultado). Para construirmos uma tabela verdade basta seguir as regras a seguir (na sequência):</p>
 <ol>
@@ -802,7 +800,7 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <div class="admonition exercise two-cols choice tag-choice-exercise" data-answer-idx="3" data-slug="commum-content/teoria/Teoria-Algebra-Booleana/choice_5" id="choice_5_0">
 <p class="admonition-title">Exercise</p>
 <form class="exercise-form">
-<p>Considerando um circuito de 4 entradas (A,B, C, D) quantas são as linhas da tabela verdade?</p>
+<p>Considerando um circuito de 4 entradas (A, B, C, D) quantas são as linhas da tabela verdade?</p>
 <div class="form-elements">
 <div class="alternative-set">
   
@@ -926,11 +924,9 @@ Resposta na sequência: X0; X1; X2; X3</p>
 <p>.</p>
 </div>
 </div>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-3"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h2 id="funcoes-geradas-a-partir-de-tabelas-verdade">Funções geradas a partir de Tabelas Verdade</h2>
 <div>
 <iframe height="500" src="https://www.youtube.com/embed/Xgy6p12ZcTI?autoplay=0" type="text/html" width="100%"></iframe>
@@ -1104,11 +1100,9 @@ Resposta na sequência: X0; X1; X2; X3</p>
 <p>.</p>
 </div>
 </div>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-4"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h2 id="simplificacao">Simplificação</h2>
 <p>Existem duas formas bastante populares de simplificar uma equação booleana: algébrica ou via mapa de Karnaugh. Veremos as duas com mais detalhes.</p>
 <h3 id="simplificacao-algebrica">Simplificação algébrica</h3>
@@ -1218,11 +1212,9 @@ Resposta na sequência: X0; X1; X2; X3</p>
 </ul>
 </li>
 </ol>
-<div>
-<div class="ah-progress-container"><button class="ah-button ah-button--primary progress" id="prog-5"> Progress </button></div>
-</div>
-</section>
-<section class="progress-section">
+<!-- !!! progress 
+    Cheguei Aqui! -->
+
 <h4 id="exemplos">Exemplos</h4>
 <div class="admonition example">
 <p class="admonition-title">Exemplo 1</p>

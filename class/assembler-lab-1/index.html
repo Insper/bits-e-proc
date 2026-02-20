@@ -408,7 +408,7 @@ END;
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/H-Assembler/code-jump.png" data-desc-position="bottom"><img alt="" src="../figs/H-Assembler/code-jump.png"></a></p>
 <p>No <strong>vscode</strong> abra o código <code>ASMcode.py</code> e procure pelo método <code>jump</code>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># TODO</span>
-    <span class="k">def</span> <span class="nf">jump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mnemnonic</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">jump</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mnemnonic</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retorna o código binário do mnemônico para realizar uma operação de jump (salto).</span>
 <span class="sd">        - in mnemnonic: vetor de mnemônicos "instrução" a ser analisada.</span>
@@ -418,7 +418,7 @@ END;
         <span class="k">return</span> <span class="n">bits</span>
 </code></pre></div>
 <p>Agora abra o arquivo <code>test_asmcode</code> e procure pelo <code>test_jump</code>, você deve ver algo como:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_jump</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_jump</span><span class="p">():</span>
     <span class="n">test_vector</span> <span class="o">=</span> <span class="p">[</span>
         <span class="o">.....</span>
         <span class="p">[[</span><span class="s2">"orw"</span><span class="p">,</span> <span class="s2">"%D"</span><span class="p">,</span> <span class="s2">"%A"</span><span class="p">,</span> <span class="s2">"%A"</span><span class="p">],</span> <span class="s2">"000"</span><span class="p">],</span>
@@ -484,7 +484,7 @@ END;
 </ol>
 <p>Vamos pegar como exemplo o método <code>commandType</code> do <code>sw/assembler/ASMparser.py</code>:</p>
 <div class="highlight"><pre><span></span><code>    <span class="c1"># TODO</span>
-    <span class="k">def</span> <span class="nf">commandType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">commandType</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">"""</span>
 <span class="sd">        Retorna o tipo da instrução passada no argumento:</span>
 <span class="sd">         - self.commandType['A'] para leaw, por exemplo leaw $1,%A</span>
@@ -554,7 +554,7 @@ END;
 <ul>
 <li>Nesse teste é passado o vetor <code>["leaw", "$2",  "%A"]</code> para o método <code>parser.commandType</code> e esperasse na saída <code>A_COMMAND</code>, .... .</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">test_commandType</span><span class="p">():</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">test_commandType</span><span class="p">():</span>
     <span class="n">fnasm</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'test_assets/mult.nasm'</span><span class="p">,</span> <span class="s1">'r'</span><span class="p">)</span>
     <span class="n">ptest</span> <span class="o">=</span> <span class="n">Parser</span><span class="p">(</span><span class="n">fnasm</span><span class="p">)</span>
 

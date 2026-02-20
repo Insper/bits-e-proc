@@ -354,13 +354,13 @@ O MyHDL faz uso de duas ferramentas da linguagem python que vocês podem não es
 </div>
 <p>No MyHDL definimos uma instância (componente de hardware) usando o <code>decorator</code>: <code>@block</code> na classe, isso define que a classe deve ser interpretada como um componente de hardware. Cada componente de hardware pode possuir internamente vários comportamentos (no caso aqui veremos apenas o combinacional) que são definidos pelos métodos da classe com o decorator (<code>always_comb</code>).</p>
 <p>Vamos ver um exemplo que implementa a seguinte equação lógica: <code>q = a or (b and c)</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">myhdl</span> <span class="kn">import</span> <span class="o">*</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">myhdl</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
 
 <span class="nd">@block</span>
-<span class="k">def</span> <span class="nf">equacao</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">equacao</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
         <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span> <span class="ow">or</span> <span class="p">(</span><span class="n">b</span> <span class="ow">and</span> <span class="n">c</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">comb</span>
@@ -388,7 +388,7 @@ O MyHDL faz uso de duas ferramentas da linguagem python que vocês podem não es
 <p>Para testarmos o bloco de hardware crido anteriormente devemos de alguma forma instanciar o hardware e adicionar estímulos a entrada dele, este processo em projetos de hardware é chamado de <em>testbench</em>. Notem que isso é diferente de apenas fazermos a chamada de uma função (que alias vamos entender mais para frente no curso como é que funciona).</p>
 <p>Para os estímulos iremos devemos criar um método, que possui um novo decorator chamado <code>instance</code>, que indica que iremos realizar a instanciação de um componente de hardware (usar o componente), nesse método iremos criar os estímulos necessários para testarmos o nosso hardware. Temos que lembrar que quando estamos mexendo com hardware, esses estímulos acontecem no tempo, por isso temos o <code>yield delay(1)</code>, que indica para a simulação aguardar por 1 tick de tempo antes de realizar o próximo processamento.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@instance</span>
-<span class="k">def</span> <span class="nf">stimulus</span><span class="p">():</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">stimulus</span><span class="p">():</span>
     <span class="n">a</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">b</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">1</span>
     <span class="n">c</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">1</span>
