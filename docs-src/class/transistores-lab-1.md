@@ -108,7 +108,8 @@ Para isso vocês deverão:
     - Mexa na chave para aplicar `0` ou `1` na entrada do circuito.
 
 !!! note "Solução"
-    https://www.tinkercad.com/things/bnWLvsuRvp6-neat-lappi-snicket/editel?sharecode=QlWtWTyxH18eCaVwphNPVTpzdXW9IlssdNUmgLUOtAU
+    <!-- (Velha)https://www.tinkercad.com/things/bnWLvsuRvp6-neat-lappi-snicket/editel?sharecode=QlWtWTyxH18eCaVwphNPVTpzdXW9IlssdNUmgLUOtAU -->
+    https://www.tinkercad.com/things/l4cJWzHxmPM/editel?sharecode=yGNoHlVEGi9QThpaCBU3SWliOkqKdjM4oX7oeE-N8AE
 
 !!! tip
     O fio 'rosa' da imagem anterior representa a entrada do seu circuito, você deve colocar ela em `GND` para simular uma entrada `0` e em `VCC` para simular uma entrada `1`.
@@ -180,8 +181,8 @@ Vamos usar o componente [7404](https://pt.wikipedia.org/wiki/TTL_7404) que possu
    
     ![](.figs/A-Transistores/7404.png)
 
-!!! note "Solução"
-    - https://www.tinkercad.com/things/5didIR3U6qY-sizzling-jaban-jarv/editel?tenant=circuits?sharecode=2N6uVn_CZekje82phPIUcZu_24lOLu1_oeEenH-htT8
+<!-- !!! note "Solução"
+    - https://www.tinkercad.com/things/5didIR3U6qY-sizzling-jaban-jarv/editel?tenant=circuits?sharecode=2N6uVn_CZekje82phPIUcZu_24lOLu1_oeEenH-htT8 -->
 
 ----------------------
 
