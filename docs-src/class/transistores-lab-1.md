@@ -57,7 +57,7 @@ Cada grupo receberá:
 - Duas protoboards
 - Duas baterias 9V
 - Jumpers macho-macho
-- 12 transistores [BJT-N BC337](https://www.onsemi.com/pub/Collateral/BC337-D.PDF)
+- 12 transistores [BJT-N BC337](http://www.alldatasheet.com/datasheet-pdf/view/2225662/ONSEMI/BC337/+Q235J85XMMyGOl+hpzCG+/datasheet.pdf)
 - 24 resistores de 2k
 - 6 LEDs coloridos (Vermelho, amarelo e verde)
 
@@ -103,7 +103,7 @@ Para isso vocês deverão:
     Levante a tabela verdade do circuito recém montado e verifique se é mesmo uma NOT.
 
 !!! tip
-    - Utilize o [datasheet](https://www.onsemi.com/pub/Collateral/BC337-D.PDF) do transistor para entender a montagem
+    - Utilize o [datasheet](http://www.alldatasheet.com/datasheet-pdf/view/2225662/ONSEMI/BC337/+Q235J85XMMyGOl+hpzCG+/datasheet.pdf) do transistor para entender a montagem
 
     - Mexa na chave para aplicar `0` ou `1` na entrada do circuito.
 
