@@ -83,7 +83,7 @@ Da documentaćão do MyHDL:
 
 ### Testando
 
-Para testarmos o bloco de hardware crido anteriormente devemos de alguma forma instanciar o hardware e adicionar estímulos a entrada dele, este processo em projetos de hardware é chamado de *testbench*. Notem que isso é diferente de apenas fazermos a chamada de uma função (que alias vamos entender mais para frente no curso como é que funciona).
+Para testarmos o bloco de hardware criado anteriormente devemos de alguma forma instanciar o hardware e adicionar estímulos a entrada dele, este processo em projetos de hardware é chamado de *testbench*. Notem que isso é diferente de apenas fazermos a chamada de uma função (que alias vamos entender mais para frente no curso como é que funciona).
 
 Para os estímulos iremos devemos criar um método, que possui um novo decorator chamado `instance`, que indica que iremos realizar a instanciação de um componente de hardware (usar o componente), nesse método iremos criar os estímulos necessários para testarmos o nosso hardware. Temos que lembrar que quando estamos mexendo com hardware, esses estímulos acontecem no tempo, por isso temos o `yield delay(1)`, que indica para a simulação aguardar por 1 tick de tempo antes de realizar o próximo processamento.
 
