@@ -214,7 +214,7 @@ Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a i
     - Faça um loop para inicializar cada um dos componentes
     ``` py
     for i in range(n):
-        faList[n] = fullAdder(x[i], ...)
+        faList[i] = fullAdder(x[i], ...)
     ```
     
 ## FPGA

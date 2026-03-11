@@ -140,10 +140,9 @@ nav:
     - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
     - PrairieLearn: *prairielearn_link
 
-  # - Quiz 1:
-  #   - Sobre: quiz/about-quiz-1.md
+  - Quiz 1: *prairielearn_link
 
-  - Aula 8 - Componentes:
+  - Aula 9 - Componentes:
     - Teoria 1: commum-content/teoria/Teoria-Componentes.md
     - Laboratório: class/ula-lab-1.md
 
