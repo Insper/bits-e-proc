@@ -148,10 +148,10 @@ nav:
     - Laboratório: class/ula-lab-1.md
     - PrairieLearn: *prairielearn_link
 
-#   - Aula 10 - ULA:
-#     - Teoria: commum-content/teoria/Teoria-ULA.md
-#     - Lab: class/ula-lab-4.md
-#     - PrairieLearn: *prairielearn_link
+  - Aula 10 - ULA:
+    - Teoria: commum-content/teoria/Teoria-ULA.md
+    - Lab: class/ula-lab-4.md
+    - PrairieLearn: *prairielearn_link
 
 #   - Aula 11 - Síncrono:
 #     - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
