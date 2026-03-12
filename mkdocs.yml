@@ -33,8 +33,8 @@ extra:
     lab_myhdl_points: 'Pontos de HW!'
     lab_myhdl_deadline: Final da aula
 
-    lab_4_classroom: https://classroom.github.com/a/NGErx3zi
-    lab_4_points: 'Pontos de HW!'
+    lab_2_classroom: https://classroom.github.com/a/QNXl2hWE
+    lab_2_points: 'Pontos de HW!'
 
     lab_ula_deadline:
     lab_ula_points:
@@ -135,6 +135,7 @@ nav:
   - Aula 6 - FPGA:
     - Teoria: myhdl/basico.md
     - Laboratório: class/comb-lab-1.md
+    - PrairieLearn: *prairielearn_link
 
   - Aula 7 - Somadores:
     - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
@@ -145,6 +146,7 @@ nav:
   - Aula 9 - Componentes:
     - Teoria 1: commum-content/teoria/Teoria-Componentes.md
     - Laboratório: class/ula-lab-1.md
+    - PrairieLearn: *prairielearn_link
 
 #   - Aula 10 - ULA:
 #     - Teoria: commum-content/teoria/Teoria-ULA.md

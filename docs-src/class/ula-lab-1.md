@@ -1,8 +1,8 @@
 # Lab: Adders
 
-| Lab 6                                                                      |
+| Lab 2                                                                      |
 |----------------------------------------------------------------------------|
-| Entregue o código pelo repositório do ==[Classroom]({{lab_4_classroom}})== |
+| Entregue o código pelo repositório do ==[Classroom]({{lab_2_classroom}})== |
 
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
@@ -197,8 +197,7 @@ Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a i
 
 !!! exercise "💰 adder (2 HW, 0 SW), exercício "
     - Modulo: `def adder(x, y, soma, carry):`
-    - Test: `pytest -k adder`
-    - Run: `./run_adderModbv.py`
+    - Test: `pytest -k test_adder`
 
     Tarefa:
 
@@ -216,6 +215,23 @@ Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a i
     for i in range(n):
         faList[i] = fullAdder(x[i], ...)
     ```
+
+Para finalizar essa parte. Ajuste seu código para usar o `Modvb`, você vai ver que tudo fica mais simples. Com ele você poderá somar todos os valores diretamente e testar os valores como inteiros.
+
+!!! exercise "💰 addervb (2 HW, 0 SW), exercício "
+    - Modulo: `def addervb(x, y, soma, carry):`
+    - Test: `pytest -k test_addervb`
+
+    Tarefa:
+
+    - Implemente o módulo `addervb` que é um somador genérico, mas com vetores de bits.
+    - Teste com `pytest test_addervb`
+    - Run: `./run_adderModbv.py`
+
+    Nota:
+    
+    - NÃO ESQUEÇA de dar um commit e push para o seu código ir para o repositório e ser avaliado.
+
     
 ## FPGA
 
