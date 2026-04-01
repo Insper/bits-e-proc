@@ -85,7 +85,7 @@ Da documentaćão do MyHDL:
 
 Para testarmos o bloco de hardware criado anteriormente devemos de alguma forma instanciar o hardware e adicionar estímulos a entrada dele, este processo em projetos de hardware é chamado de *testbench*. Notem que isso é diferente de apenas fazermos a chamada de uma função (que alias vamos entender mais para frente no curso como é que funciona).
 
-Para os estímulos iremos devemos criar um método, que possui um novo decorator chamado `instance`, que indica que iremos realizar a instanciação de um componente de hardware (usar o componente), nesse método iremos criar os estímulos necessários para testarmos o nosso hardware. Temos que lembrar que quando estamos mexendo com hardware, esses estímulos acontecem no tempo, por isso temos o `yield delay(1)`, que indica para a simulação aguardar por 1 tick de tempo antes de realizar o próximo processamento.
+Para os estímulos devemos criar um método, que possui um novo decorator chamado `instance`, que indica que iremos realizar a instanciação de um componente de hardware (usar o componente), nesse método iremos criar os estímulos necessários para testarmos o nosso hardware. Temos que lembrar que quando estamos mexendo com hardware, esses estímulos acontecem no tempo, por isso temos o `yield delay(1)`, que indica para a simulação aguardar por 1 tick de tempo antes de realizar o próximo processamento.
 
 ``` python
 @instance
@@ -120,23 +120,58 @@ q --------/      (q válido)
 !!! info "yield python"
     Você sabe o que é o `yield`? Ele surgiu no python 2.2 e é utilizado pelo MyHDL, ele é similar ao `return` de uma função, mas quando a função é chamada novamente ela retorna do ponto que parou. Veja o exemplo a baixo:
     
-    ```
-    def foo():
-        for i in range(3)
-            yield(i)
-            
-    bar = foo()
-    bar.next()
-    >>> 1
-    bar.next()
-    >>> 2
-    bar.next()
-    >>> 3
-    bar.next()
-    >>> Traceback (most recent call last):
-    >>> File "<stdin>", line 1, in ?
-    ```
-    
+<table>
+    <thead>
+        <tr>
+            <th>Python 2</th>
+            <th>Python 3</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                <div style="font-size: 0.85em; line-height: 1.2;">
+```py
+def foo():
+    for i in range(3):
+        yield(i)
+bar = foo()
+bar.next()
+>>> 1
+bar.next()
+>>> 2
+bar.next()
+>>> 3
+bar.next()
+>>> Traceback (most recent call last):
+>>> File "<stdin>", line 1, in ?
+```
+                </div>
+            </td>
+            <td>
+                <div style="font-size: 0.85em; line-height: 1.2;">
+```py
+def foo():
+    for i in range(3):
+        yield(i)
+bar = foo()
+next(bar)
+>>> 1
+next(bar)
+>>> 2
+next(bar)
+>>> 3
+next(bar)
+>>> Traceback (most recent call last):
+>>> File "<stdin>", line 1, in ?
+```
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+!!! info
     A função `foo` ficou interativa!
  
 Agora temos que juntar o hardware que desejamos testar com o estímulo criado:
