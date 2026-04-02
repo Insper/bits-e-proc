@@ -40,7 +40,7 @@ extra:
     lab_ula_points:
     lab_ula_forms: https://docs.google.com/forms/d/e/1FAIpQLSdO0b2d-wMDmysq8pPJ84Oaeu_SZy-h11ziyTSXAYBSAFdkng/viewform?usp=sf_link
 
-    lab_seq_points:
+    lab_seq_points: 'Pontos de HW!'
     lab_seq_classroom:
 
     lab_nasm_1_classroom:
@@ -153,13 +153,14 @@ nav:
     - Lab: class/ula-lab-4.md
     - PrairieLearn: *prairielearn_link
 
-#   - Aula 11 - Síncrono:
-#     - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
-#     - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-#     - Lab: class/seq-lab-1.md
-#     - PrairieLearn: *prairielearn_link
-# ##  - Aula 12 - QUIZ 2:
-# ##    - Quiz 2: quiz
+  - Quiz 2: *prairielearn_link
+
+  - Aula 11 - Síncrono:
+    - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
+    - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
+    # - Lab: class/seq-lab-1.md   # LAB COM PROBLEMAS
+    - PrairieLearn: *prairielearn_link
+
 #   - Aula 12 - Assembly:
 #     - Teoria 1: commum-content/teoria/Teoria-Z01.md
 #     - Teoria 2: commum-content/teoria/Teoria-Assembly.md

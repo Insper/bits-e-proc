@@ -237,7 +237,7 @@ def seq():
     - File: `toplevel.py`
     - Função: `blinkLed`
     
-    Vamos deixar o componente mais genérico? Para isso modifique a função `blinkLed` para receber mais um argumento:  O valor em `ms` na qual o LED irá piscar, e então faca a implementação da função que agora depende da variável tempo.
+    Vamos deixar o componente mais genérico? Para isso modifique a função `blinkLed` para receber mais um argumento:  O valor em `ms` na qual o LED irá piscar, e então faça a implementação da função que agora depende da variável tempo.
     
     ```py
     def blinkLed(led, time_ms, clk, rst):
