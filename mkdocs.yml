@@ -156,21 +156,25 @@ nav:
   - Quiz 2: *prairielearn_link
 
   - Aula 11 - Síncrono:
+
     - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
     - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-    # - Lab: class/seq-lab-1.md   # LAB COM PROBLEMAS
+    # - Lab: class/seq-lab-1.md   # LAB COM PROBLEMAS (fazer a != b e não a < b)
     - PrairieLearn: *prairielearn_link
 
-#   - Aula 12 - Assembly:
-#     - Teoria 1: commum-content/teoria/Teoria-Z01.md
-#     - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-#     - Comandos: commum-content/z01/z01-Resumo-Assembly.md
-# #    - PrairieLearn: *prairielearn_link
-#   - Aula 13 - Assembly jump:
-#     - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-# #    - PrairieLearn: *prairielearn_link
-#   - Aula 14 - Prática Assembly 1:
-#     - PrairieLearn: *prairielearn_link
+  - Aula 12 - Assembly:
+    - Slides: slides/conteudoAssembly.pdf
+    - Teoria 1: commum-content/teoria/Teoria-Z01.md
+    - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+    - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+    - PrairieLearn: *prairielearn_link
+
+  - Aula 13 - Assembly jump:
+    - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+    - PrairieLearn: *prairielearn_link
+
+  # - Aula 14 - Prática Assembly 1:
+  #   - PrairieLearn: *prairielearn_link
 #   - Aula 15 - Linguagem de máquina:
 #     - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
 #  #     - Teoria: commum-content/teoria/Teoria-Assembler.md
