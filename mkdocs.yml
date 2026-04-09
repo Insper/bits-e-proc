@@ -170,6 +170,7 @@ nav:
       - PrairieLearn: *prairielearn_link
 
     - Aula 13 - Assembly jump:
+      - Slides: slides/conteudoComputador.pdf
       - Teoria: commum-content/teoria/Teoria-nasm-jump.md
       - PrairieLearn: *prairielearn_link
 
