@@ -533,6 +533,55 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 15 - Linguagem de máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Consulta</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf">Exercicio</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -727,9 +776,9 @@ pytest<span class="w"> </span>test_ula.py<span class="w"> </span>-s
 <h2 id="entrega">Entrega</h2>
 <p>A entrega <strong>final</strong> deve ser feita no ramo <code>master</code> do git.</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Implementar todos os módulos listados</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Todos os módulos devem passar nos testes</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled=""><span class="task-list-indicator"></span></label> Actions deve estar configurado e funcionando</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Implementar todos os módulos listados</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Todos os módulos devem passar nos testes</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled><span class="task-list-indicator"></span></label> Actions deve estar configurado e funcionando</li>
 </ul>
 <h2 id="rubrica">Rubrica</h2>
 <div class="admonition warning">
@@ -747,7 +796,7 @@ pytest<span class="w"> </span>test_ula.py<span class="w"> </span>-s
 <li><code>ula</code></li>
 </ul>
 <p>Você deve testar a ULA na FPGA e gravar um vídeo explicando o que está acontecendo, para isso modifique o toplevel para:</p>
-<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">toplevel</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">SW</span><span class="p">,</span> <span class="n">KEY</span><span class="p">,</span> <span class="n">hex0</span><span class="p">,</span> <span class="n">hex1</span><span class="p">,</span> <span class="n">HEX2</span><span class="p">,</span> <span class="n">HEX3</span><span class="p">,</span> <span class="n">HEX4</span><span class="p">,</span> <span class="n">HEX5</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">toplevel</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">SW</span><span class="p">,</span> <span class="n">KEY</span><span class="p">,</span> <span class="n">hex0</span><span class="p">,</span> <span class="n">hex1</span><span class="p">,</span> <span class="n">HEX2</span><span class="p">,</span> <span class="n">HEX3</span><span class="p">,</span> <span class="n">HEX4</span><span class="p">,</span> <span class="n">HEX5</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">):</span>
     <span class="n">sw_s</span> <span class="o">=</span> <span class="p">[</span><span class="n">SW</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
     <span class="n">key_s</span> <span class="o">=</span> <span class="p">[</span><span class="n">KEY</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
     <span class="n">ledr_s</span> <span class="o">=</span> <span class="p">[</span><span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
@@ -763,7 +812,7 @@ pytest<span class="w"> </span>test_ula.py<span class="w"> </span>-s
 
     <span class="c1"># ---------------------------------------- #</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">8</span><span class="p">):</span>
             <span class="n">LEDR</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">leds</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="n">LEDR</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">zr</span>
@@ -825,7 +874,7 @@ pytest<span class="w"> </span>test_ula.py<span class="w"> </span>-s
     <span class="n">falist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">fullAdder</span><span class="p">(</span><span class="o">..</span><span class="p">,</span> <span class="o">..</span><span class="p">,</span> <span class="o">..</span> <span class="p">,</span> <span class="n">q_</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="o">...</span><span class="p">)</span>
 
 <span class="nd">@always_comb</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
         <span class="n">q</span><span class="o">.</span><span class="n">next</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">q_</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 </code></pre></div>
@@ -834,7 +883,7 @@ pytest<span class="w"> </span>test_ula.py<span class="w"> </span>-s
 </code></pre></div>
 <p>Como alternativa podemos usar o <code>concatSignal</code> em <code>q_</code> para não ter que fazer o loop:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@always_comb</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+<span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
     <span class="n">q</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">ConcatSignal</span><span class="p">(</span><span class="o">*</span><span class="nb">reversed</span><span class="p">(</span><span class="n">q_</span><span class="p">))</span>
 </code></pre></div>
 <ul>

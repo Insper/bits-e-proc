@@ -533,6 +533,55 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 15 - Linguagem de máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Consulta</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf">Exercicio</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -616,9 +665,9 @@
 <p>Podemos inserir prints nos componentes a fim de ajudar no desenvolvimento do mesmo. Temos que entender que o <code>print</code> não é sintetizável (não vai para a FPGA) e está limitado a apenas <code>inputs</code> e <code>sinais</code> internos do módulo, não podemos usar o print em <code>outputs</code>.</p>
 <p>Por exemplo, se desejarmos exibir o valor da saída <code>soma</code> do <code>halfAdder</code>, poderíamos inserir um print, mas como <code>soma</code> é uma <strong>saída</strong>, vamos ter um erro:</p>
 <div class="highlight"><span class="filename">ula_modules.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">soma</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
         <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>
 <span class="hll">        <span class="nb">print</span><span class="p">(</span><span class="n">soma</span><span class="p">)</span> <span class="c1"># (1)</span>
@@ -633,10 +682,10 @@
 </blockquote>
 <p>Para solucionar esse problema podemos criar um sinal interno auxiliar (que será visível como entrada e saída):</p>
 <div class="highlight"><span class="filename">ula_modules.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
 <span class="hll">    <span class="n">s_soma</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">())</span>
 </span>    <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">s_soma</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
 
 <span class="hll">        <span class="n">soma</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s_soma</span>
@@ -679,12 +728,12 @@ a: 1 b: 1 | s: 0 c: 1
 <h2 id="breakpoint">breakpoint</h2>
 <p>Uma outra opção muito poderosa que possuímos é de utilizarmos <code>breakpoint</code> no código, para isso basta adicionar <code>breakpoint()</code> onde você deseja interromper a execução do código,e então executar novamente o teste.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">())</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">())</span>
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
 <span class="hll">        <span class="nb">breakpoint</span><span class="p">()</span>
 </span>        <span class="n">s</span> <span class="o">=</span> <span class="n">a</span> <span class="o">^</span> <span class="n">b</span>
         <span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span>
@@ -703,7 +752,7 @@ a: 1 b: 1 | s: 0 c: 1
 <li><code>c</code>: (continue) Podemos liberar a execução do programa até ele encontrar um novo breakpoint ou finalizar</li>
 <li><code>w</code> (where) Exibi informações do local do breakpoint</li>
 </ul>
-<script id="asciicast-Xvb0we1j1c4jHYpBAK5uHjViz" src="https://asciinema.org/a/Xvb0we1j1c4jHYpBAK5uHjViz.js" async=""></script>
+<script id="asciicast-Xvb0we1j1c4jHYpBAK5uHjViz" src="https://asciinema.org/a/Xvb0we1j1c4jHYpBAK5uHjViz.js" async></script>
 
 <div class="admonition exercise self-progress" data-slug="myhdl/depurando/exercise_2" id="exercise_2_0">
 <p class="admonition-title">Exercise</p>

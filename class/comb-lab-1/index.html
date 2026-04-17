@@ -557,6 +557,55 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 15 - Linguagem de máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Consulta</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf">Exercicio</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -684,7 +733,7 @@
 <p>Bits e Processadores utiliza uma metodologia de desenvolvimento de projeto chamada de <strong>test driven development (TDD)</strong>, ou seja, para cada etapa do projeto teremos um teste associado a ele. Os testes podem ser do tipo unitário e de integração. Para realizarmos os testes em python utilizaremos o módulo <code>pytest</code> e o plugin de dev-life (para fazer o report do progresso de vocês para o servidor).</p>
 <p>Cada exercício possui um arquivo com o prefixo <code>test_</code> que excita o componente que vocês irão desenvolver e valida a saída esperada.</p>
 <p>A seguir um exemplo do teste falhando e então solucionado e testado novamente:</p>
-<script id="asciicast-DL3cuBQSgSgIyXdZK2LVBolgr" src="https://asciinema.org/a/DL3cuBQSgSgIyXdZK2LVBolgr.js" async=""></script>
+<script id="asciicast-DL3cuBQSgSgIyXdZK2LVBolgr" src="https://asciinema.org/a/DL3cuBQSgSgIyXdZK2LVBolgr.js" async></script>
 
 <div class="admonition exercise self-progress" data-slug="class/comb-lab-1/exercise_2" id="exercise_2_0">
 <p class="admonition-title">Exercise</p>
@@ -766,7 +815,7 @@
 <h3 id="gerando-toplevelvhd">Gerando <code>toplevel.vhd</code></h3>
 <p>O programa <code>toplevel.py</code> faz o mapeamento do componente para os pinos da FPGA e gera o arquivo <code>toplevel.vhd</code> que será utilizado pelo Quartus para gerar o arquivo binário que irá ser programado na FPGA, a ideia desse módulo é mapear os sinais do componente para nomes e tamanhos fixos que serão utilizados pelo programa.</p>
 <div class="highlight"><span class="filename">toplevel.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">toplevel</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">SW</span><span class="p">,</span> <span class="n">KEY</span><span class="p">,</span> <span class="n">HEX0</span><span class="p">,</span> <span class="n">HEX1</span><span class="p">,</span> <span class="n">HEX2</span><span class="p">,</span> <span class="n">HEX3</span><span class="p">,</span> <span class="n">HEX4</span><span class="p">,</span> <span class="n">HEX5</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">toplevel</span><span class="p">(</span><span class="n">LEDR</span><span class="p">,</span> <span class="n">SW</span><span class="p">,</span> <span class="n">KEY</span><span class="p">,</span> <span class="n">HEX0</span><span class="p">,</span> <span class="n">HEX1</span><span class="p">,</span> <span class="n">HEX2</span><span class="p">,</span> <span class="n">HEX3</span><span class="p">,</span> <span class="n">HEX4</span><span class="p">,</span> <span class="n">HEX5</span><span class="p">,</span> <span class="n">CLOCK_50</span><span class="p">,</span> <span class="n">RESET_N</span><span class="p">):</span>
     <span class="o">...</span>
 
     <span class="n">ic1</span> <span class="o">=</span> <span class="n">exe4</span><span class="p">(</span><span class="n">ledr_s</span><span class="p">,</span> <span class="n">SW</span><span class="p">)</span>
@@ -790,9 +839,9 @@
 </code></pre></div>
 <p>Notem que os sinais criados são do tipo <code>Signal(intbv(0)[X:])</code>, isso indica que estamos manipulando um vetor de bits de tamanho <strong>X</strong>, no caso do LED, indicamos que o vetor é do tamanho 10, e no caso das KEY de tamanho 4. Com isso, podemos dentro do componente acessar individualmente cada um dos elementos do vetor:</p>
 <div class="highlight"><span class="filename">comb_modules.py</span><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">exe4</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">sw</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">exe4</span><span class="p">(</span><span class="n">led</span><span class="p">,</span> <span class="n">sw</span><span class="p">):</span>
    <span class="nd">@always_comb</span>
-   <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+   <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
        <span class="n">led</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">sw</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="ow">and</span> <span class="p">(</span><span class="ow">not</span> <span class="n">sw</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>

@@ -565,6 +565,55 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 15 - Linguagem de máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../Teoria-Linguagem-de-Maquina/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Teoria-Assembler/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../z01/z01-InstructionSet/">Consulta</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf">Exercicio</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -687,9 +736,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">mux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">mux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">in1</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">o</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">in0</span>
         <span class="k">else</span><span class="p">:</span>
@@ -775,9 +824,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">deMux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">deMux2Way</span><span class="p">(</span><span class="n">in0</span><span class="p">,</span> <span class="n">sel</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="k">if</span> <span class="n">sel</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">out0</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">a</span>
             <span class="n">out1</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="mi">0</span>
@@ -925,9 +974,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">out0</span><span class="p">,</span> <span class="n">out1</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="o">...</span>
     <span class="k">return</span> <span class="n">comb</span>
 </code></pre></div>
@@ -1111,9 +1160,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eq</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">binaryToBCD</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">eq</span><span class="p">,</span> <span class="n">gt</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">gt</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span>  <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
         <span class="n">eq</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
     <span class="k">return</span> <span class="n">comb</span>
@@ -1145,9 +1194,9 @@
 </div>
 <div class="tabbed-block">
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">adder</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">in1</span><span class="p">,</span> <span class="n">in2</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">o</span> <span class="o">=</span> <span class="n">in1</span> <span class="o">+</span> <span class="n">in2</span>
     <span class="k">return</span> <span class="n">comb</span>
 </code></pre></div>

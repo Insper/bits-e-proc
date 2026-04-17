@@ -553,6 +553,55 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 15 - Linguagem de máquina</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Linguagem-de-Maquina/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Assembler/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/z01/z01-InstructionSet/">Consulta</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf">Exercicio</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/209305">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -688,7 +737,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/ula/full-adder.svg" data-desc-position="bottom"><img alt="" src="../figs/ula/full-adder.svg"></a></p>
 <p>O código em python fica:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="n">s1</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="c1"># (1)</span>
     <span class="n">s2</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> 
     <span class="n">s3</span> <span class="o">=</span> <span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
@@ -697,7 +746,7 @@
     <span class="n">half_2</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s1</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">s3</span><span class="p">)</span> 
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s2</span> <span class="o">|</span> <span class="n">s3</span> 
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
@@ -742,14 +791,14 @@
 <details class="solução">
 <summary>Solução</summary>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
 
     <span class="n">half_1</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> 
     <span class="n">half_2</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">soma</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">|</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
@@ -778,7 +827,7 @@
 </code></pre></div>
 <p>Nessa ligação, estamos somando dois vetores de dois bits cada: <code>x[1..0] + y[1..0]</code> que resulta em uma soma de dois bits: <code>q[1..0]</code> e um <code>carry</code>.</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">adder2bits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">adder2bits</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="c1"># adder de 2 bits!</span>
 </code></pre></div>
 <p>Onde <code>x</code>, <code>y</code> e <code>s</code> são vetores do tipo <code>bool</code> de duas posições.</p>
@@ -811,7 +860,7 @@
 <li>Você deve lembrar de dar um commit e push para o seu código ir para o repositório e ser avaliado.</li>
 </ul>
 <p>Tip:</p>
-<p><script id="asciicast-282J3aAGabeQLyhbSdTgGuRIB" src="https://asciinema.org/a/282J3aAGabeQLyhbSdTgGuRIB.js" async=""></script></p>
+<p><script id="asciicast-282J3aAGabeQLyhbSdTgGuRIB" src="https://asciinema.org/a/282J3aAGabeQLyhbSdTgGuRIB.js" async></script></p>
 <div class="form-elements">
 <input type="hidden" name="data" value="OK">
 <input class="ah-button ah-button--primary" type="submit" name="Submit" value="Mark as done">
@@ -825,7 +874,7 @@
 </code></pre></div>
 <p>Implementação fullAdder com lista de componentes fica assim:</p>
 <div class="highlight"><pre><span></span><code><span class="nd">@block</span>
-<span class="k">def</span><span class="w"> </span><span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">fullAdder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">soma</span><span class="p">,</span> <span class="n">carry</span><span class="p">):</span>
     <span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="n">Signal</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">)]</span>
     <span class="n">haList</span> <span class="o">=</span> <span class="p">[</span><span class="kc">None</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">)]</span>  <span class="c1"># (1)</span>
 
@@ -833,7 +882,7 @@
     <span class="n">haList</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">halfAdder</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">soma</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
 
     <span class="nd">@always_comb</span>
-    <span class="k">def</span><span class="w"> </span><span class="nf">comb</span><span class="p">():</span>
+    <span class="k">def</span> <span class="nf">comb</span><span class="p">():</span>
         <span class="n">carry</span><span class="o">.</span><span class="n">next</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">|</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">instances</span><span class="p">()</span>
