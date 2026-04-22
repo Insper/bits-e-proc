@@ -178,6 +178,7 @@ nav:
       - PrairieLearn: *prairielearn_link
 
     - Aula 15 - Linguagem de máquina:
+      - Slides: slides/conteudoAssembler.pdf
       - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
       - Teoria: commum-content/teoria/Teoria-Assembler.md
       - Consulta: commum-content/z01/z01-InstructionSet.md
