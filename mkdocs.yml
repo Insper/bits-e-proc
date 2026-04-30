@@ -186,12 +186,15 @@ nav:
       - PrairieLearn: *prairielearn_link
 
 
-  #   - Aula 16 - VM:
-  #       - Teoria: commum-content/teoria/Teoria-vm.md
-  #       - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
-  #       - Teoria: commum-content/teoria/Teoria-vm-jump.md
-  #       - Resumo VM: commum-content/z01/z01-Resumo-VM.md
-  #       - PrairieLearn: *prairielearn_link
+    - Aula 16 - VM:
+      - Slides: slides/aulaMaquinaVirtual.pdf
+      - Teoria: commum-content/teoria/Teoria-vm.md
+      - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
+      - Teoria: commum-content/teoria/Teoria-vm-jump.md
+      - Resumo VM: commum-content/z01/z01-Resumo-VM.md
+      - PrairieLearn: *prairielearn_link
+
+
   # #  - Aula 18 - VM condições:
   # #      - PrairieLearn: *prairielearn_link
   #   - Aula 17 - VM funções:
