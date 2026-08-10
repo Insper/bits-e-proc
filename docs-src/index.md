@@ -9,7 +9,7 @@
 
 [^1]:![](assets/bits.png)
 
-Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de Sistemas](http://github.com/insper/z01.1).
+Criado por Rafael Corsi / rafael.corsi@insper.edu.br, inspirado em [Elementos de Sistemas](http://github.com/insper/z01.1) por Luciano Soares / lpsoares@insper.edu.br
 
 -------------------------
 
@@ -28,7 +28,7 @@ Desenvolver um computador do ZERO!
 
 ## Avaliação
 
-A disciplina é avaliada em duas frentes: Quizes e Laboratórios que forneceram pontos em duas frentes: HW e SW. Para passar na disciplina é necessário possuir ao menos 50 pontos / 100 em ambas as frentes.
+A disciplina é avaliada em duas frentes: Quizes e Laboratórios.
 
 ## Bibliografia
 
@@ -43,4 +43,3 @@ A disciplina é avaliada em duas frentes: Quizes e Laboratórios que forneceram 
 - LAING, Gordon., Digital Retro: The Evolution and Design of the Personal Computer, ª ed., Sybex, 2004
 - NIELSEN, L., Computing: A Business History, ª ed., New Street Communications LLC, 2012
 - FLOYD, T. L., Digital Fundamentals, 11ª ed., Pearson, 2015
-

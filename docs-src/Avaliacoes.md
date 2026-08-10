@@ -1,4 +1,6 @@
-# Avaliações
+<!-- OBSOLETO -->
+
+<!-- # Avaliações
 
 Página com informações sobre as avaliações de bits e proc
 
@@ -31,4 +33,4 @@ A seguir exercícios para vocês praticarem, além do que já existe (vocês pod
 
 | AI                                                                      |
 |-------------------------------------------------------------------------|
-| Prática extra: ==[Classroom](https://classroom.github.com/a/dk1ErssU)== |
+| Prática extra: ==[Classroom](https://classroom.github.com/a/dk1ErssU)== | -->

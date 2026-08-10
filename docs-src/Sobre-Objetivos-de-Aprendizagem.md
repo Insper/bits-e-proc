@@ -1,4 +1,6 @@
-Objetivo:
+<!-- OBSOLETO -->
+
+<!-- Objetivo:
 
 Ao final da disciplina o estudante será capaz de:
 
@@ -22,4 +24,4 @@ Conteúdo Programático:
 10. Linguagem Orientada a Objetos
 11. Análise Léxica e Sintática
 12. Linguagens
-
+ -->

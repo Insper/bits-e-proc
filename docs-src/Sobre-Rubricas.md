@@ -1,4 +1,6 @@
-# Rubricas individuais
+<!-- OBSOLETO -->
+
+<!-- # Rubricas individuais
 
 Você será avaliado conforme o seu papel no desenvolvimento
 do projeto. Podendo ser: 
@@ -41,4 +43,4 @@ A nota final será a média das notas de cada 'Desenvolvedor' vezes `Fator de pa
     Caso a nota do Facilitador seja inferior a C, a nota dos desenvolvedores se dará pela média da avaliação dos seus colegas.
 
 !!! warning
-    Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I
+    Se algum desenvolvedor não preencher o formulário no prazo estipulado sua nota será D/I -->
