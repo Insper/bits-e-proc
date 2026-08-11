@@ -22,6 +22,7 @@ extra:
   custom_variables:
 
     prairielearn_link: https://us.prairielearn.com/pl/course_instance/225014
+    
     prairielearn_link_26a: https://us.prairielearn.com/pl/course_instance/209305
 
     lab_1_mural: https://app.mural.co/t/bitsprocessadores3866/m/bitsprocessadores3866/1770576553075/e7f5ae192741182c7c5fb4edacdfa21ff53c01d5?sender=u154845be7420b5a36f432010
@@ -110,6 +111,7 @@ nav:
 
   - Aulas:
     - Aula 1 - Visão geral:
+      - Slides: slides/aulaOrganizacaoDeComputadores.pdf
       - Laboratório: class/intro-benchmark-lab.md
 
     # - Aula 2 - Álgebra Booleana :
