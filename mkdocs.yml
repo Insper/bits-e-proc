@@ -21,7 +21,7 @@ plugins:
 extra:
   custom_variables:
 
-    prairielearn_link: https://us.prairielearn.com/pl/course_instance/225014
+    prairielearn_link: &prairielearn_link https://us.prairielearn.com/pl/course_instance/225014
     
     prairielearn_link_26a: https://us.prairielearn.com/pl/course_instance/209305
 
@@ -114,10 +114,11 @@ nav:
       - Slides: slides/aulaOrganizacaoDeComputadores.pdf
       - Laboratório: class/intro-benchmark-lab.md
 
-    # - Aula 2 - Álgebra Booleana :
-    #   - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
-    #   - Exercícios: &prairielearn_link https://us.prairielearn.com/pl/course_instance/209305
-    #   # - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md   # REVER PARA INCLUSÃO
+    - Aula 2 - Álgebra Booleana :
+      - Slides: slides/conteudoAlgebraBooleana.pdf
+      - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
+      - Exercícios: *prairielearn_link
+      # - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md   # REVER PARA INCLUSÃO
 
     # - Aula 3 - Dados Digitais:
     #   - Teoria: commum-content/teoria/Teoria-Dados.md
