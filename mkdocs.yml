@@ -120,13 +120,14 @@ nav:
       - Exercícios: *prairielearn_link
       # - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md   # REVER PARA INCLUSÃO
 
-    # - Aula 3 - Dados Digitais:
-    #   - Teoria: commum-content/teoria/Teoria-Dados.md
-    #   - Exercícios: *prairielearn_link
-    #   - Exercícios Extra: commum-content/exercicios/Exercicio-Dados-2.md
+    - Aula 3 - Dados Digitais:
+      - Slides: slides/conteudoDadosDigitais.pdf
+      - Teoria: commum-content/teoria/Teoria-Dados.md
+      - Exercícios: *prairielearn_link
+      - Exercícios Extra: commum-content/exercicios/Exercicio-Dados-2.md
 
     # - Aula 4 - Transistores:
-    #   # - Slides: https://drive.google.com/file/d/1b42248Hy_J7O_sj81F_ixpmcyYElzNXk/view?usp=sharing     # REVER ISSO COM ATENÇÃO PARA JUNÇÃO NO VÍDEO
+    #   - Slides: slides/conteudoTransistoresCIs.pdf
     #   - Teoria: commum-content/teoria/Teoria-RTL.md
     #   - Ĺaboratório: class/transistores-lab-1.md
     #   - Exercícios: *prairielearn_link
