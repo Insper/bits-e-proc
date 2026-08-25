@@ -126,11 +126,11 @@ nav:
       - Exercícios: *prairielearn_link
       - Exercícios Extra: commum-content/exercicios/Exercicio-Dados-2.md
 
-    # - Aula 4 - Transistores:
-    #   - Slides: slides/conteudoTransistoresCIs.pdf
-    #   - Teoria: commum-content/teoria/Teoria-RTL.md
-    #   - Ĺaboratório: class/transistores-lab-1.md
-    #   - Exercícios: *prairielearn_link
+    - Aula 4 - Transistores:
+      - Slides: slides/conteudoTransistoresCIs.pdf
+      - Teoria: commum-content/teoria/Teoria-RTL.md
+      - Ĺaboratório: class/transistores-lab-1.md
+      - Exercícios: *prairielearn_link
 
     # - Aula 5 - Aritmética Binária:
     #   - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria.md
