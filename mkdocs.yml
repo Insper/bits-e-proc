@@ -132,10 +132,11 @@ nav:
       - Ĺaboratório: class/transistores-lab-1.md
       - Exercícios: *prairielearn_link
 
-    # - Aula 5 - Aritmética Binária:
-    #   - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria.md
-    #   - Exercícios: *prairielearn_link
-    #   - Exercícios Extra: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
+    - Aula 5 - Aritmética Binária:
+      # Aula estúdio (matéria já foi dada)
+      - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria.md
+      - Exercícios: *prairielearn_link
+      - Exercícios Extra: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
 
     # - Aula 6 - FPGA:
     #   - Teoria: myhdl/basico.md
@@ -145,8 +146,6 @@ nav:
     # - Aula 7 - Somadores:
     #   - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
     #   - PrairieLearn: *prairielearn_link
-
-    # - Quiz 1: *prairielearn_link
 
     # - Aula 9 - Componentes:
     #   - Teoria 1: commum-content/teoria/Teoria-Componentes.md
