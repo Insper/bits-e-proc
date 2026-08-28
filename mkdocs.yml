@@ -133,7 +133,7 @@ nav:
       - Exercícios: *prairielearn_link
 
     - Aula 5 - Aritmética Binária:
-      # Aula estúdio (matéria já foi dada)
+      - Slides: slides/conteudoDadosDigitaisCont.pdf
       - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria.md
       - Exercícios: *prairielearn_link
       - Exercícios Extra: commum-content/exercicios/Exercicios-Aritmetica-Booleana.md
