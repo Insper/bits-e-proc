@@ -2,33 +2,29 @@
 
 | Descritivo                                                                     |
 |--------------------------------------------------------------------------------|
-| Pontos: {{lab_myhdl_points}}
-| Fazer em dupla!                                                                |
-| Accessar pelo: [Classroom]({{lab_myhdl_classroom}}){.ah-button} |
+| Fazer em grupos!                                                                |
 
-!!! info "💰 Laboratório com pontos"
-    ==Realizar em dupla!==. Para os dois ganharem os pontos todos devem acessar o classroom com a sua respectiva conta do github! Mesmo sendo em dupla, sugerimos para todos fazerem, pois esse tipo de exercício vai ser cobrado em quiz.
+!!! info "💰 Laboratório (vale pontos)"
+    Para os membros do grupo ganharem os pontos todos devem enviar o arquivo final da atividade (não basta só um enviar).
 
 !!! exercise
     Antes de seguir, leia a teoria desta aula.
 
-Este laboratório é introdutório para o desenvolvimento do projeto ([`Lógica-Combinacional`](/bits-e-proc/class/logiComb-Projeto)), onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
+Este laboratório é introdutório para o desenvolvimento do projeto `Lógica-Combinacional`, onde iremos criar componentes de hardware que serão os alicerces do nosso computador. Primeiro precisamos praticar um pouco de `MyHDL` e entender a ferramenta e o fluxo de compilação, teste e como conseguimos executar o hardware em uma FPGA.
 
-==Os laboratórios são individuais e possuem nota (atualizado para a nova versão do curso)==, cada laboratório contribui com um pouco dos pontos da avaliação individual. Todos os laboratórios devem ser realizados localmente e finalizados até o término da aula.
+Os laboratórios são individuais e possuem nota, cada laboratório contribui com um pouco dos pontos da avaliação individual. Todos os laboratórios devem ser realizados localmente e finalizados até o término da aula.
 
 ## Infra
 
-Agora iremos fazer todo o desenvolvimento da disciplina usando o codespaces:
+Iremos fazer a primeira parte do desenvolvimento com um repositório do Git
 
-1. Crie o repositório pelo link do [Classroom]({{lab_myhdl_classroom}})
-1. Com o repositório criado, clique em  [Code -> Codespace]()[^1]
-1. Aguarde carregar e abrir o `vscode` online
-1. Trabalhe online
+1. Clone ou forke o repositório: [https://github.com/insper-bits/lab-myhdl-comb](https://github.com/insper-bits/lab-myhdl-comb)
+2. Instale os requisitos: `pip install -r requirements.txt`
+3. Use o `vscode` (ou outro) para editar o código
 
-[^1]: ![](figs/codespace.png)
-
+<!-- 
 !!! video
-    ![](https://youtu.be/u03nflB7V6o)
+    ![](https://youtu.be/u03nflB7V6o) -->
 
 ### pytest
 
@@ -55,14 +51,12 @@ A seguir um exemplo do teste falhando e então solucionado e testado novamente:
     
     Execute o `pytest -k exe1` novamente e note que o código passa no teste.
     
-!!! progress
-    Começando o laboratório.
     
 ## Praticando
 
 Agora é por sua conta, você deve descrever alguns circuitos lógicos combinacionais bem simples em MyHDL. 
 
-!!! exercise "💰 1 ponto - até o final da aula"
+!!! exercise
     Para cada exercício implemente a solução no arquivo `comb_modules.py` e teste com `pytest`. A descrição do exercício está no próprio módulo.
 
     - `pytest -s -k exe2`
@@ -72,6 +66,8 @@ Agora é por sua conta, você deve descrever alguns circuitos lógicos combinaci
 ## Testando no hardware
 
 Faća o download do programa que facilita a programacão da FPGA (desenvolvido internamente pelo Eduardo Marossi):
+
+- Instale o Docker (se ainda não tiver ele)
 
 - https://github.com/Insper/fpgaloader/releases
 
@@ -173,9 +169,9 @@ O processo de gerar um hardware que posso ser executado na FPGA é complexo e at
 !!! exercise
     Na raiz do repositório execute:
  
-    1. `make toplevel.rbf`
-    1. Aguardem compilar
-    1. Verifiquem que um novo arquivo `toplevel.rbf` foi gerado
+    1. `docker run --rm -v "${PWD}:/work" -w /work rafaelcorsi/bits bash -lc "make clean && make toplevel.rbf"`
+    2. Aguardem compilar
+    3. Verifiquem que um novo arquivo `toplevel.rbf` foi gerado
     
 ### Programando FPGA
 
