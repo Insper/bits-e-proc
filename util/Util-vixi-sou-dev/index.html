@@ -342,6 +342,39 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 7 - Somadores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../slides/conteudoUnidadeLogicaAritmetica.pdf">Slides</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../commum-content/teoria/Teoria-Aritmetica-Binaria-HW/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/225014">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -444,9 +477,9 @@
 </code></pre></div>
 <hr>
 <p>Adicionado teste no CI:</p>
-<div class="highlight"><span class="filename">.github/workflows/componentes.yml</span><pre><span></span><code><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test MODULO</span>
-<span class="w">      </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">        </span><span class="no">pytest hw/test_components.py -k MODULO</span>
+<div class="highlight"><span class="filename">.github/workflows/componentes.yml</span><pre><span></span><code>    - name: Test MODULO
+      run: |
+        pytest hw/test_components.py -k MODULO
 </code></pre></div>
 <ul>
 <li>MODULO: Nome do modulo que está implementando.</li>

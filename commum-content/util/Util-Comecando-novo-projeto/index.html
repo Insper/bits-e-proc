@@ -342,6 +342,39 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 7 - Somadores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../slides/conteudoUnidadeLogicaAritmetica.pdf">Slides</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../../teoria/Teoria-Aritmetica-Binaria-HW/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/225014">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -472,17 +505,17 @@ aparecem normalmente no gerenciador de arquivos ou no comando <code>ls</code>, p
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio"><input id="__tabbed_2_2" name="__tabbed_2" type="radio"><div class="tabbed-labels"><label for="__tabbed_2_1">Elementos</label><label for="__tabbed_2_2">Bits e Proc</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="l l-Scalar l-Scalar-Plain">python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py</span>
-<span class="l l-Scalar l-Scalar-Plain">python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py</span>
-<span class="l l-Scalar l-Scalar-Plain">python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py</span>
+<div class="highlight"><pre><span></span><code>python3 Projetos/B-LogicaCombinacional/testeLogicaCombinacional.py
+python3 Projetos/C-UnidadeLogicaAritmetica/testeULA.py
+python3 Projetos/D-LogicaSequencial/testeLogicaSequencial.py
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <p>Cada entrega terá um arquivo de configuracão, no caso do primeiro projeto ele já está 
 configurado, mas de uma olhada no arquivo: <code>.github/workflows/componentes.yml</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Combinacional</span>
-<span class="w">    </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">    </span><span class="l l-Scalar l-Scalar-Plain">pytest hw/test_components.py</span>
+<div class="highlight"><pre><span></span><code>  - name: Combinacional
+    run: |
+    pytest hw/test_components.py
 </code></pre></div>
 </div>
 </div>

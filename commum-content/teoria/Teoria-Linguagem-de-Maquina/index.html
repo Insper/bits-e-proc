@@ -342,6 +342,39 @@
   </li>
 
       
+        
+  <li class="ah-togglable-item">
+    <span class="ah-togglable-handle">Aula 7 - Somadores</span>
+    <ul>
+      
+        
+  
+    <li>
+      <a href="../../../slides/conteudoUnidadeLogicaAritmetica.pdf">Slides</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="../Teoria-Aritmetica-Binaria-HW/">Teoria</a>
+    </li>
+  
+
+      
+        
+  
+    <li>
+      <a href="https://us.prairielearn.com/pl/course_instance/225014">PrairieLearn</a>
+    </li>
+  
+
+      
+    </ul>
+  </li>
+
+      
     </ul>
   </li>
 
@@ -416,7 +449,7 @@
 <p>Um programa em código de máquina consiste em uma sequência de bytes que correspondem a instruções que serão executadas pelo processador. As instruções do processador, chamadas de opcodes, são representadas por valores em hexadecimal.</p>
 <p>Fonte: <a href="https://pt.wikipedia.org/wiki/C%C3%B3digo_de_m%C3%A1quina">https://pt.wikipedia.org/wiki/C%C3%B3digo_de_m%C3%A1quina</a></p>
 </blockquote>
-<p>É o que efetivamente será convertido em binário e gravado na memória de programa para ser lido e interpretado pela CPU. Essa conversão é realizada normalmente um por software chamado de Assembler ou Montador. Ele é responsável por converter os OPCODES (<code>leaw</code>) no código de máquina (<code>000000101010</code>).</p>
+<p>É o que efetivamente será convertido em binário e gravado na memória de programa para ser lido e interpretado pela CPU. Essa conversão é realizada normalmente por um por software chamado de Assembler ou Montador. Ele é responsável por converter os OPCODES (<code>leaw</code>) no código de máquina (<code>000000101010</code>).</p>
 <p>Uma linguagem de máquina é específica para um <a href="https://pt.wikipedia.org/wiki/Conjunto_de_instru%C3%A7%C3%B5es">Conjunto de instruções</a> (<code>instruction set</code>), que define os recursos de hardware que uma determinada CPU oferece (uso de registradores, operações aritméticas, operações lógicas, ...). </p>
 <p>Fabricantes de chips tendem a modificar o instruction set melhorando o HW entre gerações, essas mudanças tem que ser feito de modo que permita que códigos antigos executem em hardwares mais modernos (retrocompatibilidade).</p>
 <div class="admonition info">
@@ -443,7 +476,7 @@
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../figs/hardware/IS-Z011.svg" data-desc-position="bottom"><img alt="" src="../figs/hardware/IS-Z011.svg"></a></p>
 <h3 id="instrucoes-do-tipo-a">Instruções do tipo A</h3>
 <p>Instruções do tipo A são aquelas que possibilitam o carregamento efetivo de um dado salvo no programa (ROM) para dentro da CPU. É a maneira que possuímos de carregar uma constante no nosso hardware. Essas instruções são definidas pelo <code>bit17 = 0</code>.</p>
-<p>No versão atual da CPU só possuímos uma instrução nessa categoria, a <code>leaw</code>.</p>
+<p>Na versão atual da CPU só possuímos uma instrução nessa categoria, a <code>leaw</code>.</p>
 <div class="admonition example">
 <p class="admonition-title">exemplo</p>
 <ul>
