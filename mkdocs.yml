@@ -146,9 +146,10 @@ nav:
       - Laboratório: class/comb-lab-1.md
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 7 - Somadores:
-    #   - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 7 - Somadores:
+      - Slides: slides/conteudoUnidadeLogicaAritmetica.pdf
+      - Teoria: commum-content/teoria/Teoria-Aritmetica-Binaria-HW.md
+      - PrairieLearn: *prairielearn_link
 
     # - Aula 9 - Componentes:
     #   - Teoria 1: commum-content/teoria/Teoria-Componentes.md
