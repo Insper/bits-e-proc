@@ -2,7 +2,12 @@
 
 | Lab 2                                                                      |
 |----------------------------------------------------------------------------|
-| Entregue o código pelo repositório do ==[Classroom]({{lab_2_classroom}})== |
+| Entregue o código do Projeto do GitHub |
+
+
+Repositório: [https://github.com/insper-bits/lab-adders](https://github.com/insper-bits/lab-adders)
+
+Entregar o arquivo: `ula_modules.py` pelo PrairieLearn.
 
 Neste laboratório iremos desenvolver somadores que serão utilizados no desenvolvimento da unidade lógica aritmética da nossa CPU.
 
@@ -10,8 +15,9 @@ Neste laboratório iremos desenvolver somadores que serão utilizados no desenvo
 
 Vamos começar implementando as duas unidades básicas de um somador: o *half-adder* e *full-adder*. 
 
+File: `ula_modules.py `
+  
 !!! exercise
-    - File: `ula_modules.py `
     - Modulo: `def halfAdder(a, b, soma, carry):`
     - Test: `pytest -s -k halfAdder`
  
@@ -103,7 +109,7 @@ Com isso temos um vetor de bits `s` que pode ser endereçado como `s[0]`, `s[1]`
             return instances()
         ```
 
-## 💰 Somador (1 HW / 0 SW)
+## Somador
 
 Agora com os dois módulos implementados podemos construir um somador mais completo, que soma dois vetores de bits. Para isso iremos precisar de um halfAdder (HA) e um fullAdders (FA) conectados da seguinte maneira:
 
@@ -195,7 +201,7 @@ def fullAdder(a, b, c, soma, carry):
     
 Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a implementação do adder que se adapta a quantidade de bits que ele recebe. Isso é interessante pois podemos usar o mesmo adder instanciado de diferentes maneiras como um hardware dedicado para somar vetores de `2` bits, `8` ou quanto quisermos. Vamos ver mais para frente que a largura do somador é determinada pela arquitetura da CPU, já reparou que alguns programas quando você vai baixar possuem a opção `x64` ou `x86`? Isso determina entre outras coisas, qual a largura de dados da CPU em questão, `64` ou `32` bits.
 
-!!! exercise "💰 adder (2 HW, 0 SW), exercício "
+!!! exercise "adder"
     - Modulo: `def adder(x, y, soma, carry):`
     - Test: `pytest -k test_adder`
 
@@ -218,7 +224,7 @@ Agora que sabemos como podemos criar uma lista de componentes, podemos fazer a i
 
 Para finalizar essa parte. Ajuste seu código para usar o `Modvb`, você vai ver que tudo fica mais simples. Com ele você poderá somar todos os valores diretamente e testar os valores como inteiros.
 
-!!! exercise "💰 addervb (2 HW, 0 SW), exercício "
+!!! exercise "addervb"
     - Modulo: `def addervb(x, y, soma, carry):`
     - Test: `pytest -k test_addervb`
 
