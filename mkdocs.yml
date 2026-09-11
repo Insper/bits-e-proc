@@ -157,10 +157,12 @@ nav:
       - Laboratório: class/ula-lab-1.md
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 10 - ULA:
-    #   - Teoria: commum-content/teoria/Teoria-ULA.md
-    #   - Lab: class/ula-lab-4.md
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 9 - ULA:
+      - MARCAR REPOSIÇÃO: "MARCAR REPOSIÇÃO"
+      - Slides: slides/aulaControleULA.pdf
+      - Teoria: commum-content/teoria/Teoria-ULA.md
+      - Lab: class/ula-lab-4.md
+      - PrairieLearn: *prairielearn_link
 
     # - Quiz 1: *prairielearn_link
 
