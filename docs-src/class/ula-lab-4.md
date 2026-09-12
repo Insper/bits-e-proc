@@ -10,7 +10,7 @@ O objetivo desse laboratório é o de trabalharmos com o controle dos sinais da 
 Podemos executar a ULA na FPGA, para isso iremos disponibilizar o binário da FPGA com a ULA já implementada. Faća o download do arquivo:
 
 - [Z011-ULA.rbf](https://github.com/Insper/bits-e-proc-lab-6-adders/blob/main/Z011-ULA.rbf)
-- Abra o FPGA LOADER
+- Abra o [FPGA LOADER](https://github.com/Insper/fpgaloader/releases)
 - Programe a FPGA
 
 !!! warning
