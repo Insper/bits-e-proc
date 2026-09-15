@@ -164,6 +164,7 @@ nav:
       - PrairieLearn: *prairielearn_link
 
     - Aula 10 - Síncrono:
+      - Slides: slides/conteudoLogicaSequencial.pdf
       - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
       - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
       # - Lab: class/seq-lab-1.md   # LAB COM PROBLEMAS (fazer a != b e não a < b)
