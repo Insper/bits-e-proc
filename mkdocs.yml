@@ -172,22 +172,22 @@ nav:
 
     # - Prova 1: *prairielearn_link
 
-    # - Aula 12 - Assembly:
-    #   - Slides: slides/conteudoAssembly.pdf
-    #   - Teoria 1: commum-content/teoria/Teoria-Z01.md
-    #   - Teoria 2: commum-content/teoria/Teoria-Assembly.md
-    #   - Comandos: commum-content/z01/z01-Resumo-Assembly.md
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 11 - Assembly:
+      - Slides: slides/conteudoAssembly.pdf
+      - Teoria 1: commum-content/teoria/Teoria-Z01.md
+      - Teoria 2: commum-content/teoria/Teoria-Assembly.md
+      - Comandos: commum-content/z01/z01-Resumo-Assembly.md
+      - PrairieLearn: *prairielearn_link
 
-    # - Aula 13 - Assembly jump:
+    # - Aula 12 - Assembly jump:
     #   - Slides: slides/conteudoComputador.pdf
     #   - Teoria: commum-content/teoria/Teoria-nasm-jump.md
     #   - PrairieLearn: *prairielearn_link
 
-    # - Aula 14 - Prática Assembly 1:
+    # - Aula 13 - Prática Assembly 1:
     #   - PrairieLearn: *prairielearn_link
 
-    # - Aula 15 - Linguagem de máquina:
+    # - Aula 14 - Linguagem de máquina:
     #   - Slides: slides/conteudoAssembler.pdf
     #   - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
     #   - Teoria: commum-content/teoria/Teoria-Assembler.md
@@ -195,8 +195,7 @@ nav:
     #   - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
     #   - PrairieLearn: *prairielearn_link
 
-
-    # - Aula 16 - VM:
+    # - Aula 15 - VM:
     #   - Slides: slides/aulaMaquinaVirtual.pdf
     #   - Teoria: commum-content/teoria/Teoria-vm.md
     #   - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
