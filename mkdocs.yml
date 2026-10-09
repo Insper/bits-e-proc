@@ -179,10 +179,11 @@ nav:
       - Comandos: commum-content/z01/z01-Resumo-Assembly.md
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 12 - Assembly jump:
-    #   - Slides: slides/conteudoComputador.pdf
-    #   - Teoria: commum-content/teoria/Teoria-nasm-jump.md
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 12 - Assembly jump:
+      - LEMBRAR DE REPOSIÇÃO DAS AULAS : LEMBRAR DE REPOSIÇÃO DAS AULAS
+      - Slides: slides/conteudoComputador.pdf
+      - Teoria: commum-content/teoria/Teoria-nasm-jump.md
+      - PrairieLearn: *prairielearn_link
 
     # - Aula 13 - Prática Assembly 1:
     #   - PrairieLearn: *prairielearn_link
