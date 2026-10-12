@@ -180,13 +180,13 @@ nav:
       - PrairieLearn: *prairielearn_link
 
     - Aula 12 - Assembly jump:
-      - LEMBRAR DE REPOSIÇÃO DAS AULAS : LEMBRAR DE REPOSIÇÃO DAS AULAS
       - Slides: slides/conteudoComputador.pdf
       - Teoria: commum-content/teoria/Teoria-nasm-jump.md
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 13 - Prática Assembly 1:
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 13 - Prática Assembly 1:
+      - LEMBRAR DE REPOSIÇÃO DAS AULAS : LEMBRAR DE REPOSIÇÃO DAS AULAS
+      - PrairieLearn: *prairielearn_link
 
     # - Aula 14 - Linguagem de máquina:
     #   - Slides: slides/conteudoAssembler.pdf
