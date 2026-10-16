@@ -185,10 +185,12 @@ nav:
       - PrairieLearn: *prairielearn_link
 
     - Aula 13 - Prática Assembly 1:
-      - LEMBRAR DE REPOSIÇÃO DAS AULAS : LEMBRAR DE REPOSIÇÃO DAS AULAS
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 14 - Linguagem de máquina:
+    - Aula 14 - Prática Assembly 2:
+      - PrairieLearn: *prairielearn_link
+
+    # - Aula 15 - Linguagem de máquina:
     #   - Slides: slides/conteudoAssembler.pdf
     #   - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
     #   - Teoria: commum-content/teoria/Teoria-Assembler.md
@@ -196,7 +198,7 @@ nav:
     #   - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
     #   - PrairieLearn: *prairielearn_link
 
-    # - Aula 15 - VM:
+    # - Aula 16 - VM:
     #   - Slides: slides/aulaMaquinaVirtual.pdf
     #   - Teoria: commum-content/teoria/Teoria-vm.md
     #   - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
