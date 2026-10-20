@@ -184,13 +184,16 @@ nav:
       - Teoria: commum-content/teoria/Teoria-nasm-jump.md
       - PrairieLearn: *prairielearn_link
 
-    - Aula 13 - Prática Assembly 1:
+    - Aula 13 - Prática Assembly 1 ():
       - PrairieLearn: *prairielearn_link
 
-    - Aula 14 - Prática Assembly 2:
+    - Aula 14 - Prática Assembly 2 (Loop):
+      - PrairieLearn: *prairielearn_link
+    
+    - Aula 15 - Prática Assembly 3 (Multiplicação e Divisão):
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 15 - Linguagem de máquina:
+    # - Aula 16 - Linguagem de máquina:
     #   - Slides: slides/conteudoAssembler.pdf
     #   - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
     #   - Teoria: commum-content/teoria/Teoria-Assembler.md
@@ -198,7 +201,7 @@ nav:
     #   - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
     #   - PrairieLearn: *prairielearn_link
 
-    # - Aula 16 - VM:
+    # - Aula 17 - VM:
     #   - Slides: slides/aulaMaquinaVirtual.pdf
     #   - Teoria: commum-content/teoria/Teoria-vm.md
     #   - Teoria Segmentos: commum-content/teoria/Teoria-vm-segmentos.md
