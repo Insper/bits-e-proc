@@ -193,13 +193,12 @@ nav:
     - Aula 15 - Prática Assembly 3 (Multiplicação e Divisão):
       - PrairieLearn: *prairielearn_link
 
-    # - Aula 16 - Linguagem de máquina:
-    #   - Slides: slides/conteudoAssembler.pdf
-    #   - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
-    #   - Teoria: commum-content/teoria/Teoria-Assembler.md
-    #   - Consulta: commum-content/z01/z01-InstructionSet.md
-    #   - Exercicio: https://github.com/Insper/elementos-bits-content/blob/main/exercicios/Linguagem_de_maquina.pdf
-    #   - PrairieLearn: *prairielearn_link
+    - Aula 16 - Linguagem de máquina:
+      - Slides: slides/conteudoAssembler.pdf
+      - Teoria: commum-content/teoria/Teoria-Linguagem-de-Maquina.md
+      - Teoria: commum-content/teoria/Teoria-Assembler.md
+      - Consulta: commum-content/z01/z01-InstructionSet.md
+      - PrairieLearn: *prairielearn_link
 
     # - Aula 17 - VM:
     #   - Slides: slides/aulaMaquinaVirtual.pdf
