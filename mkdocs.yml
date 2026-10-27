@@ -208,18 +208,16 @@ nav:
       - Resumo VM: commum-content/z01/z01-Resumo-VM.md
       - PrairieLearn: *prairielearn_link
 
-  #  - Aula 18 - VM condições:
-  #      - PrairieLearn: *prairielearn_link
+    - Aula 18 - VM condições:
+      - Slides: slides/conteudoPilhas.pdf
+      - PrairieLearn: *prairielearn_link
 
   #   - Aula 19 - VM funções:
   #       - Funções: commum-content/teoria/Teoria-vm-funcoes.md
   #       - Memória: commum-content/teoria/Teoria-vm-memoria.md
   #       - PrairieLearn: *prairielearn_link
   #       - Codespace: class/vm-lab-function.md
-
-  #  - Aula 20 - Quiz 3 VM:
-  #      - PrairieLearn: *prairielearn_link
-
+ 
   #   - Aula 21 - VM translator:
   #       - Lab - VM translator: class/vmtranslator-lab-1.md
   #       - PrairieLearn: *prairielearn_link
