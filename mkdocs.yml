@@ -213,6 +213,7 @@ nav:
       - PrairieLearn: *prairielearn_link
 
   #   - Aula 19 - VM funções:
+  #       - Slides: slides/conteudoControle.pdf
   #       - Funções: commum-content/teoria/Teoria-vm-funcoes.md
   #       - Memória: commum-content/teoria/Teoria-vm-memoria.md
   #       - PrairieLearn: *prairielearn_link
