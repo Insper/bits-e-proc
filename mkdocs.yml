@@ -184,7 +184,7 @@ nav:
       - Teoria: commum-content/teoria/Teoria-nasm-jump.md
       - PrairieLearn: *prairielearn_link
 
-    - Aula 13 - Prática Assembly 1 ():
+    - Aula 13 - Prática Assembly 1 (Base):
       - PrairieLearn: *prairielearn_link
 
     - Aula 14 - Prática Assembly 2 (Loop):
@@ -212,12 +212,11 @@ nav:
       - Slides: slides/conteudoPilhas.pdf
       - PrairieLearn: *prairielearn_link
 
-  #   - Aula 19 - VM funções:
-  #       - Slides: slides/conteudoControle.pdf
-  #       - Funções: commum-content/teoria/Teoria-vm-funcoes.md
-  #       - Memória: commum-content/teoria/Teoria-vm-memoria.md
-  #       - PrairieLearn: *prairielearn_link
-  #       - Codespace: class/vm-lab-function.md
+    - Aula 19 - VM funções:
+        - Slides: slides/conteudoControle.pdf
+        - Funções: commum-content/teoria/Teoria-vm-funcoes.md
+        - Memória: commum-content/teoria/Teoria-vm-memoria.md
+        - PrairieLearn: *prairielearn_link
  
   #   - Aula 21 - VM translator:
   #       - Lab - VM translator: class/vmtranslator-lab-1.md
