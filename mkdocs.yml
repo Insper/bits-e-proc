@@ -120,7 +120,6 @@ nav:
       - Slides: slides/conteudoAlgebraBooleana.pdf
       - Teoria: commum-content/teoria/Teoria-Algebra-Booleana.md
       - Exercícios: *prairielearn_link
-      # - Exercício 2: commum-content/exercicios/Exercicio-Algebra-Booleana-2.md   # REVER PARA INCLUSÃO
 
     - Aula 3 - Dados Digitais:
       - Slides: slides/conteudoDadosDigitais.pdf
@@ -167,10 +166,12 @@ nav:
       - Slides: slides/conteudoLogicaSequencial.pdf
       - Teoria 1: commum-content/teoria/Teoria-Logica-Sequencial.md
       - Teoria 2: commum-content/teoria/Teoria-Sequencial-Componentes.md
-      # - Lab: class/seq-lab-1.md   # LAB COM PROBLEMAS (fazer a != b e não a < b)
       - PrairieLearn: *prairielearn_link
 
-    # - Prova 1: *prairielearn_link
+    - Simulado 1 - Hardware:
+      - PrairieLearn: *prairielearn_link
+      
+    - Prova 1: *prairielearn_link
 
     - Aula 11 - Assembly:
       - Slides: slides/conteudoAssembly.pdf
@@ -190,7 +191,7 @@ nav:
     - Aula 14 - Prática Assembly 2 (Loop):
       - PrairieLearn: *prairielearn_link
     
-    - Aula 15 - Prática Assembly 3 (Multiplicação e Divisão):
+    - Aula 15 - Prática Assembly 3 (Aritmética):
       - PrairieLearn: *prairielearn_link
 
     - Aula 16 - Linguagem de máquina:
@@ -217,6 +218,9 @@ nav:
         - Funções: commum-content/teoria/Teoria-vm-funcoes.md
         - Memória: commum-content/teoria/Teoria-vm-memoria.md
         - PrairieLearn: *prairielearn_link
+
+    - Simulado 2 - Software:
+      - PrairieLearn: *prairielearn_link
  
   #   - Aula 21 - VM translator:
   #       - Lab - VM translator: class/vmtranslator-lab-1.md
